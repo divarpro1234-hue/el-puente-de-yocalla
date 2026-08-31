@@ -14,6 +14,10 @@ config/name="Relatos de Bolivia - El Puente de Yocalla"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+_fennara_game_capture="*res://addons/fennara/runtime/game_capture_helper.gd"
+
 [display]
 
 window/stretch/mode="canvas_items"
