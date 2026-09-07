@@ -1,10 +1,13 @@
 [gd_scene format=3 uid="uid://bswelubn23x0h"]
 
+[ext_resource type="Script" uid="uid://ctqmbj22yfry2" path="res://scripts/player/player_controller.gd" id="1_wr5hl"]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o8nba"]
 radius = 12.0
 height = 48.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1388814590]
+script = ExtResource("1_wr5hl")
 
 [node name="Visual" type="Polygon2D" parent="." unique_id=919570886]
 color = Color(0.76, 0.42, 0.2, 1)
@@ -15,3 +18,4 @@ polygon = PackedVector2Array(-8, -24, 8, -24, 12, -20, 12, 20, 8, 24, -8, 24, -1
 shape = SubResource("CapsuleShape2D_o8nba")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1355875088]
+enabled = false
