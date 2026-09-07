@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://1frq3jeeeows"]
+
+[ext_resource type="Script" uid="uid://ccl3mu0ox8o0c" path="res://scripts/levels/nivel02_reconocimiento_regreso.gd" id="1_ilpqe"]
+[ext_resource type="PackedScene" uid="uid://bswelubn23x0h" path="res://scenes/player/Player.tscn" id="2_l1gcm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_apk1t"]
+size = Vector2(800, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbaw4"]
+size = Vector2(800, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dig7p"]
+size = Vector2(120, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_auhyr"]
+size = Vector2(1200, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwtln"]
+size = Vector2(1200, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_durvj"]
+size = Vector2(1200, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mh5mv"]
+size = Vector2(120, 40)
+
+[node name="Nivel02_Reconocimiento_Regreso" type="Node2D" unique_id=880944882]
+script = ExtResource("1_ilpqe")
+
+[node name="Player" parent="." unique_id=1388814590 instance=ExtResource("2_l1gcm")]
+position = Vector2(300, 500)
+
+[node name="SenderosIda" type="Node2D" parent="." unique_id=1810287007]
+
+[node name="Ground_01" type="StaticBody2D" parent="SenderosIda" unique_id=865705678]
+position = Vector2(400, 564)
+
+[node name="Visual" type="Polygon2D" parent="SenderosIda/Ground_01" unique_id=180552436]
+color = Color(0.44, 0.32, 0.2, 1)
+polygon = PackedVector2Array(-400, -40, 400, -40, 400, 40, -400, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SenderosIda/Ground_01" unique_id=2121988269]
+shape = SubResource("RectangleShape2D_apk1t")
+
+[node name="Ground_02" type="StaticBody2D" parent="SenderosIda" unique_id=124150221]
+position = Vector2(1200, 548)
+
+[node name="Visual" type="Polygon2D" parent="SenderosIda/Ground_02" unique_id=1535085652]
+color = Color(0.5, 0.38, 0.24, 1)
+polygon = PackedVector2Array(-400, -56, 400, -56, 400, 56, -400, 56)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SenderosIda/Ground_02" unique_id=1911415733]
+shape = SubResource("RectangleShape2D_hbaw4")
+
+[node name="Platform_01" type="StaticBody2D" parent="SenderosIda" unique_id=1922665239]
+position = Vector2(1200, 472)
+
+[node name="Visual" type="Polygon2D" parent="SenderosIda/Platform_01" unique_id=1121472193]
+color = Color(0.76, 0.6, 0.28, 1)
+polygon = PackedVector2Array(-60, -20, 60, -20, 60, 20, -60, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SenderosIda/Platform_01" unique_id=1297130496]
+shape = SubResource("RectangleShape2D_dig7p")
+
+[node name="ZonaReconocimiento" type="Node2D" parent="." unique_id=1555434382]
+
+[node name="Ground_03" type="StaticBody2D" parent="ZonaReconocimiento" unique_id=1655345572]
+position = Vector2(2200, 564)
+
+[node name="Visual" type="Polygon2D" parent="ZonaReconocimiento/Ground_03" unique_id=791062595]
+color = Color(0.3, 0.51, 0.36, 1)
+polygon = PackedVector2Array(-600, -40, 600, -40, 600, 40, -600, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaReconocimiento/Ground_03" unique_id=1698007970]
+shape = SubResource("RectangleShape2D_auhyr")
+
+[node name="Ground_04" type="StaticBody2D" parent="ZonaReconocimiento" unique_id=1368138278]
+position = Vector2(3400, 564)
+
+[node name="Visual" type="Polygon2D" parent="ZonaReconocimiento/Ground_04" unique_id=1911996237]
+color = Color(0.35, 0.56, 0.4, 1)
+polygon = PackedVector2Array(-600, -40, 600, -40, 600, 40, -600, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaReconocimiento/Ground_04" unique_id=126235055]
+shape = SubResource("RectangleShape2D_lwtln")
+
+[node name="SenderosRegreso" type="Node2D" parent="." unique_id=1385576016]
+
+[node name="Ground_05" type="StaticBody2D" parent="SenderosRegreso" unique_id=1756809031]
+position = Vector2(4600, 564)
+
+[node name="Visual" type="Polygon2D" parent="SenderosRegreso/Ground_05" unique_id=1218639226]
+color = Color(0.37, 0.43, 0.57, 1)
+polygon = PackedVector2Array(-600, -40, 600, -40, 600, 40, -600, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SenderosRegreso/Ground_05" unique_id=1580863931]
+shape = SubResource("RectangleShape2D_durvj")
+
+[node name="Platform_02" type="StaticBody2D" parent="SenderosRegreso" unique_id=1455417068]
+position = Vector2(4600, 504)
+
+[node name="Visual" type="Polygon2D" parent="SenderosRegreso/Platform_02" unique_id=2102499194]
+color = Color(0.58, 0.65, 0.78, 1)
+polygon = PackedVector2Array(-60, -20, 60, -20, 60, 20, -60, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SenderosRegreso/Platform_02" unique_id=763019435]
+shape = SubResource("RectangleShape2D_mh5mv")
+
+[node name="ObjectiveHUD" type="CanvasLayer" parent="." unique_id=77080691]
+
+[node name="ObjectiveLabel" type="Label" parent="ObjectiveHUD" unique_id=1820388405]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 624.0
+offset_bottom = 52.0
+text = "Objetivo: Reúne información en la zona de reconocimiento"
