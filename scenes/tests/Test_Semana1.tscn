@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://d0u5d1xek8x6a"]
 
 [ext_resource type="PackedScene" uid="uid://bswelubn23x0h" path="res://scenes/player/Player.tscn" id="1_6yx01"]
+[ext_resource type="Script" uid="uid://dcb0ckfs588hh" path="res://scripts/tests/test_semana1.gd" id="1_ddemg"]
 [ext_resource type="PackedScene" uid="uid://bf7brq4pufq2b" path="res://scenes/npc/JefeInca_Test.tscn" id="2_04tc3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6yx01"]
 size = Vector2(1600, 80)
 
 [node name="Test_Semana1" type="Node2D" unique_id=408675330]
+script = ExtResource("1_ddemg")
 
 [node name="Player" parent="." unique_id=1388814590 instance=ExtResource("1_6yx01")]
 position = Vector2(400, 500)
@@ -23,3 +25,13 @@ shape = SubResource("RectangleShape2D_6yx01")
 
 [node name="JefeInca_Test" parent="." unique_id=401455346 instance=ExtResource("2_04tc3")]
 position = Vector2(900, 496)
+
+[node name="ObjectiveHUD" type="CanvasLayer" parent="." unique_id=573842006]
+
+[node name="ObjectiveLabel" type="Label" parent="ObjectiveHUD" unique_id=309934037]
+visible = false
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 24.0
+offset_bottom = 24.0
+text = "Objetivo: Dirígete a la zona de reconocimiento"

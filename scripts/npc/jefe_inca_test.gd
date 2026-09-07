@@ -1,6 +1,9 @@
 extends Node2D
 
+signal mission_assigned(objective: String)
+
 var player_inside: bool = false
+var mission_was_assigned: bool = false
 
 @onready var interaction_area: Area2D = $InteractionArea
 @onready var interaction_prompt: Label = $InteractionPrompt
@@ -17,6 +20,9 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if player_inside and Input.is_action_just_pressed(&"interact"):
 		dialogue_text.show()
+		if not mission_was_assigned:
+			mission_was_assigned = true
+			mission_assigned.emit("Dirígete a la zona de reconocimiento")
 
 
 func _on_body_entered(body: Node2D) -> void:
