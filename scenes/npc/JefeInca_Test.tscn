@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bf7brq4pufq2b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgkrg"]
+size = Vector2(120, 80)
+
+[node name="JefeInca_Test" type="Node2D" unique_id=401455346]
+
+[node name="Visual" type="Polygon2D" parent="." unique_id=1669630346]
+polygon = PackedVector2Array(-16, -28, 16, -28, 16, 28, -16, 28)
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1545988293]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=283136296]
+shape = SubResource("RectangleShape2D_fgkrg")

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://d0u5d1xek8x6a"]
 
 [ext_resource type="PackedScene" uid="uid://bswelubn23x0h" path="res://scenes/player/Player.tscn" id="1_6yx01"]
+[ext_resource type="PackedScene" uid="uid://bf7brq4pufq2b" path="res://scenes/npc/JefeInca_Test.tscn" id="2_04tc3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6yx01"]
 size = Vector2(1600, 80)
@@ -19,3 +20,6 @@ polygon = PackedVector2Array(-800, -40, 800, -40, 800, 40, -800, 40)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=986745826]
 shape = SubResource("RectangleShape2D_6yx01")
+
+[node name="JefeInca_Test" parent="." unique_id=401455346 instance=ExtResource("2_04tc3")]
+position = Vector2(900, 496)
