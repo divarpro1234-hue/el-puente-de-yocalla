@@ -2,7 +2,20 @@
 
 [ext_resource type="PackedScene" uid="uid://bswelubn23x0h" path="res://scenes/player/Player.tscn" id="1_6yx01"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6yx01"]
+size = Vector2(1600, 80)
+
 [node name="Test_Semana1" type="Node2D" unique_id=408675330]
 
 [node name="Player" parent="." unique_id=1388814590 instance=ExtResource("1_6yx01")]
 position = Vector2(400, 500)
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=194158496]
+position = Vector2(960, 564)
+
+[node name="Visual" type="Polygon2D" parent="Ground" unique_id=979505741]
+color = Color(0.32, 0.22, 0.14, 1)
+polygon = PackedVector2Array(-800, -40, 800, -40, 800, 40, -800, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=986745826]
+shape = SubResource("RectangleShape2D_6yx01")
