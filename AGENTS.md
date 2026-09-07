@@ -82,3 +82,45 @@ The current goal is a minimal functional Week 1 prototype:
 - Mission/objective update in the HUD.
 
 Do not implement later chapters yet.
+
+# Final GDD v1.0 Alignment Addendum
+
+These rules supersede any earlier project-specific rule that conflicts with them.
+
+## Level Structure
+- The final Week 1 GDD defines exactly 3 main playable levels.
+- These 3 levels are composed of 5 reusable narrative/environment zones.
+- Do not interpret the 5 zones as 5 independent playable levels.
+
+### Level 1 — Yocalla y la misión
+- E01 Yocalla.
+- E02 Complejo del jefe inca.
+
+### Level 2 — Reconocimiento y regreso
+- E04-A Senderos de ida.
+- E03 Zona de reconocimiento.
+- Mensajero encounter.
+- E04-B Senderos de regreso / tormenta.
+
+### Level 3 — El Puente de Yocalla
+- E05 Río / Puente.
+- E01-C Yocalla epilogue.
+
+## Scope Confirmation
+- Keep exactly the 5 main mechanics defined in the GDD.
+- Do not add new NPC, mechanics, levels or systems unless explicitly requested.
+- No combat.
+- No health system.
+- No inventory.
+- No economy or XP.
+- Kespi remains the only playable character.
+
+## MCP Status
+- Codex ↔ Fennara MCP ↔ Godot 4.7.1 integration has been technically validated.
+- Fennara MCP may be used to inspect and modify the active Godot project when explicitly requested.
+- Always inspect before modifying and verify after modifying.
+
+## Current Development Phase
+- Current phase: Week 1 technical evidence / minimal functional prototype.
+- Do not implement the complete game yet.
+- Work in small, verifiable tasks.
