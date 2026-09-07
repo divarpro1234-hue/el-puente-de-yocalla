@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bswelubn23x0h"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o8nba"]
+radius = 12.0
+height = 48.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1388814590]
+
+[node name="Visual" type="Polygon2D" parent="." unique_id=919570886]
+color = Color(0.76, 0.42, 0.2, 1)
+antialiased = true
+polygon = PackedVector2Array(-8, -24, 8, -24, 12, -20, 12, 20, 8, 24, -8, 24, -12, 20, -12, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1739459837]
+shape = SubResource("CapsuleShape2D_o8nba")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1355875088]
