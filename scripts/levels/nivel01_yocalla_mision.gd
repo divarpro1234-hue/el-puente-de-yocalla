@@ -5,6 +5,8 @@ extends Node2D
 
 
 func _ready() -> void:
+	objective_label.text = "Objetivo: Dirígete al Complejo del Jefe Inca"
+	objective_label.show()
 	jefe_inca.connect(&"mission_assigned", _on_mission_assigned)
 
 

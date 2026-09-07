@@ -72,8 +72,8 @@ position = Vector2(2600, 496)
 [node name="ObjectiveHUD" type="CanvasLayer" parent="." unique_id=1010854544]
 
 [node name="ObjectiveLabel" type="Label" parent="ObjectiveHUD" unique_id=1053388577]
-visible = false
 offset_left = 24.0
 offset_top = 24.0
 offset_right = 524.0
 offset_bottom = 52.0
+text = "Objetivo: Dirígete al Complejo del Jefe Inca"
