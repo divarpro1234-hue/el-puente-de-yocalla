@@ -18,4 +18,3 @@ polygon = PackedVector2Array(-8, -24, 8, -24, 12, -20, 12, 20, 8, 24, -8, 24, -1
 shape = SubResource("CapsuleShape2D_o8nba")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1355875088]
-enabled = false
