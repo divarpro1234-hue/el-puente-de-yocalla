@@ -92,18 +92,18 @@ These rules supersede any earlier project-specific rule that conflicts with them
 - These 3 levels are composed of 5 reusable narrative/environment zones.
 - Do not interpret the 5 zones as 5 independent playable levels.
 
-### Level 1 — Yocalla y la misión
+### Level 1 - Yocalla y la mision
 - E01 Yocalla.
 - E02 Complejo del jefe inca.
 
-### Level 2 — Reconocimiento y regreso
+### Level 2 - Reconocimiento y regreso
 - E04-A Senderos de ida.
 - E03 Zona de reconocimiento.
 - Mensajero encounter.
 - E04-B Senderos de regreso / tormenta.
 
-### Level 3 — El Puente de Yocalla
-- E05 Río / Puente.
+### Level 3 - El Puente de Yocalla
+- E05 Rio / Puente.
 - E01-C Yocalla epilogue.
 
 ## Scope Confirmation
@@ -116,7 +116,7 @@ These rules supersede any earlier project-specific rule that conflicts with them
 - Kespi remains the only playable character.
 
 ## MCP Status
-- Codex ↔ Fennara MCP ↔ Godot 4.7.1 integration has been technically validated.
+- Codex <-> Fennara MCP <-> Godot 4.7.1 integration has been technically validated.
 - Fennara MCP may be used to inspect and modify the active Godot project when explicitly requested.
 - Always inspect before modifying and verify after modifying.
 
