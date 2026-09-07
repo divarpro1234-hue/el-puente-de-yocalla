@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://v7o6mfuf81ee"]
+
+[ext_resource type="Script" uid="uid://cojvwoyahg5hp" path="res://scripts/levels/nivel01_yocalla_mision.gd" id="1_85674"]
+[ext_resource type="PackedScene" uid="uid://bswelubn23x0h" path="res://scenes/player/Player.tscn" id="2_2v31h"]
+[ext_resource type="PackedScene" uid="uid://bf7brq4pufq2b" path="res://scenes/npc/JefeInca_Test.tscn" id="3_x1nsb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sbgmi"]
+size = Vector2(900, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2cbj"]
+size = Vector2(1000, 112)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rg2hi"]
+size = Vector2(120, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5l63"]
+size = Vector2(1100, 80)
+
+[node name="Nivel01_Yocalla_Mision" type="Node2D" unique_id=928365288]
+script = ExtResource("1_85674")
+
+[node name="Player" parent="." unique_id=1388814590 instance=ExtResource("2_2v31h")]
+position = Vector2(300, 500)
+
+[node name="ZonaYocalla" type="Node2D" parent="." unique_id=525782087]
+
+[node name="Ground_01" type="StaticBody2D" parent="ZonaYocalla" unique_id=2072530067]
+position = Vector2(450, 564)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/Ground_01" unique_id=1928825645]
+color = Color(0.4, 0.29, 0.18, 1)
+polygon = PackedVector2Array(-450, -40, 450, -40, 450, 40, -450, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/Ground_01" unique_id=796623907]
+shape = SubResource("RectangleShape2D_sbgmi")
+
+[node name="Ground_02" type="StaticBody2D" parent="ZonaYocalla" unique_id=279625953]
+position = Vector2(1400, 548)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/Ground_02" unique_id=212666108]
+color = Color(0.36, 0.48, 0.29, 1)
+polygon = PackedVector2Array(-500, -56, 500, -56, 500, 56, -500, 56)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/Ground_02" unique_id=1060316245]
+shape = SubResource("RectangleShape2D_e2cbj")
+
+[node name="Platform_01" type="StaticBody2D" parent="ZonaYocalla" unique_id=603280424]
+position = Vector2(1400, 472)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/Platform_01" unique_id=1718208028]
+color = Color(0.73, 0.58, 0.24, 1)
+polygon = PackedVector2Array(-60, -20, 60, -20, 60, 20, -60, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/Platform_01" unique_id=722424007]
+shape = SubResource("RectangleShape2D_rg2hi")
+
+[node name="ZonaComplejoInca" type="Node2D" parent="." unique_id=1747310493]
+
+[node name="Ground_03" type="StaticBody2D" parent="ZonaComplejoInca" unique_id=1785380816]
+position = Vector2(2450, 564)
+
+[node name="Visual" type="Polygon2D" parent="ZonaComplejoInca/Ground_03" unique_id=1649636236]
+color = Color(0.38, 0.44, 0.57, 1)
+polygon = PackedVector2Array(-550, -40, 550, -40, 550, 40, -550, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaComplejoInca/Ground_03" unique_id=1284146579]
+shape = SubResource("RectangleShape2D_a5l63")
+
+[node name="JefeInca_Test" parent="ZonaComplejoInca" unique_id=401455346 instance=ExtResource("3_x1nsb")]
+position = Vector2(2600, 496)
+
+[node name="ObjectiveHUD" type="CanvasLayer" parent="." unique_id=1010854544]
+
+[node name="ObjectiveLabel" type="Label" parent="ObjectiveHUD" unique_id=1053388577]
+visible = false
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 524.0
+offset_bottom = 52.0
