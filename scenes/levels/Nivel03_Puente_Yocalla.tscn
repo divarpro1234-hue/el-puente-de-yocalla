@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://fra1id20mk6c" path="res://scripts/levels/nivel03_puente_yocalla.gd" id="1_m53sp"]
 [ext_resource type="PackedScene" uid="uid://bswelubn23x0h" path="res://scenes/player/Player.tscn" id="2_587l1"]
+[ext_resource type="PackedScene" uid="uid://bk16hnkrfjjkf" path="res://scenes/npc/Satanas_Test.tscn" id="3_587l1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6wyq"]
 size = Vector2(1200, 240)
@@ -11,6 +12,9 @@ size = Vector2(1000, 240)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ku70w"]
 size = Vector2(1000, 240)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nduto"]
+size = Vector2(180, 140)
 
 [node name="Nivel03_Puente_Yocalla" type="Node2D" unique_id=2100613900]
 script = ExtResource("1_m53sp")
@@ -107,3 +111,22 @@ offset_top = 24.0
 offset_right = 744.0
 offset_bottom = 52.0
 text = "Objetivo: Encuentra una forma de cruzar el río"
+
+[node name="PactArea" type="Area2D" parent="." unique_id=349111852]
+position = Vector2(1080, 470)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PactArea" unique_id=1368199581]
+shape = SubResource("RectangleShape2D_nduto")
+
+[node name="PactPrompt" type="Label" parent="PactArea" unique_id=1644025426]
+visible = false
+z_index = 10
+offset_left = -78.0
+offset_top = -100.0
+offset_right = -78.0
+offset_bottom = -100.0
+text = "[E] Pedir ayuda"
+
+[node name="Satanas" parent="." unique_id=696938969 instance=ExtResource("3_587l1")]
+position = Vector2(1320, 480)
