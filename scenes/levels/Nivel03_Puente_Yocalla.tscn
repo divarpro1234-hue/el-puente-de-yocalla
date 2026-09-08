@@ -91,6 +91,28 @@ position = Vector2(540, 520)
 color = Color(0.95, 0.8, 0.4, 0.35)
 polygon = PackedVector2Array(0, -3, 40, -3, 40, 3, 0, 3)
 
+[node name="BridgeConstruction" type="Node2D" parent="ZonaRioPuente/BridgeZone" unique_id=597894117]
+
+[node name="BridgePart_01" type="Polygon2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction" unique_id=418196100]
+visible = false
+position = Vector2(0, 520)
+color = Color(0.48, 0.45, 0.4, 1)
+polygon = PackedVector2Array(0, -15, 180, -13, 180, 15, 0, 17)
+
+[node name="BridgePart_02" type="Polygon2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction" unique_id=1963426941]
+visible = false
+position = Vector2(180, 520)
+color = Color(0.55, 0.52, 0.46, 1)
+polygon = PackedVector2Array(0, -13, 180, -15, 180, 17, 0, 15)
+
+[node name="BridgePart_03" type="Polygon2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction" unique_id=2000347037]
+visible = false
+position = Vector2(360, 520)
+color = Color(0.44, 0.42, 0.38, 1)
+polygon = PackedVector2Array(0, -15, 170, -12, 170, 16, 0, 17)
+
+[node name="ConstructionTimer" type="Timer" parent="ZonaRioPuente/BridgeZone/BridgeConstruction" unique_id=91392770]
+
 [node name="ZonaEpilogo" type="Node2D" parent="." unique_id=464544751]
 
 [node name="Ground_Final" type="StaticBody2D" parent="ZonaEpilogo" unique_id=946044868]
