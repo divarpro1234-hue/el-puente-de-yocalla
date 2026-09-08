@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://c5sfodynxa2an"]
+
+[ext_resource type="Script" uid="uid://fra1id20mk6c" path="res://scripts/levels/nivel03_puente_yocalla.gd" id="1_m53sp"]
+[ext_resource type="PackedScene" uid="uid://bswelubn23x0h" path="res://scenes/player/Player.tscn" id="2_587l1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p6wyq"]
+size = Vector2(1200, 240)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8xgis"]
+size = Vector2(1000, 240)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ku70w"]
+size = Vector2(1000, 240)
+
+[node name="Nivel03_Puente_Yocalla" type="Node2D" unique_id=2100613900]
+script = ExtResource("1_m53sp")
+
+[node name="Player" parent="." unique_id=1388814590 instance=ExtResource("2_587l1")]
+position = Vector2(300, 500)
+
+[node name="ZonaRioPuente" type="Node2D" parent="." unique_id=44802814]
+
+[node name="Ground_Izquierda" type="StaticBody2D" parent="ZonaRioPuente" unique_id=1183558644]
+position = Vector2(600, 644)
+
+[node name="Visual" type="Polygon2D" parent="ZonaRioPuente/Ground_Izquierda" unique_id=334793445]
+color = Color(0.46, 0.34, 0.22, 1)
+polygon = PackedVector2Array(-600, -120, 600, -120, 600, 120, -600, 120)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaRioPuente/Ground_Izquierda" unique_id=698342842]
+shape = SubResource("RectangleShape2D_p6wyq")
+
+[node name="RiverGap" type="Polygon2D" parent="ZonaRioPuente" unique_id=177849644]
+color = Color(0.08, 0.48, 0.82, 0.9)
+polygon = PackedVector2Array(1200, 556, 1800, 556, 1800, 1000, 1200, 1000)
+
+[node name="Ground_Derecha" type="StaticBody2D" parent="ZonaRioPuente" unique_id=1303296086]
+position = Vector2(2300, 644)
+
+[node name="Visual" type="Polygon2D" parent="ZonaRioPuente/Ground_Derecha" unique_id=2060337302]
+color = Color(0.5, 0.4, 0.26, 1)
+polygon = PackedVector2Array(-500, -120, 500, -120, 500, 120, -500, 120)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaRioPuente/Ground_Derecha" unique_id=1532894495]
+shape = SubResource("RectangleShape2D_8xgis")
+
+[node name="BridgeZone" type="Node2D" parent="ZonaRioPuente" unique_id=1400814744]
+position = Vector2(1200, 0)
+
+[node name="Guide_01" type="Polygon2D" parent="ZonaRioPuente/BridgeZone" unique_id=1704935151]
+position = Vector2(15, 520)
+color = Color(0.95, 0.8, 0.4, 0.35)
+polygon = PackedVector2Array(0, -3, 40, -3, 40, 3, 0, 3)
+
+[node name="Guide_02" type="Polygon2D" parent="ZonaRioPuente/BridgeZone" unique_id=774828003]
+position = Vector2(90, 520)
+color = Color(0.95, 0.8, 0.4, 0.35)
+polygon = PackedVector2Array(0, -3, 40, -3, 40, 3, 0, 3)
+
+[node name="Guide_03" type="Polygon2D" parent="ZonaRioPuente/BridgeZone" unique_id=672332579]
+position = Vector2(165, 520)
+color = Color(0.95, 0.8, 0.4, 0.35)
+polygon = PackedVector2Array(0, -3, 40, -3, 40, 3, 0, 3)
+
+[node name="Guide_04" type="Polygon2D" parent="ZonaRioPuente/BridgeZone" unique_id=1249848740]
+position = Vector2(240, 520)
+color = Color(0.95, 0.8, 0.4, 0.35)
+polygon = PackedVector2Array(0, -3, 40, -3, 40, 3, 0, 3)
+
+[node name="Guide_05" type="Polygon2D" parent="ZonaRioPuente/BridgeZone" unique_id=149506214]
+position = Vector2(315, 520)
+color = Color(0.95, 0.8, 0.4, 0.35)
+polygon = PackedVector2Array(0, -3, 40, -3, 40, 3, 0, 3)
+
+[node name="Guide_06" type="Polygon2D" parent="ZonaRioPuente/BridgeZone" unique_id=1001058914]
+position = Vector2(390, 520)
+color = Color(0.95, 0.8, 0.4, 0.35)
+polygon = PackedVector2Array(0, -3, 40, -3, 40, 3, 0, 3)
+
+[node name="Guide_07" type="Polygon2D" parent="ZonaRioPuente/BridgeZone" unique_id=1350822656]
+position = Vector2(465, 520)
+color = Color(0.95, 0.8, 0.4, 0.35)
+polygon = PackedVector2Array(0, -3, 40, -3, 40, 3, 0, 3)
+
+[node name="Guide_08" type="Polygon2D" parent="ZonaRioPuente/BridgeZone" unique_id=1625060086]
+position = Vector2(540, 520)
+color = Color(0.95, 0.8, 0.4, 0.35)
+polygon = PackedVector2Array(0, -3, 40, -3, 40, 3, 0, 3)
+
+[node name="ZonaEpilogo" type="Node2D" parent="." unique_id=464544751]
+
+[node name="Ground_Final" type="StaticBody2D" parent="ZonaEpilogo" unique_id=946044868]
+position = Vector2(3300, 644)
+
+[node name="Visual" type="Polygon2D" parent="ZonaEpilogo/Ground_Final" unique_id=1616623052]
+color = Color(0.34, 0.52, 0.32, 1)
+polygon = PackedVector2Array(-500, -120, 500, -120, 500, 120, -500, 120)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaEpilogo/Ground_Final" unique_id=263746285]
+shape = SubResource("RectangleShape2D_ku70w")
+
+[node name="ObjectiveHUD" type="CanvasLayer" parent="." unique_id=246681028]
+
+[node name="ObjectiveLabel" type="Label" parent="ObjectiveHUD" unique_id=583434866]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 744.0
+offset_bottom = 52.0
+text = "Objetivo: Encuentra una forma de cruzar el río"
