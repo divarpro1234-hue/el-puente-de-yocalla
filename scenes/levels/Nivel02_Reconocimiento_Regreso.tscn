@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ccl3mu0ox8o0c" path="res://scripts/levels/nivel02_reconocimiento_regreso.gd" id="1_ilpqe"]
 [ext_resource type="PackedScene" uid="uid://bswelubn23x0h" path="res://scenes/player/Player.tscn" id="2_l1gcm"]
+[ext_resource type="PackedScene" uid="uid://mkxgrb8xgmkv" path="res://scenes/core/InfoPoint.tscn" id="3_l1gcm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_apk1t"]
 size = Vector2(800, 80)
@@ -83,6 +84,10 @@ polygon = PackedVector2Array(-600, -40, 600, -40, 600, 40, -600, 40)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaReconocimiento/Ground_04" unique_id=126235055]
 shape = SubResource("RectangleShape2D_lwtln")
+
+[node name="InfoPoint_01" parent="ZonaReconocimiento" unique_id=1729395355 instance=ExtResource("3_l1gcm")]
+position = Vector2(2300, 500)
+info_id = "info_01"
 
 [node name="SenderosRegreso" type="Node2D" parent="." unique_id=1385576016]
 

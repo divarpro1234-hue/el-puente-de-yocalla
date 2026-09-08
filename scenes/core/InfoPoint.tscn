@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://mkxgrb8xgmkv"]
+
+[ext_resource type="Script" uid="uid://smtv5b5gbmgp" path="res://scripts/core/info_point.gd" id="1_dto2w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ug6mq"]
+size = Vector2(160, 96)
+
+[node name="InfoPoint" type="Node2D" unique_id=1729395355]
+script = ExtResource("1_dto2w")
+
+[node name="Visual" type="Polygon2D" parent="." unique_id=1141276085]
+color = Color(0.85, 0.2, 0.85, 1)
+polygon = PackedVector2Array(-14, -24, 14, -24, 14, 24, -14, 24)
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1990570474]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=328436109]
+shape = SubResource("RectangleShape2D_ug6mq")
+
+[node name="InteractionPrompt" type="Label" parent="." unique_id=2049688178]
+visible = false
+offset_left = -90.0
+offset_top = -54.0
+offset_right = 90.0
+offset_bottom = -30.0
+text = "[E] Examinar"
+horizontal_alignment = 1
+
+[node name="CollectedLabel" type="Label" parent="." unique_id=23471824]
+visible = false
+offset_left = -120.0
+offset_top = -84.0
+offset_right = 120.0
+offset_bottom = -60.0
+text = "Información recopilada"
+horizontal_alignment = 1
