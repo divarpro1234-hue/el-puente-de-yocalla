@@ -1,8 +1,32 @@
 extends Node2D
 
+const INFO_IDS: Array[String] = ["info_01", "info_02", "info_03"]
+
+var collected_info_ids: Dictionary = {}
+
 @onready var objective_label: Label = $ObjectiveHUD/ObjectiveLabel
+@onready var info_counter: Label = $ObjectiveHUD/InfoCounter
+@onready var info_points: Array[Node2D] = [
+	$ZonaReconocimiento/InfoPoint_01,
+	$ZonaReconocimiento/InfoPoint_02,
+	$ZonaReconocimiento/InfoPoint_03,
+]
 
 
 func _ready() -> void:
 	objective_label.text = "Objetivo: Reúne información en la zona de reconocimiento"
 	objective_label.show()
+	for point: Node2D in info_points:
+		point.connect(&"information_collected", _on_information_collected)
+	_update_info_counter()
+
+
+func _on_information_collected(info_id: String) -> void:
+	if not INFO_IDS.has(info_id) or collected_info_ids.has(info_id):
+		return
+	collected_info_ids[info_id] = true
+	_update_info_counter()
+
+
+func _update_info_counter() -> void:
+	info_counter.text = "Información: %d/3" % collected_info_ids.size()

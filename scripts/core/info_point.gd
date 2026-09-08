@@ -1,6 +1,6 @@
 extends Node2D
 
-signal information_collected
+signal information_collected(info_id: String)
 
 @export var info_id: String = ""
 
@@ -24,7 +24,7 @@ func _process(_delta: float) -> void:
 		collected = true
 		interaction_prompt.hide()
 		collected_label.show()
-		information_collected.emit()
+		information_collected.emit(info_id)
 
 
 func _on_body_entered(body: Node2D) -> void:
