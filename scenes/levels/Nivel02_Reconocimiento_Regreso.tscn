@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ccl3mu0ox8o0c" path="res://scripts/levels/nivel02_reconocimiento_regreso.gd" id="1_ilpqe"]
 [ext_resource type="PackedScene" uid="uid://bswelubn23x0h" path="res://scenes/player/Player.tscn" id="2_l1gcm"]
 [ext_resource type="PackedScene" uid="uid://mkxgrb8xgmkv" path="res://scenes/core/InfoPoint.tscn" id="3_l1gcm"]
+[ext_resource type="PackedScene" uid="uid://bpegwik8rheit" path="res://scenes/npc/Mensajero_Test.tscn" id="4_apk1t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_apk1t"]
 size = Vector2(800, 80)
@@ -96,6 +97,9 @@ info_id = "info_02"
 [node name="InfoPoint_03" parent="ZonaReconocimiento" unique_id=1579486972 instance=ExtResource("3_l1gcm")]
 position = Vector2(3700, 500)
 info_id = "info_03"
+
+[node name="Mensajero" parent="ZonaReconocimiento" unique_id=1945888453 instance=ExtResource("4_apk1t")]
+position = Vector2(3920, 500)
 
 [node name="SenderosRegreso" type="Node2D" parent="." unique_id=1385576016]
 

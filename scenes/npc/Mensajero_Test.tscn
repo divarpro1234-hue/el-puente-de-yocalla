@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bpegwik8rheit"]
+
+[ext_resource type="Script" uid="uid://cicfk8jpp1rll" path="res://scripts/npc/mensajero_test.gd" id="1_6khc5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0fwdn"]
+size = Vector2(120, 80)
+
+[node name="Mensajero_Test" type="Node2D" unique_id=1945888453]
+visible = false
+script = ExtResource("1_6khc5")
+
+[node name="Visual" type="Polygon2D" parent="." unique_id=1971876051]
+color = Color(0.1, 0.85, 0.95, 1)
+polygon = PackedVector2Array(-14, -24, 14, -24, 14, 24, -14, 24)
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1498689320]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1076535317]
+shape = SubResource("RectangleShape2D_0fwdn")
+
+[node name="InteractionPrompt" type="Label" parent="." unique_id=710884987]
+visible = false
+offset_left = -70.0
+offset_top = -54.0
+offset_right = 70.0
+offset_bottom = -30.0
+text = "[E] Hablar"
+horizontal_alignment = 1
+
+[node name="DialogueText" type="Label" parent="." unique_id=1634661030]
+visible = false
+offset_left = -220.0
+offset_top = -116.0
+offset_right = 220.0
+offset_bottom = -60.0
+text = "Mensajero: Kespi, debes regresar a Yocalla."
+horizontal_alignment = 1
+autowrap_mode = 3
