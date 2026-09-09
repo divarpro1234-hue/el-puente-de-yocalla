@@ -23,6 +23,9 @@ size = Vector2(170, 30)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ku70w"]
 size = Vector2(1000, 240)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vv6yq"]
+size = Vector2(520, 190)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nduto"]
 size = Vector2(180, 140)
 
@@ -156,6 +159,25 @@ polygon = PackedVector2Array(-500, -120, 500, -120, 500, 120, -500, 120)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaEpilogo/Ground_Final" unique_id=263746285]
 shape = SubResource("RectangleShape2D_ku70w")
 
+[node name="EpilogueDecoration" type="Node2D" parent="ZonaEpilogo" unique_id=1424431118]
+
+[node name="Decoration_01" type="Polygon2D" parent="ZonaEpilogo/EpilogueDecoration" unique_id=2022468602]
+position = Vector2(3040, 474)
+color = Color(0.26, 0.42, 0.24, 1)
+polygon = PackedVector2Array(-120, 50, -68, -18, -24, 16, 22, -54, 82, 18, 132, 50)
+
+[node name="Decoration_02" type="Polygon2D" parent="ZonaEpilogo/EpilogueDecoration" unique_id=205150566]
+position = Vector2(3500, 474)
+color = Color(0.38, 0.58, 0.3, 1)
+polygon = PackedVector2Array(-105, 50, -58, -10, -10, 20, 38, -42, 104, 50)
+
+[node name="EpilogueArea" type="Area2D" parent="ZonaEpilogo" unique_id=1190899099]
+position = Vector2(3250, 430)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaEpilogo/EpilogueArea" unique_id=241835842]
+shape = SubResource("RectangleShape2D_vv6yq")
+
 [node name="ObjectiveHUD" type="CanvasLayer" parent="." unique_id=246681028]
 
 [node name="ObjectiveLabel" type="Label" parent="ObjectiveHUD" unique_id=583434866]
@@ -172,6 +194,16 @@ offset_top = 60.0
 offset_right = 24.0
 offset_bottom = 60.0
 text = "¡Quiquiriquí! El gallo ha cantado."
+
+[node name="EpilogueText" type="Label" parent="ObjectiveHUD" unique_id=767109567]
+visible = false
+custom_minimum_size = Vector2(720, 60)
+offset_left = 24.0
+offset_top = 96.0
+offset_right = 744.0
+offset_bottom = 156.0
+text = "Kespi logró regresar a Yocalla. El puente quedó como recuerdo de la prueba que logró superar."
+autowrap_mode = 3
 
 [node name="PactArea" type="Area2D" parent="." unique_id=349111852]
 position = Vector2(1080, 470)

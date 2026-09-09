@@ -8,6 +8,8 @@ extends Node2D
 @onready var guardian: Node2D = $Guardian
 @onready var objective_label: Label = $ObjectiveHUD/ObjectiveLabel
 @onready var rooster_event_label: Label = $ObjectiveHUD/RoosterEventLabel
+@onready var epilogue_area: Area2D = $ZonaEpilogo/EpilogueArea
+@onready var epilogue_text: Label = $ObjectiveHUD/EpilogueText
 @onready var bridge_parts: Array[Polygon2D] = [
 	$ZonaRioPuente/BridgeZone/BridgeConstruction/BridgePart_01,
 	$ZonaRioPuente/BridgeZone/BridgeConstruction/BridgePart_02,
@@ -27,6 +29,7 @@ var bridge_construction_started: bool = false
 var next_bridge_part_index: int = 0
 var outcome_sequence_started: bool = false
 var outcome_stage: int = 0
+var epilogue_started: bool = false
 
 
 func _ready() -> void:
@@ -34,8 +37,10 @@ func _ready() -> void:
 	objective_label.show()
 	pact_prompt.hide()
 	rooster_event_label.hide()
+	epilogue_text.hide()
 	pact_area.body_entered.connect(_on_pact_area_body_entered)
 	pact_area.body_exited.connect(_on_pact_area_body_exited)
+	epilogue_area.body_entered.connect(_on_epilogue_area_body_entered)
 	construction_timer.timeout.connect(_on_construction_timer_timeout)
 	outcome_timer.timeout.connect(_on_outcome_timer_timeout)
 
@@ -112,3 +117,11 @@ func _on_pact_area_body_exited(body: Node2D) -> void:
 	player_inside_pact_area = false
 	if not pact_completed:
 		pact_prompt.hide()
+
+
+func _on_epilogue_area_body_entered(body: Node2D) -> void:
+	if body != player or outcome_stage != 2 or epilogue_started:
+		return
+	epilogue_started = true
+	epilogue_text.show()
+	objective_label.text = "Objetivo: Descubre el destino de Yocalla"
