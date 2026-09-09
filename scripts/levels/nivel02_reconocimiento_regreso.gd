@@ -1,16 +1,19 @@
 extends Node2D
 
 const INFO_IDS: Array[String] = ["info_01", "info_02", "info_03"]
+const NEXT_LEVEL_PATH: String = "res://scenes/levels/Nivel03_Puente_Yocalla.tscn"
 
 var collected_info_ids: Dictionary = {}
 var return_mission_assigned: bool = false
 var level_completed: bool = false
+var level_transition_started: bool = false
 
 @onready var objective_label: Label = $ObjectiveHUD/ObjectiveLabel
 @onready var info_counter: Label = $ObjectiveHUD/InfoCounter
 @onready var mensajero: Node2D = $ZonaReconocimiento/Mensajero
 @onready var level_end_area: Area2D = $SenderosRegreso/LevelEndArea
 @onready var level_complete_label: Label = $ObjectiveHUD/LevelCompleteLabel
+@onready var level_transition_timer: Timer = $LevelTransitionTimer
 @onready var info_points: Array[Node2D] = [
 	$ZonaReconocimiento/InfoPoint_01,
 	$ZonaReconocimiento/InfoPoint_02,
@@ -24,6 +27,7 @@ func _ready() -> void:
 	level_complete_label.hide()
 	level_end_area.body_entered.connect(_on_level_end_body_entered)
 	mensajero.connect(&"return_mission_assigned", _on_return_mission_assigned)
+	level_transition_timer.timeout.connect(_on_level_transition_timer_timeout)
 	for point: Node2D in info_points:
 		point.connect(&"information_collected", _on_information_collected)
 	_update_info_counter()
@@ -57,7 +61,14 @@ func _on_level_end_body_entered(body: Node2D) -> void:
 	level_complete_label.show()
 	objective_label.text = "Objetivo completado: Regresaste a Yocalla"
 	objective_label.show()
+	if not level_transition_started:
+		level_transition_started = true
+		level_transition_timer.start()
 
 
 func _update_info_counter() -> void:
 	info_counter.text = "Información: %d/3" % collected_info_ids.size()
+
+
+func _on_level_transition_timer_timeout() -> void:
+	get_tree().change_scene_to_file(NEXT_LEVEL_PATH)
