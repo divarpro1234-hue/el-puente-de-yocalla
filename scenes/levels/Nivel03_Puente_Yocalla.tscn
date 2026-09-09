@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://bk16hnkrfjjkf" path="res://scenes/npc/Satanas_Test.tscn" id="3_587l1"]
 [ext_resource type="PackedScene" uid="uid://dfhhxhf6hxfwr" path="res://scenes/npc/Guardian_Test.tscn" id="4_p6wyq"]
 [ext_resource type="PackedScene" uid="uid://ltfr3mc2dfj1" path="res://scenes/core/Checkpoint.tscn" id="5_ku70w"]
-[ext_resource type="Script" uid="uid://u1x330rffasx" path="res://scripts/core/checkpoint.gd" id="6_nduto"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6wyq"]
 size = Vector2(1200, 240)
@@ -21,6 +20,9 @@ size = Vector2(180, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a21q1"]
 size = Vector2(170, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y1gpa"]
+size = Vector2(20, 160)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ku70w"]
 size = Vector2(1000, 240)
@@ -147,6 +149,13 @@ position = Vector2(445, 539)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction/BridgeCollision_03" unique_id=174472096]
 shape = SubResource("RectangleShape2D_a21q1")
+disabled = true
+
+[node name="BridgeBlocker" type="StaticBody2D" parent="ZonaRioPuente/BridgeZone" unique_id=727839901]
+position = Vector2(-10, 450)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaRioPuente/BridgeZone/BridgeBlocker" unique_id=432909650]
+shape = SubResource("RectangleShape2D_y1gpa")
 disabled = true
 
 [node name="ZonaEpilogo" type="Node2D" parent="." unique_id=464544751]
@@ -276,6 +285,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
+[node name="BridgeBlockedText" type="Label" parent="ObjectiveHUD" unique_id=1774432382]
+visible = false
+offset_left = 24.0
+offset_top = 60.0
+offset_right = 624.0
+offset_bottom = 88.0
+text = "El puente todavía no está listo. Debo esperar."
+
 [node name="PactArea" type="Area2D" parent="." unique_id=349111852]
 position = Vector2(1080, 470)
 collision_layer = 0
@@ -310,7 +327,9 @@ one_shot = true
 wait_time = 3.0
 one_shot = true
 
-[node name="Checkpoint_Start" type="Area2D" parent="." unique_id=471287348 instance=ExtResource("5_ku70w")]
+[node name="Checkpoint_Start" parent="." unique_id=471287348 instance=ExtResource("5_ku70w")]
 position = Vector2(300, 500)
-collision_layer = 0
-script = ExtResource("6_nduto")
+
+[node name="BridgeBlockedMessageTimer" type="Timer" parent="." unique_id=1811182205]
+wait_time = 2.0
+one_shot = true

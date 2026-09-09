@@ -12,6 +12,9 @@ extends Node2D
 @onready var epilogue_text: Label = $ObjectiveHUD/EpilogueText
 @onready var final_story_text: Label = $ObjectiveHUD/FinalStoryText
 @onready var legend_complete_panel: Control = $ObjectiveHUD/LegendCompletePanel
+@onready var bridge_blocker: StaticBody2D = $ZonaRioPuente/BridgeZone/BridgeBlocker
+@onready var bridge_blocker_collision: CollisionShape2D = $ZonaRioPuente/BridgeZone/BridgeBlocker/CollisionShape2D
+@onready var bridge_blocked_text: Label = $ObjectiveHUD/BridgeBlockedText
 @onready var bridge_parts: Array[Polygon2D] = [
 	$ZonaRioPuente/BridgeZone/BridgeConstruction/BridgePart_01,
 	$ZonaRioPuente/BridgeZone/BridgeConstruction/BridgePart_02,
@@ -26,6 +29,7 @@ extends Node2D
 @onready var outcome_timer: Timer = $OutcomeTimer
 @onready var final_story_timer: Timer = $FinalStoryTimer
 @onready var legend_complete_timer: Timer = $LegendCompleteTimer
+@onready var bridge_blocked_message_timer: Timer = $BridgeBlockedMessageTimer
 
 var player_inside_pact_area: bool = false
 var pact_completed: bool = false
@@ -45,6 +49,8 @@ func _ready() -> void:
 	epilogue_text.hide()
 	final_story_text.hide()
 	legend_complete_panel.hide()
+	bridge_blocked_text.hide()
+	bridge_blocker_collision.disabled = true
 	pact_area.body_entered.connect(_on_pact_area_body_entered)
 	pact_area.body_exited.connect(_on_pact_area_body_exited)
 	epilogue_area.body_entered.connect(_on_epilogue_area_body_entered)
@@ -52,6 +58,18 @@ func _ready() -> void:
 	outcome_timer.timeout.connect(_on_outcome_timer_timeout)
 	final_story_timer.timeout.connect(_on_final_story_timer_timeout)
 	legend_complete_timer.timeout.connect(_on_legend_complete_timer_timeout)
+	bridge_blocked_message_timer.timeout.connect(_on_bridge_blocked_message_timer_timeout)
+
+
+func _physics_process(_delta: float) -> void:
+	if bridge_blocker_collision.disabled or bridge_blocked_text.visible:
+		return
+	for collision_index: int in player.get_slide_collision_count():
+		var collision: KinematicCollision2D = player.get_slide_collision(collision_index)
+		if collision.get_collider() == bridge_blocker:
+			bridge_blocked_text.show()
+			bridge_blocked_message_timer.start()
+			return
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -70,6 +88,7 @@ func _start_bridge_construction() -> void:
 	if bridge_construction_started:
 		return
 	bridge_construction_started = true
+	bridge_blocker_collision.disabled = false
 	bridge_parts[0].show()
 	next_bridge_part_index = 1
 	construction_timer.start()
@@ -104,6 +123,7 @@ func _on_outcome_timer_timeout() -> void:
 		satanas.hide()
 		satanas_dialogue.hide()
 		_enable_bridge_collisions()
+		_disable_bridge_blocker()
 		objective_label.text = "Objetivo: Cruza el Puente de Yocalla"
 		outcome_stage = 2
 
@@ -111,6 +131,16 @@ func _on_outcome_timer_timeout() -> void:
 func _enable_bridge_collisions() -> void:
 	for collision_shape: CollisionShape2D in bridge_collision_shapes:
 		collision_shape.disabled = false
+
+
+func _disable_bridge_blocker() -> void:
+	bridge_blocker_collision.disabled = true
+	bridge_blocked_message_timer.stop()
+	bridge_blocked_text.hide()
+
+
+func _on_bridge_blocked_message_timer_timeout() -> void:
+	bridge_blocked_text.hide()
 
 
 func _on_pact_area_body_entered(body: Node2D) -> void:
