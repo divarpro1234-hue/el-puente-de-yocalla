@@ -205,6 +205,16 @@ offset_bottom = 156.0
 text = "Kespi logró regresar a Yocalla. El puente quedó como recuerdo de la prueba que logró superar."
 autowrap_mode = 3
 
+[node name="FinalStoryText" type="Label" parent="ObjectiveHUD" unique_id=1762778526]
+visible = false
+custom_minimum_size = Vector2(720, 60)
+offset_left = 24.0
+offset_top = 164.0
+offset_right = 744.0
+offset_bottom = 224.0
+text = "El Puente de Yocalla quedó como símbolo de unión y esperanza para las generaciones futuras."
+autowrap_mode = 3
+
 [node name="PactArea" type="Area2D" parent="." unique_id=349111852]
 position = Vector2(1080, 470)
 collision_layer = 0
@@ -230,3 +240,7 @@ one_shot = true
 
 [node name="Guardian" parent="." unique_id=1398259284 instance=ExtResource("4_p6wyq")]
 position = Vector2(1760, 478)
+
+[node name="FinalStoryTimer" type="Timer" parent="." unique_id=1293282999]
+wait_time = 2.0
+one_shot = true
