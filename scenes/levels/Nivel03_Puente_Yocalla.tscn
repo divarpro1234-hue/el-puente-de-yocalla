@@ -215,6 +215,65 @@ offset_bottom = 224.0
 text = "El Puente de Yocalla quedó como símbolo de unión y esperanza para las generaciones futuras."
 autowrap_mode = 3
 
+[node name="LegendCompletePanel" type="Control" parent="ObjectiveHUD" unique_id=1954516502]
+visible = false
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TitleLabel" type="Label" parent="ObjectiveHUD/LegendCompletePanel" unique_id=1127244242]
+layout_mode = 0
+anchor_top = 0.3
+anchor_right = 1.0
+anchor_bottom = 0.3
+offset_top = -28.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.98, 0.88, 0.58, 1)
+theme_override_colors/font_outline_color = Color(0.08, 0.06, 0.04, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 32
+text = "EL PUENTE DE YOCALLA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="ObjectiveHUD/LegendCompletePanel" unique_id=350924021]
+layout_mode = 0
+anchor_top = 0.44
+anchor_right = 1.0
+anchor_bottom = 0.44
+offset_top = -24.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.08, 0.06, 0.04, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 26
+text = "LEYENDA COMPLETADA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ContinueLabel" type="Label" parent="ObjectiveHUD/LegendCompletePanel" unique_id=688587126]
+custom_minimum_size = Vector2(640, 140)
+layout_mode = 0
+anchor_left = 0.15
+anchor_top = 0.58
+anchor_right = 0.85
+anchor_bottom = 0.82
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0.08, 0.06, 0.04, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 18
+text = "\"Una historia donde la valentía, la memoria y la esperanza construyeron un puente eterno.\"
+
+Presiona cualquier tecla para continuar"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
 [node name="PactArea" type="Area2D" parent="." unique_id=349111852]
 position = Vector2(1080, 470)
 collision_layer = 0
@@ -243,4 +302,8 @@ position = Vector2(1760, 478)
 
 [node name="FinalStoryTimer" type="Timer" parent="." unique_id=1293282999]
 wait_time = 2.0
+one_shot = true
+
+[node name="LegendCompleteTimer" type="Timer" parent="." unique_id=1626760743]
+wait_time = 3.0
 one_shot = true

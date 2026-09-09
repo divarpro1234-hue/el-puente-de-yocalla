@@ -11,6 +11,7 @@ extends Node2D
 @onready var epilogue_area: Area2D = $ZonaEpilogo/EpilogueArea
 @onready var epilogue_text: Label = $ObjectiveHUD/EpilogueText
 @onready var final_story_text: Label = $ObjectiveHUD/FinalStoryText
+@onready var legend_complete_panel: Control = $ObjectiveHUD/LegendCompletePanel
 @onready var bridge_parts: Array[Polygon2D] = [
 	$ZonaRioPuente/BridgeZone/BridgeConstruction/BridgePart_01,
 	$ZonaRioPuente/BridgeZone/BridgeConstruction/BridgePart_02,
@@ -24,6 +25,7 @@ extends Node2D
 @onready var construction_timer: Timer = $ZonaRioPuente/BridgeZone/BridgeConstruction/ConstructionTimer
 @onready var outcome_timer: Timer = $OutcomeTimer
 @onready var final_story_timer: Timer = $FinalStoryTimer
+@onready var legend_complete_timer: Timer = $LegendCompleteTimer
 
 var player_inside_pact_area: bool = false
 var pact_completed: bool = false
@@ -32,6 +34,7 @@ var next_bridge_part_index: int = 0
 var outcome_sequence_started: bool = false
 var outcome_stage: int = 0
 var epilogue_started: bool = false
+var legend_completed: bool = false
 
 
 func _ready() -> void:
@@ -41,12 +44,14 @@ func _ready() -> void:
 	rooster_event_label.hide()
 	epilogue_text.hide()
 	final_story_text.hide()
+	legend_complete_panel.hide()
 	pact_area.body_entered.connect(_on_pact_area_body_entered)
 	pact_area.body_exited.connect(_on_pact_area_body_exited)
 	epilogue_area.body_entered.connect(_on_epilogue_area_body_entered)
 	construction_timer.timeout.connect(_on_construction_timer_timeout)
 	outcome_timer.timeout.connect(_on_outcome_timer_timeout)
 	final_story_timer.timeout.connect(_on_final_story_timer_timeout)
+	legend_complete_timer.timeout.connect(_on_legend_complete_timer_timeout)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -135,3 +140,14 @@ func _on_epilogue_area_body_entered(body: Node2D) -> void:
 
 func _on_final_story_timer_timeout() -> void:
 	final_story_text.show()
+	legend_complete_timer.start()
+
+
+func _on_legend_complete_timer_timeout() -> void:
+	if legend_completed:
+		return
+	legend_completed = true
+	epilogue_text.hide()
+	final_story_text.hide()
+	legend_complete_panel.show()
+	objective_label.text = "Objetivo completado: La leyenda de Yocalla terminó"
