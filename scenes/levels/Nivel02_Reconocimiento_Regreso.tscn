@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bswelubn23x0h" path="res://scenes/player/Player.tscn" id="2_l1gcm"]
 [ext_resource type="PackedScene" uid="uid://mkxgrb8xgmkv" path="res://scenes/core/InfoPoint.tscn" id="3_l1gcm"]
 [ext_resource type="PackedScene" uid="uid://bpegwik8rheit" path="res://scenes/npc/Mensajero_Test.tscn" id="4_apk1t"]
+[ext_resource type="PackedScene" uid="uid://ltfr3mc2dfj1" path="res://scenes/core/Checkpoint.tscn" id="5_dig7p"]
+[ext_resource type="Script" uid="uid://u1x330rffasx" path="res://scripts/core/checkpoint.gd" id="6_auhyr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_apk1t"]
 size = Vector2(800, 80)
@@ -196,3 +198,8 @@ offset_right = 624.0
 offset_bottom = 160.0
 theme_override_font_sizes/font_size = 32
 text = "NIVEL 2 COMPLETADO"
+
+[node name="Checkpoint_Start" type="Area2D" parent="." unique_id=471287348 instance=ExtResource("5_dig7p")]
+position = Vector2(300, 500)
+collision_layer = 0
+script = ExtResource("6_auhyr")
