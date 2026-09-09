@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dfhhxhf6hxfwr"]
+
+[ext_resource type="Script" uid="uid://c5dgyc3sel6iv" path="res://scripts/npc/guardian_test.gd" id="1_gdcv5"]
+
+[node name="Guardian_Test" type="Node2D" unique_id=1398259284]
+visible = false
+script = ExtResource("1_gdcv5")
+
+[node name="Visual" type="Polygon2D" parent="." unique_id=1624796970]
+color = Color(0.12, 0.52, 0.46, 1)
+polygon = PackedVector2Array(0, -48, 28, -32, 24, 18, 0, 42, -24, 18, -28, -32)
+
+[node name="EventText" type="Label" parent="." unique_id=102258195]
+visible = false
+z_index = 10
+offset_left = -250.0
+offset_top = -105.0
+offset_right = -250.0
+offset_bottom = -105.0
+text = "El Guardián impide colocar la última piedra."

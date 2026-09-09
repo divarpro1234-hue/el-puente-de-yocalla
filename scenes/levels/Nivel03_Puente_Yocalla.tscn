@@ -3,12 +3,22 @@
 [ext_resource type="Script" uid="uid://fra1id20mk6c" path="res://scripts/levels/nivel03_puente_yocalla.gd" id="1_m53sp"]
 [ext_resource type="PackedScene" uid="uid://bswelubn23x0h" path="res://scenes/player/Player.tscn" id="2_587l1"]
 [ext_resource type="PackedScene" uid="uid://bk16hnkrfjjkf" path="res://scenes/npc/Satanas_Test.tscn" id="3_587l1"]
+[ext_resource type="PackedScene" uid="uid://dfhhxhf6hxfwr" path="res://scenes/npc/Guardian_Test.tscn" id="4_p6wyq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6wyq"]
 size = Vector2(1200, 240)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8xgis"]
 size = Vector2(1000, 240)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71np4"]
+size = Vector2(180, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qiq0r"]
+size = Vector2(180, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a21q1"]
+size = Vector2(170, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ku70w"]
 size = Vector2(1000, 240)
@@ -113,6 +123,27 @@ polygon = PackedVector2Array(0, -15, 170, -12, 170, 16, 0, 17)
 
 [node name="ConstructionTimer" type="Timer" parent="ZonaRioPuente/BridgeZone/BridgeConstruction" unique_id=91392770]
 
+[node name="BridgeCollision_01" type="StaticBody2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction" unique_id=1307885540]
+position = Vector2(90, 539)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction/BridgeCollision_01" unique_id=1942273731]
+shape = SubResource("RectangleShape2D_71np4")
+disabled = true
+
+[node name="BridgeCollision_02" type="StaticBody2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction" unique_id=573793294]
+position = Vector2(270, 539)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction/BridgeCollision_02" unique_id=712890866]
+shape = SubResource("RectangleShape2D_qiq0r")
+disabled = true
+
+[node name="BridgeCollision_03" type="StaticBody2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction" unique_id=1526690498]
+position = Vector2(445, 539)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction/BridgeCollision_03" unique_id=174472096]
+shape = SubResource("RectangleShape2D_a21q1")
+disabled = true
+
 [node name="ZonaEpilogo" type="Node2D" parent="." unique_id=464544751]
 
 [node name="Ground_Final" type="StaticBody2D" parent="ZonaEpilogo" unique_id=946044868]
@@ -134,6 +165,14 @@ offset_right = 744.0
 offset_bottom = 52.0
 text = "Objetivo: Encuentra una forma de cruzar el río"
 
+[node name="RoosterEventLabel" type="Label" parent="ObjectiveHUD" unique_id=514883114]
+visible = false
+offset_left = 24.0
+offset_top = 60.0
+offset_right = 24.0
+offset_bottom = 60.0
+text = "¡Quiquiriquí! El gallo ha cantado."
+
 [node name="PactArea" type="Area2D" parent="." unique_id=349111852]
 position = Vector2(1080, 470)
 collision_layer = 0
@@ -152,3 +191,10 @@ text = "[E] Pedir ayuda"
 
 [node name="Satanas" parent="." unique_id=696938969 instance=ExtResource("3_587l1")]
 position = Vector2(1320, 480)
+
+[node name="OutcomeTimer" type="Timer" parent="." unique_id=700191916]
+wait_time = 0.9
+one_shot = true
+
+[node name="Guardian" parent="." unique_id=1398259284 instance=ExtResource("4_p6wyq")]
+position = Vector2(1760, 478)
