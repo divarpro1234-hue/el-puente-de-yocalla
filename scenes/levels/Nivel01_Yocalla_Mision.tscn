@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cojvwoyahg5hp" path="res://scripts/levels/nivel01_yocalla_mision.gd" id="1_85674"]
 [ext_resource type="PackedScene" uid="uid://bswelubn23x0h" path="res://scenes/player/Player.tscn" id="2_2v31h"]
+[ext_resource type="PackedScene" uid="uid://bjetk3r7mqn32" path="res://scenes/npc/Lucero_Test.tscn" id="3_sbgmi"]
 [ext_resource type="PackedScene" uid="uid://bf7brq4pufq2b" path="res://scenes/npc/JefeInca_Test.tscn" id="3_x1nsb"]
 [ext_resource type="PackedScene" uid="uid://ltfr3mc2dfj1" path="res://scenes/core/Checkpoint.tscn" id="4_x1nsb"]
 
@@ -13,6 +14,9 @@ size = Vector2(1000, 112)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rg2hi"]
 size = Vector2(120, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pf2kg"]
+size = Vector2(240, 180)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a5l63"]
 size = Vector2(1100, 80)
@@ -55,6 +59,16 @@ polygon = PackedVector2Array(-60, -20, 60, -20, 60, 20, -60, 20)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/Platform_01" unique_id=722424007]
 shape = SubResource("RectangleShape2D_rg2hi")
 
+[node name="CarreraArea" type="Area2D" parent="ZonaYocalla" unique_id=739476107]
+position = Vector2(850, 440)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/CarreraArea" unique_id=1431488074]
+shape = SubResource("RectangleShape2D_pf2kg")
+
+[node name="Lucero_Test" parent="ZonaYocalla" unique_id=1090689686 instance=ExtResource("3_sbgmi")]
+position = Vector2(1080, 496)
+
 [node name="ZonaComplejoInca" type="Node2D" parent="." unique_id=1747310493]
 
 [node name="Ground_03" type="StaticBody2D" parent="ZonaComplejoInca" unique_id=1785380816]
@@ -87,9 +101,25 @@ offset_right = 524.0
 offset_bottom = 88.0
 text = "NIVEL 1 COMPLETADO"
 
+[node name="IntroStoryText" type="Label" parent="ObjectiveHUD" unique_id=1013164583]
+visible = false
+custom_minimum_size = Vector2(756, 0)
+offset_left = 24.0
+offset_top = 96.0
+offset_right = 780.0
+offset_bottom = 184.0
+text = "En las tierras altas de Yocalla se encontraba un pueblo rodeado de montañas y tradiciones ancestrales.
+
+Allí vivía Kespi, un joven conocido por su valentía y espíritu aventurero."
+autowrap_mode = 3
+
 [node name="Checkpoint_Start" parent="." unique_id=471287348 instance=ExtResource("4_x1nsb")]
 position = Vector2(300, 500)
 
 [node name="LevelTransitionTimer" type="Timer" parent="." unique_id=72711565]
 wait_time = 1.8
+one_shot = true
+
+[node name="IntroStoryTimer" type="Timer" parent="." unique_id=58397415]
+wait_time = 5.0
 one_shot = true
