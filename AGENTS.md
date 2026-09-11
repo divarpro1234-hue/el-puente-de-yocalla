@@ -124,3 +124,64 @@ These rules supersede any earlier project-specific rule that conflicts with them
 - Current phase: Week 1 technical evidence / minimal functional prototype.
 - Do not implement the complete game yet.
 - Work in small, verifiable tasks.
+
+---
+
+# Gameplay Update: Basic Health System
+
+The original GDD excluded health systems.
+
+This restriction is no longer applicable.
+
+A basic player health system is now authorized with the following limitations:
+
+## Allowed
+
+- Player health only.
+- Maximum health: 100.
+- Basic damage handling.
+- Health HUD during gameplay.
+- Respawn using the existing checkpoint system.
+
+## Purpose
+
+The health system exists only as a foundation for future environmental hazards.
+
+Examples:
+
+- falls;
+- storms;
+- environmental dangers.
+
+## Restrictions
+
+Do not implement:
+
+- combat;
+- enemies;
+- enemy damage;
+- inventory;
+- hunger;
+- thirst;
+- stamina;
+- Game Over;
+- death menus.
+
+## Architecture restrictions
+
+The implementation must remain simple.
+
+Do not create:
+
+- GameManager;
+- HealthManager;
+- PlayerManager;
+- autoloads;
+- global systems.
+
+Do not modify:
+
+- existing checkpoint logic;
+- player movement;
+- existing narrative systems;
+- existing levels unless explicitly required.
