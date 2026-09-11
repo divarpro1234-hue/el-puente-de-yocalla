@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Relatos de Bolivia - El Puente de Yocalla"
-run/main_scene="uid://d0u5d1xek8x6a"
+run/main_scene="res://scenes/ui/MainMenu.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

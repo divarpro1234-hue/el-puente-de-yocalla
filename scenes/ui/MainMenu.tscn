@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://cca0y7wqh3hlb"]
+
+[ext_resource type="Script" uid="uid://b3eolfxf8dphc" path="res://scripts/ui/main_menu.gd" id="1_vjtqc"]
+
+[node name="MainMenu" type="Control" unique_id=1029497002]
+layout_mode = 3
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vjtqc")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1260418691]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.09019608, 0.13333334, 0.21960784, 1)
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1519819389]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.27
+anchor_right = 0.5
+anchor_bottom = 0.27
+offset_left = -450.0
+offset_top = -35.0
+offset_right = 450.0
+offset_bottom = 35.0
+theme_override_colors/font_color = Color(0.95686275, 0.8509804, 0.60784316, 1)
+theme_override_font_sizes/font_size = 42
+text = "EL PUENTE DE YOCALLA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubtitleLabel" type="Label" parent="." unique_id=342819959]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.4
+anchor_right = 0.5
+anchor_bottom = 0.4
+offset_left = -400.0
+offset_top = -24.0
+offset_right = 400.0
+offset_bottom = 24.0
+theme_override_colors/font_color = Color(0.8509804, 0.8862745, 0.9254902, 1)
+theme_override_font_sizes/font_size = 22
+text = "Una leyenda de los Andes bolivianos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="." unique_id=255983998]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.58
+anchor_right = 0.5
+anchor_bottom = 0.58
+offset_left = -130.0
+offset_top = -27.0
+offset_right = 130.0
+offset_bottom = 27.0
+theme_override_font_sizes/font_size = 20
+text = "JUGAR"
+
+[node name="ExitButton" type="Button" parent="." unique_id=2049638685]
+layout_mode = 0
+anchor_left = 0.5
+anchor_top = 0.7
+anchor_right = 0.5
+anchor_bottom = 0.7
+offset_left = -130.0
+offset_top = -27.0
+offset_right = 130.0
+offset_bottom = 27.0
+theme_override_font_sizes/font_size = 20
+text = "SALIR"
