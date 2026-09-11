@@ -123,3 +123,6 @@ one_shot = true
 [node name="IntroStoryTimer" type="Timer" parent="." unique_id=58397415]
 wait_time = 5.0
 one_shot = true
+
+[node name="IntroCamera" type="Camera2D" parent="." unique_id=877676865]
+position = Vector2(1050, 324)

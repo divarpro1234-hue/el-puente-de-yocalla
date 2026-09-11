@@ -1,13 +1,18 @@
 extends Node2D
 
 const NEXT_LEVEL_PATH: String = "res://scenes/levels/Nivel02_Reconocimiento_Regreso.tscn"
+const INTRO_PART_DURATION: float = 2.8
 const RACE_MESSAGE_DURATION: float = 1.6
 
-var intro_started: bool = false
+var intro_camera_started: bool = false
+var intro_second_part_shown: bool = false
+var intro_finished: bool = false
 var race_event_started: bool = false
 var level_transition_started: bool = false
 
 @onready var player: CharacterBody2D = $Player
+@onready var player_camera: Camera2D = $Player/Camera2D
+@onready var intro_camera: Camera2D = $IntroCamera
 @onready var jefe_inca: Node2D = $ZonaComplejoInca/JefeInca_Test
 @onready var lucero: Node2D = $ZonaYocalla/Lucero_Test
 @onready var carrera_area: Area2D = $ZonaYocalla/CarreraArea
@@ -31,23 +36,42 @@ func _ready() -> void:
 
 
 func _start_intro() -> void:
-	if intro_started:
+	if intro_camera_started:
 		return
-	intro_started = true
-	intro_story_text.text = "En las tierras altas de Yocalla se encontraba un pueblo rodeado de montañas y tradiciones ancestrales.\n\nAllí vivía Kespi, un joven conocido por su valentía y espíritu aventurero."
+	intro_camera_started = true
+	intro_camera.enabled = true
+	intro_camera.make_current()
+	intro_story_text.text = "En las tierras altas de Yocalla se encontraba un pueblo rodeado de montañas y tradiciones ancestrales."
 	intro_story_text.show()
-	intro_story_timer.start()
+	intro_story_timer.start(INTRO_PART_DURATION)
 
 
 func _on_intro_story_timer_timeout() -> void:
+	if not intro_second_part_shown:
+		intro_second_part_shown = true
+		intro_story_text.text = "Allí vivía Kespi, un joven conocido por su valentía y espíritu aventurero."
+		intro_story_timer.start(INTRO_PART_DURATION)
+		return
+	_finish_intro()
+
+
+func _finish_intro() -> void:
+	if intro_finished:
+		return
+	intro_finished = true
+	intro_story_timer.stop()
 	intro_story_text.hide()
+	player_camera.enabled = true
+	player_camera.make_current()
+	intro_camera.enabled = false
 
 
 func _on_carrera_area_body_entered(body: Node2D) -> void:
 	if race_event_started or body != player:
 		return
 	race_event_started = true
-	intro_story_timer.stop()
+	while not intro_finished:
+		await get_tree().process_frame
 	intro_story_text.text = "Kespi participa en la carrera tradicional de Yocalla."
 	intro_story_text.show()
 	await get_tree().create_timer(RACE_MESSAGE_DURATION).timeout
