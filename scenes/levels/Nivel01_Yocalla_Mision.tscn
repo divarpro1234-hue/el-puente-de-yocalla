@@ -6,20 +6,74 @@
 [ext_resource type="PackedScene" uid="uid://bf7brq4pufq2b" path="res://scenes/npc/JefeInca_Test.tscn" id="3_x1nsb"]
 [ext_resource type="PackedScene" uid="uid://ltfr3mc2dfj1" path="res://scenes/core/Checkpoint.tscn" id="4_x1nsb"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pf2kg"]
+size = Vector2(180, 260)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x1nsb"]
+size = Vector2(2100, 80)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbgmi"]
-size = Vector2(900, 80)
+size = Vector2(2100, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e2cbj"]
-size = Vector2(1000, 112)
+size = Vector2(2100, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rg2hi"]
-size = Vector2(120, 40)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pf2kg"]
-size = Vector2(240, 180)
+size = Vector2(2100, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a5l63"]
-size = Vector2(1100, 80)
+size = Vector2(2100, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sf13c"]
+size = Vector2(2100, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxmpi"]
+size = Vector2(2100, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3onka"]
+size = Vector2(82, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_patrk"]
+size = Vector2(96, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trfyd"]
+size = Vector2(86, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ou8fv"]
+size = Vector2(110, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqcf8"]
+size = Vector2(90, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qfg1v"]
+size = Vector2(104, 52)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ylr6f"]
+size = Vector2(2100, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bl6px"]
+size = Vector2(2100, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6vmn4"]
+size = Vector2(2100, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_syygp"]
+size = Vector2(2100, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d71m2"]
+size = Vector2(2100, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_12nbm"]
+size = Vector2(76, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oxa7f"]
+size = Vector2(82, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u72j3"]
+size = Vector2(72, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6e1v"]
+size = Vector2(4200, 80)
 
 [node name="Nivel01_Yocalla_Mision" type="Node2D" unique_id=928365288]
 script = ExtResource("1_85674")
@@ -29,60 +83,565 @@ position = Vector2(300, 500)
 
 [node name="ZonaYocalla" type="Node2D" parent="." unique_id=525782087]
 
-[node name="Ground_01" type="StaticBody2D" parent="ZonaYocalla" unique_id=2072530067]
-position = Vector2(450, 564)
-
-[node name="Visual" type="Polygon2D" parent="ZonaYocalla/Ground_01" unique_id=1928825645]
-color = Color(0.4, 0.29, 0.18, 1)
-polygon = PackedVector2Array(-450, -40, 450, -40, 450, 40, -450, 40)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/Ground_01" unique_id=796623907]
-shape = SubResource("RectangleShape2D_sbgmi")
-
-[node name="Ground_02" type="StaticBody2D" parent="ZonaYocalla" unique_id=279625953]
-position = Vector2(1400, 548)
-
-[node name="Visual" type="Polygon2D" parent="ZonaYocalla/Ground_02" unique_id=212666108]
-color = Color(0.36, 0.48, 0.29, 1)
-polygon = PackedVector2Array(-500, -56, 500, -56, 500, 56, -500, 56)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/Ground_02" unique_id=1060316245]
-shape = SubResource("RectangleShape2D_e2cbj")
-
-[node name="Platform_01" type="StaticBody2D" parent="ZonaYocalla" unique_id=603280424]
-position = Vector2(1400, 472)
-
-[node name="Visual" type="Polygon2D" parent="ZonaYocalla/Platform_01" unique_id=1718208028]
-color = Color(0.73, 0.58, 0.24, 1)
-polygon = PackedVector2Array(-60, -20, 60, -20, 60, 20, -60, 20)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/Platform_01" unique_id=722424007]
-shape = SubResource("RectangleShape2D_rg2hi")
-
 [node name="CarreraArea" type="Area2D" parent="ZonaYocalla" unique_id=739476107]
-position = Vector2(850, 440)
+position = Vector2(14400, 410)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/CarreraArea" unique_id=1431488074]
 shape = SubResource("RectangleShape2D_pf2kg")
 
 [node name="Lucero_Test" parent="ZonaYocalla" unique_id=1090689686 instance=ExtResource("3_sbgmi")]
-position = Vector2(1080, 496)
+position = Vector2(14850, 496)
+
+[node name="ZonaCarrera" type="Node2D" parent="ZonaYocalla" unique_id=1011156560]
+
+[node name="RaceGround_01" type="StaticBody2D" parent="ZonaYocalla/ZonaCarrera" unique_id=557173456]
+position = Vector2(1050, 564)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/ZonaCarrera/RaceGround_01" unique_id=1287717892]
+color = Color(0.4, 0.29, 0.18, 1)
+polygon = PackedVector2Array(-1050, -40, 1050, -40, 1050, 40, -1050, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/ZonaCarrera/RaceGround_01" unique_id=1270641930]
+shape = SubResource("RectangleShape2D_x1nsb")
+
+[node name="RaceGround_02" type="StaticBody2D" parent="ZonaYocalla/ZonaCarrera" unique_id=769158493]
+position = Vector2(3150, 548)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/ZonaCarrera/RaceGround_02" unique_id=384841085]
+color = Color(0.43, 0.32, 0.2, 1)
+polygon = PackedVector2Array(-1050, -40, 1050, -40, 1050, 40, -1050, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/ZonaCarrera/RaceGround_02" unique_id=1809692850]
+shape = SubResource("RectangleShape2D_sbgmi")
+
+[node name="RaceGround_03" type="StaticBody2D" parent="ZonaYocalla/ZonaCarrera" unique_id=560776278]
+position = Vector2(5250, 564)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/ZonaCarrera/RaceGround_03" unique_id=1236352563]
+color = Color(0.4, 0.29, 0.18, 1)
+polygon = PackedVector2Array(-1050, -40, 1050, -40, 1050, 40, -1050, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/ZonaCarrera/RaceGround_03" unique_id=389757424]
+shape = SubResource("RectangleShape2D_e2cbj")
+
+[node name="RaceGround_04" type="StaticBody2D" parent="ZonaYocalla/ZonaCarrera" unique_id=156598065]
+position = Vector2(7350, 540)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/ZonaCarrera/RaceGround_04" unique_id=1985769379]
+color = Color(0.43, 0.32, 0.2, 1)
+polygon = PackedVector2Array(-1050, -40, 1050, -40, 1050, 40, -1050, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/ZonaCarrera/RaceGround_04" unique_id=1220507530]
+shape = SubResource("RectangleShape2D_rg2hi")
+
+[node name="RaceGround_05" type="StaticBody2D" parent="ZonaYocalla/ZonaCarrera" unique_id=767327117]
+position = Vector2(9450, 564)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/ZonaCarrera/RaceGround_05" unique_id=564616255]
+color = Color(0.4, 0.29, 0.18, 1)
+polygon = PackedVector2Array(-1050, -40, 1050, -40, 1050, 40, -1050, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/ZonaCarrera/RaceGround_05" unique_id=583923986]
+shape = SubResource("RectangleShape2D_a5l63")
+
+[node name="RaceGround_06" type="StaticBody2D" parent="ZonaYocalla/ZonaCarrera" unique_id=461700921]
+position = Vector2(11550, 548)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/ZonaCarrera/RaceGround_06" unique_id=1771742717]
+color = Color(0.43, 0.32, 0.2, 1)
+polygon = PackedVector2Array(-1050, -40, 1050, -40, 1050, 40, -1050, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/ZonaCarrera/RaceGround_06" unique_id=718814870]
+shape = SubResource("RectangleShape2D_sf13c")
+
+[node name="RaceGround_07" type="StaticBody2D" parent="ZonaYocalla/ZonaCarrera" unique_id=756815615]
+position = Vector2(13650, 564)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/ZonaCarrera/RaceGround_07" unique_id=1394231652]
+color = Color(0.4, 0.29, 0.18, 1)
+polygon = PackedVector2Array(-1050, -40, 1050, -40, 1050, 40, -1050, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/ZonaCarrera/RaceGround_07" unique_id=153657306]
+shape = SubResource("RectangleShape2D_lxmpi")
+
+[node name="RaceRock_01" type="StaticBody2D" parent="ZonaYocalla/ZonaCarrera" unique_id=1417179648]
+position = Vector2(2550, 485)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/ZonaCarrera/RaceRock_01" unique_id=1519357355]
+color = Color(0.34, 0.31, 0.29, 1)
+polygon = PackedVector2Array(-41, 23, -29.52, -12.65, -7.38, -23, 28.7, -14.26, 41, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/ZonaCarrera/RaceRock_01" unique_id=40682309]
+shape = SubResource("RectangleShape2D_3onka")
+
+[node name="RaceRock_02" type="StaticBody2D" parent="ZonaYocalla/ZonaCarrera" unique_id=1419240368]
+position = Vector2(4680, 493)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/ZonaCarrera/RaceRock_02" unique_id=1087720895]
+color = Color(0.34, 0.31, 0.29, 1)
+polygon = PackedVector2Array(-48, 27, -34.56, -14.85, -8.64, -27, 33.6, -16.74, 48, 27)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/ZonaCarrera/RaceRock_02" unique_id=1429951268]
+shape = SubResource("RectangleShape2D_patrk")
+
+[node name="RaceRock_03" type="StaticBody2D" parent="ZonaYocalla/ZonaCarrera" unique_id=1760638096]
+position = Vector2(6820, 470)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/ZonaCarrera/RaceRock_03" unique_id=797449985]
+color = Color(0.34, 0.31, 0.29, 1)
+polygon = PackedVector2Array(-43, 24, -30.96, -13.2, -7.74, -24, 30.1, -14.88, 43, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/ZonaCarrera/RaceRock_03" unique_id=652013352]
+shape = SubResource("RectangleShape2D_trfyd")
+
+[node name="RaceRock_04" type="StaticBody2D" parent="ZonaYocalla/ZonaCarrera" unique_id=1189271845]
+position = Vector2(8950, 490)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/ZonaCarrera/RaceRock_04" unique_id=645516370]
+color = Color(0.34, 0.31, 0.29, 1)
+polygon = PackedVector2Array(-55, 26, -39.6, -14.3, -9.9, -26, 38.5, -16.12, 55, 26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/ZonaCarrera/RaceRock_04" unique_id=487242018]
+shape = SubResource("RectangleShape2D_ou8fv")
+
+[node name="RaceRock_05" type="StaticBody2D" parent="ZonaYocalla/ZonaCarrera" unique_id=321309619]
+position = Vector2(11150, 477)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/ZonaCarrera/RaceRock_05" unique_id=1606970810]
+color = Color(0.34, 0.31, 0.29, 1)
+polygon = PackedVector2Array(-45, 25, -32.4, -13.75, -8.1, -25, 31.5, -15.5, 45, 25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/ZonaCarrera/RaceRock_05" unique_id=265844091]
+shape = SubResource("RectangleShape2D_bqcf8")
+
+[node name="RaceRock_06" type="StaticBody2D" parent="ZonaYocalla/ZonaCarrera" unique_id=695265486]
+position = Vector2(13050, 490)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/ZonaCarrera/RaceRock_06" unique_id=1070566473]
+color = Color(0.34, 0.31, 0.29, 1)
+polygon = PackedVector2Array(-52, 26, -37.44, -14.3, -9.36, -26, 36.4, -16.12, 52, 26)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/ZonaCarrera/RaceRock_06" unique_id=76142082]
+shape = SubResource("RectangleShape2D_qfg1v")
+
+[node name="DistantHill_01" type="Polygon2D" parent="ZonaYocalla/ZonaCarrera" unique_id=852899989]
+z_index = -8
+position = Vector2(3400, 470)
+color = Color(0.3, 0.42, 0.29, 1)
+polygon = PackedVector2Array(-1300, 60, -650, -210, 0, 20, 720, -170, 1400, 60)
+
+[node name="DistantHill_02" type="Polygon2D" parent="ZonaYocalla/ZonaCarrera" unique_id=41833166]
+z_index = -8
+position = Vector2(10100, 470)
+color = Color(0.32, 0.44, 0.3, 1)
+polygon = PackedVector2Array(-1500, 60, -760, -180, -120, 10, 680, -225, 1500, 60)
+
+[node name="EntradaYocalla" type="Node2D" parent="ZonaYocalla" unique_id=2032621496]
+
+[node name="FinishPostLeft" type="Polygon2D" parent="ZonaYocalla/EntradaYocalla" unique_id=1098706827]
+position = Vector2(14320, 420)
+color = Color(0.58, 0.22, 0.14, 1)
+polygon = PackedVector2Array(-14, -105, 14, -105, 14, 105, -14, 105)
+
+[node name="FinishPostRight" type="Polygon2D" parent="ZonaYocalla/EntradaYocalla" unique_id=1652036166]
+position = Vector2(14480, 420)
+color = Color(0.58, 0.22, 0.14, 1)
+polygon = PackedVector2Array(-14, -105, 14, -105, 14, 105, -14, 105)
+
+[node name="FinishBanner" type="Polygon2D" parent="ZonaYocalla/EntradaYocalla" unique_id=165796384]
+position = Vector2(14400, 325)
+color = Color(0.86, 0.67, 0.22, 1)
+polygon = PackedVector2Array(-94, -17, 94, -17, 94, 17, -94, 17)
+
+[node name="PuebloYocalla" type="Node2D" parent="ZonaYocalla" unique_id=907235659]
+
+[node name="VillageGround_01" type="StaticBody2D" parent="ZonaYocalla/PuebloYocalla" unique_id=1743593942]
+position = Vector2(15750, 564)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/VillageGround_01" unique_id=678145621]
+color = Color(0.36, 0.48, 0.29, 1)
+polygon = PackedVector2Array(-1050, -40, 1050, -40, 1050, 40, -1050, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/PuebloYocalla/VillageGround_01" unique_id=1908077826]
+shape = SubResource("RectangleShape2D_ylr6f")
+
+[node name="VillageGround_02" type="StaticBody2D" parent="ZonaYocalla/PuebloYocalla" unique_id=1234948546]
+position = Vector2(17850, 548)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/VillageGround_02" unique_id=1412599643]
+color = Color(0.39, 0.51, 0.31, 1)
+polygon = PackedVector2Array(-1050, -40, 1050, -40, 1050, 40, -1050, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/PuebloYocalla/VillageGround_02" unique_id=1319467027]
+shape = SubResource("RectangleShape2D_bl6px")
+
+[node name="VillageGround_03" type="StaticBody2D" parent="ZonaYocalla/PuebloYocalla" unique_id=256807207]
+position = Vector2(19950, 564)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/VillageGround_03" unique_id=549078663]
+color = Color(0.36, 0.48, 0.29, 1)
+polygon = PackedVector2Array(-1050, -40, 1050, -40, 1050, 40, -1050, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/PuebloYocalla/VillageGround_03" unique_id=737102450]
+shape = SubResource("RectangleShape2D_6vmn4")
+
+[node name="VillageGround_04" type="StaticBody2D" parent="ZonaYocalla/PuebloYocalla" unique_id=61095716]
+position = Vector2(22050, 548)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/VillageGround_04" unique_id=1404969646]
+color = Color(0.39, 0.51, 0.31, 1)
+polygon = PackedVector2Array(-1050, -40, 1050, -40, 1050, 40, -1050, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/PuebloYocalla/VillageGround_04" unique_id=1920636360]
+shape = SubResource("RectangleShape2D_syygp")
+
+[node name="VillageGround_05" type="StaticBody2D" parent="ZonaYocalla/PuebloYocalla" unique_id=1316209298]
+position = Vector2(24150, 564)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/VillageGround_05" unique_id=517228003]
+color = Color(0.36, 0.48, 0.29, 1)
+polygon = PackedVector2Array(-1050, -40, 1050, -40, 1050, 40, -1050, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/PuebloYocalla/VillageGround_05" unique_id=1583051268]
+shape = SubResource("RectangleShape2D_d71m2")
+
+[node name="House_01" type="Node2D" parent="ZonaYocalla/PuebloYocalla" unique_id=817698709]
+z_index = -2
+position = Vector2(15800, 430)
+
+[node name="Walls" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/House_01" unique_id=788884372]
+color = Color(0.72, 0.56, 0.34, 1)
+polygon = PackedVector2Array(-130, -75, 130, -75, 130, 75, -130, 75)
+
+[node name="Roof" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/House_01" unique_id=1727515474]
+position = Vector2(0, -105)
+color = Color(0.43, 0.19, 0.12, 1)
+polygon = PackedVector2Array(-155, 30, 0, -55, 155, 30)
+
+[node name="Door" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/House_01" unique_id=942074955]
+position = Vector2(0, 35)
+color = Color(0.24, 0.14, 0.09, 1)
+polygon = PackedVector2Array(-24, -40, 24, -40, 24, 40, -24, 40)
+
+[node name="Tree_01" type="Node2D" parent="ZonaYocalla/PuebloYocalla" unique_id=1272860158]
+z_index = -1
+position = Vector2(16450, 430)
+
+[node name="Trunk" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Tree_01" unique_id=1450403674]
+position = Vector2(0, 20)
+color = Color(0.31, 0.18, 0.1, 1)
+polygon = PackedVector2Array(-17, -60, 17, -60, 17, 60, -17, 60)
+
+[node name="Canopy" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Tree_01" unique_id=1020525304]
+position = Vector2(0, -65)
+color = Color(0.22, 0.48, 0.24, 1)
+polygon = PackedVector2Array(-88, 20, -58, -52, 0, -82, 64, -48, 90, 24, 0, 62)
+
+[node name="Crops_01" type="Node2D" parent="ZonaYocalla/PuebloYocalla" unique_id=2080412925]
+z_index = -1
+position = Vector2(17100, 478)
+
+[node name="Soil" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Crops_01" unique_id=769231717]
+position = Vector2(0, 18)
+color = Color(0.34, 0.21, 0.12, 1)
+polygon = PackedVector2Array(-210, -21, 210, -21, 210, 21, -210, 21)
+
+[node name="Plant_01" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Crops_01" unique_id=1482855459]
+position = Vector2(-180, -8)
+color = Color(0.36, 0.63, 0.25, 1)
+polygon = PackedVector2Array(-15, 18, 0, -24, 15, 18)
+
+[node name="Plant_02" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Crops_01" unique_id=1099008806]
+position = Vector2(-120, -8)
+color = Color(0.36, 0.63, 0.25, 1)
+polygon = PackedVector2Array(-15, 18, 0, -24, 15, 18)
+
+[node name="Plant_03" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Crops_01" unique_id=30658569]
+position = Vector2(-60, -8)
+color = Color(0.36, 0.63, 0.25, 1)
+polygon = PackedVector2Array(-15, 18, 0, -24, 15, 18)
+
+[node name="Plant_04" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Crops_01" unique_id=855718659]
+position = Vector2(0, -8)
+color = Color(0.36, 0.63, 0.25, 1)
+polygon = PackedVector2Array(-15, 18, 0, -24, 15, 18)
+
+[node name="Plant_05" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Crops_01" unique_id=889560795]
+position = Vector2(60, -8)
+color = Color(0.36, 0.63, 0.25, 1)
+polygon = PackedVector2Array(-15, 18, 0, -24, 15, 18)
+
+[node name="Plant_06" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Crops_01" unique_id=447106836]
+position = Vector2(120, -8)
+color = Color(0.36, 0.63, 0.25, 1)
+polygon = PackedVector2Array(-15, 18, 0, -24, 15, 18)
+
+[node name="Plant_07" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Crops_01" unique_id=783762936]
+position = Vector2(180, -8)
+color = Color(0.36, 0.63, 0.25, 1)
+polygon = PackedVector2Array(-15, 18, 0, -24, 15, 18)
+
+[node name="Fence_01" type="Node2D" parent="ZonaYocalla/PuebloYocalla" unique_id=1862873632]
+z_index = -1
+position = Vector2(18100, 475)
+
+[node name="RailTop" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Fence_01" unique_id=464820457]
+position = Vector2(0, -42)
+color = Color(0.5, 0.32, 0.16, 1)
+polygon = PackedVector2Array(-240, -8, 240, -8, 240, 8, -240, 8)
+
+[node name="RailBottom" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Fence_01" unique_id=62066327]
+position = Vector2(0, 6)
+color = Color(0.5, 0.32, 0.16, 1)
+polygon = PackedVector2Array(-240, -8, 240, -8, 240, 8, -240, 8)
+
+[node name="Post_01" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Fence_01" unique_id=2045473929]
+position = Vector2(-220, -15)
+color = Color(0.42, 0.25, 0.12, 1)
+polygon = PackedVector2Array(-10, -55, 10, -55, 10, 55, -10, 55)
+
+[node name="Post_02" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Fence_01" unique_id=495544692]
+position = Vector2(-110, -15)
+color = Color(0.42, 0.25, 0.12, 1)
+polygon = PackedVector2Array(-10, -55, 10, -55, 10, 55, -10, 55)
+
+[node name="Post_03" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Fence_01" unique_id=333032193]
+position = Vector2(0, -15)
+color = Color(0.42, 0.25, 0.12, 1)
+polygon = PackedVector2Array(-10, -55, 10, -55, 10, 55, -10, 55)
+
+[node name="Post_04" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Fence_01" unique_id=2115057434]
+position = Vector2(110, -15)
+color = Color(0.42, 0.25, 0.12, 1)
+polygon = PackedVector2Array(-10, -55, 10, -55, 10, 55, -10, 55)
+
+[node name="Post_05" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Fence_01" unique_id=322090330]
+position = Vector2(220, -15)
+color = Color(0.42, 0.25, 0.12, 1)
+polygon = PackedVector2Array(-10, -55, 10, -55, 10, 55, -10, 55)
+
+[node name="House_02" type="Node2D" parent="ZonaYocalla/PuebloYocalla" unique_id=1909048754]
+z_index = -2
+position = Vector2(19000, 430)
+
+[node name="Walls" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/House_02" unique_id=639641231]
+color = Color(0.63, 0.46, 0.28, 1)
+polygon = PackedVector2Array(-130, -75, 130, -75, 130, 75, -130, 75)
+
+[node name="Roof" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/House_02" unique_id=725448518]
+position = Vector2(0, -105)
+color = Color(0.43, 0.19, 0.12, 1)
+polygon = PackedVector2Array(-155, 30, 0, -55, 155, 30)
+
+[node name="Door" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/House_02" unique_id=1895824525]
+position = Vector2(0, 35)
+color = Color(0.24, 0.14, 0.09, 1)
+polygon = PackedVector2Array(-24, -40, 24, -40, 24, 40, -24, 40)
+
+[node name="Tree_02" type="Node2D" parent="ZonaYocalla/PuebloYocalla" unique_id=436822284]
+z_index = -1
+position = Vector2(19700, 430)
+
+[node name="Trunk" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Tree_02" unique_id=442220525]
+position = Vector2(0, 20)
+color = Color(0.31, 0.18, 0.1, 1)
+polygon = PackedVector2Array(-17, -60, 17, -60, 17, 60, -17, 60)
+
+[node name="Canopy" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Tree_02" unique_id=1585853759]
+position = Vector2(0, -65)
+color = Color(0.22, 0.48, 0.24, 1)
+polygon = PackedVector2Array(-88, 20, -58, -52, 0, -82, 64, -48, 90, 24, 0, 62)
+
+[node name="Crops_02" type="Node2D" parent="ZonaYocalla/PuebloYocalla" unique_id=1692213949]
+z_index = -1
+position = Vector2(20700, 478)
+
+[node name="Soil" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Crops_02" unique_id=527163859]
+position = Vector2(0, 18)
+color = Color(0.34, 0.21, 0.12, 1)
+polygon = PackedVector2Array(-210, -21, 210, -21, 210, 21, -210, 21)
+
+[node name="Plant_01" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Crops_02" unique_id=978517465]
+position = Vector2(-180, -8)
+color = Color(0.36, 0.63, 0.25, 1)
+polygon = PackedVector2Array(-15, 18, 0, -24, 15, 18)
+
+[node name="Plant_02" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Crops_02" unique_id=1254202879]
+position = Vector2(-120, -8)
+color = Color(0.36, 0.63, 0.25, 1)
+polygon = PackedVector2Array(-15, 18, 0, -24, 15, 18)
+
+[node name="Plant_03" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Crops_02" unique_id=1911014605]
+position = Vector2(-60, -8)
+color = Color(0.36, 0.63, 0.25, 1)
+polygon = PackedVector2Array(-15, 18, 0, -24, 15, 18)
+
+[node name="Plant_04" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Crops_02" unique_id=107728554]
+position = Vector2(0, -8)
+color = Color(0.36, 0.63, 0.25, 1)
+polygon = PackedVector2Array(-15, 18, 0, -24, 15, 18)
+
+[node name="Plant_05" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Crops_02" unique_id=969304933]
+position = Vector2(60, -8)
+color = Color(0.36, 0.63, 0.25, 1)
+polygon = PackedVector2Array(-15, 18, 0, -24, 15, 18)
+
+[node name="Plant_06" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Crops_02" unique_id=1868372242]
+position = Vector2(120, -8)
+color = Color(0.36, 0.63, 0.25, 1)
+polygon = PackedVector2Array(-15, 18, 0, -24, 15, 18)
+
+[node name="Plant_07" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Crops_02" unique_id=390310456]
+position = Vector2(180, -8)
+color = Color(0.36, 0.63, 0.25, 1)
+polygon = PackedVector2Array(-15, 18, 0, -24, 15, 18)
+
+[node name="House_03" type="Node2D" parent="ZonaYocalla/PuebloYocalla" unique_id=908324435]
+z_index = -2
+position = Vector2(21800, 430)
+
+[node name="Walls" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/House_03" unique_id=396805633]
+color = Color(0.76, 0.6, 0.36, 1)
+polygon = PackedVector2Array(-130, -75, 130, -75, 130, 75, -130, 75)
+
+[node name="Roof" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/House_03" unique_id=358076602]
+position = Vector2(0, -105)
+color = Color(0.43, 0.19, 0.12, 1)
+polygon = PackedVector2Array(-155, 30, 0, -55, 155, 30)
+
+[node name="Door" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/House_03" unique_id=701246409]
+position = Vector2(0, 35)
+color = Color(0.24, 0.14, 0.09, 1)
+polygon = PackedVector2Array(-24, -40, 24, -40, 24, 40, -24, 40)
+
+[node name="Fence_02" type="Node2D" parent="ZonaYocalla/PuebloYocalla" unique_id=2139302373]
+z_index = -1
+position = Vector2(22800, 475)
+
+[node name="RailTop" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Fence_02" unique_id=150673510]
+position = Vector2(0, -42)
+color = Color(0.5, 0.32, 0.16, 1)
+polygon = PackedVector2Array(-240, -8, 240, -8, 240, 8, -240, 8)
+
+[node name="RailBottom" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Fence_02" unique_id=1733060127]
+position = Vector2(0, 6)
+color = Color(0.5, 0.32, 0.16, 1)
+polygon = PackedVector2Array(-240, -8, 240, -8, 240, 8, -240, 8)
+
+[node name="Post_01" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Fence_02" unique_id=291502659]
+position = Vector2(-220, -15)
+color = Color(0.42, 0.25, 0.12, 1)
+polygon = PackedVector2Array(-10, -55, 10, -55, 10, 55, -10, 55)
+
+[node name="Post_02" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Fence_02" unique_id=1590011776]
+position = Vector2(-110, -15)
+color = Color(0.42, 0.25, 0.12, 1)
+polygon = PackedVector2Array(-10, -55, 10, -55, 10, 55, -10, 55)
+
+[node name="Post_03" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Fence_02" unique_id=1961713838]
+position = Vector2(0, -15)
+color = Color(0.42, 0.25, 0.12, 1)
+polygon = PackedVector2Array(-10, -55, 10, -55, 10, 55, -10, 55)
+
+[node name="Post_04" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Fence_02" unique_id=640440777]
+position = Vector2(110, -15)
+color = Color(0.42, 0.25, 0.12, 1)
+polygon = PackedVector2Array(-10, -55, 10, -55, 10, 55, -10, 55)
+
+[node name="Post_05" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Fence_02" unique_id=673438120]
+position = Vector2(220, -15)
+color = Color(0.42, 0.25, 0.12, 1)
+polygon = PackedVector2Array(-10, -55, 10, -55, 10, 55, -10, 55)
+
+[node name="Tree_03" type="Node2D" parent="ZonaYocalla/PuebloYocalla" unique_id=2039092235]
+z_index = -1
+position = Vector2(23700, 430)
+
+[node name="Trunk" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Tree_03" unique_id=776453580]
+position = Vector2(0, 20)
+color = Color(0.31, 0.18, 0.1, 1)
+polygon = PackedVector2Array(-17, -60, 17, -60, 17, 60, -17, 60)
+
+[node name="Canopy" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/Tree_03" unique_id=1049826398]
+position = Vector2(0, -65)
+color = Color(0.22, 0.48, 0.24, 1)
+polygon = PackedVector2Array(-88, 20, -58, -52, 0, -82, 64, -48, 90, 24, 0, 62)
+
+[node name="House_04" type="Node2D" parent="ZonaYocalla/PuebloYocalla" unique_id=2078477756]
+z_index = -2
+position = Vector2(24500, 430)
+
+[node name="Walls" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/House_04" unique_id=1460509334]
+color = Color(0.66, 0.49, 0.29, 1)
+polygon = PackedVector2Array(-130, -75, 130, -75, 130, 75, -130, 75)
+
+[node name="Roof" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/House_04" unique_id=1996348813]
+position = Vector2(0, -105)
+color = Color(0.43, 0.19, 0.12, 1)
+polygon = PackedVector2Array(-155, 30, 0, -55, 155, 30)
+
+[node name="Door" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/House_04" unique_id=1568811769]
+position = Vector2(0, 35)
+color = Color(0.24, 0.14, 0.09, 1)
+polygon = PackedVector2Array(-24, -40, 24, -40, 24, 40, -24, 40)
+
+[node name="VillageRock_01" type="StaticBody2D" parent="ZonaYocalla/PuebloYocalla" unique_id=1926158185]
+position = Vector2(17550, 490)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/VillageRock_01" unique_id=1437679515]
+color = Color(0.34, 0.31, 0.29, 1)
+polygon = PackedVector2Array(-38, 22, -27.36, -12.1, -6.84, -22, 26.6, -13.64, 38, 22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/PuebloYocalla/VillageRock_01" unique_id=170428754]
+shape = SubResource("RectangleShape2D_12nbm")
+
+[node name="VillageRock_02" type="StaticBody2D" parent="ZonaYocalla/PuebloYocalla" unique_id=1682092228]
+position = Vector2(21350, 492)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/VillageRock_02" unique_id=1192547811]
+color = Color(0.34, 0.31, 0.29, 1)
+polygon = PackedVector2Array(-41, 23, -29.52, -12.65, -7.38, -23, 28.7, -14.26, 41, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/PuebloYocalla/VillageRock_02" unique_id=270642662]
+shape = SubResource("RectangleShape2D_oxa7f")
+
+[node name="VillageRock_03" type="StaticBody2D" parent="ZonaYocalla/PuebloYocalla" unique_id=1957025298]
+position = Vector2(23450, 490)
+
+[node name="Visual" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/VillageRock_03" unique_id=48652950]
+color = Color(0.34, 0.31, 0.29, 1)
+polygon = PackedVector2Array(-36, 22, -25.92, -12.1, -6.48, -22, 25.2, -13.64, 36, 22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaYocalla/PuebloYocalla/VillageRock_03" unique_id=513947746]
+shape = SubResource("RectangleShape2D_u72j3")
 
 [node name="ZonaComplejoInca" type="Node2D" parent="." unique_id=1747310493]
 
-[node name="Ground_03" type="StaticBody2D" parent="ZonaComplejoInca" unique_id=1785380816]
-position = Vector2(2450, 564)
-
-[node name="Visual" type="Polygon2D" parent="ZonaComplejoInca/Ground_03" unique_id=1649636236]
-color = Color(0.38, 0.44, 0.57, 1)
-polygon = PackedVector2Array(-550, -40, 550, -40, 550, 40, -550, 40)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaComplejoInca/Ground_03" unique_id=1284146579]
-shape = SubResource("RectangleShape2D_a5l63")
-
 [node name="JefeInca_Test" parent="ZonaComplejoInca" unique_id=401455346 instance=ExtResource("3_x1nsb")]
-position = Vector2(2600, 496)
+position = Vector2(26600, 496)
+
+[node name="ComplexGround" type="StaticBody2D" parent="ZonaComplejoInca" unique_id=1842985625]
+position = Vector2(26250, 564)
+
+[node name="Visual" type="Polygon2D" parent="ZonaComplejoInca/ComplexGround" unique_id=1305451845]
+color = Color(0.38, 0.44, 0.57, 1)
+polygon = PackedVector2Array(-2100, -40, 2100, -40, 2100, 40, -2100, 40)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaComplejoInca/ComplexGround" unique_id=956916720]
+shape = SubResource("RectangleShape2D_g6e1v")
+
+[node name="ComplexWall" type="Polygon2D" parent="ZonaComplejoInca" unique_id=795014382]
+z_index = -4
+position = Vector2(26250, 400)
+color = Color(0.47, 0.42, 0.35, 1)
+polygon = PackedVector2Array(-800, -120, 800, -120, 800, 120, -800, 120)
+
+[node name="ComplexGate" type="Polygon2D" parent="ZonaComplejoInca" unique_id=1233849922]
+z_index = -3
+position = Vector2(25950, 445)
+color = Color(0.26, 0.18, 0.12, 1)
+polygon = PackedVector2Array(-90, -75, 90, -75, 90, 75, -90, 75)
 
 [node name="ObjectiveHUD" type="CanvasLayer" parent="." unique_id=1010854544]
 
@@ -125,4 +684,4 @@ wait_time = 5.0
 one_shot = true
 
 [node name="IntroCamera" type="Camera2D" parent="." unique_id=877676865]
-position = Vector2(1050, 324)
+position = Vector2(900, 324)

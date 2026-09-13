@@ -24,7 +24,7 @@ var level_transition_started: bool = false
 
 
 func _ready() -> void:
-	objective_label.text = "Objetivo: Dirígete al Complejo del Jefe Inca"
+	objective_label.text = "Objetivo: Completa la carrera y llega a Yocalla"
 	objective_label.show()
 	level_complete_label.hide()
 	intro_story_text.hide()
@@ -64,21 +64,28 @@ func _finish_intro() -> void:
 	player_camera.enabled = true
 	player_camera.make_current()
 	intro_camera.enabled = false
+	_show_race_start_message()
+
+
+func _show_race_start_message() -> void:
+	intro_story_text.text = "Kespi participa en la carrera tradicional de Yocalla."
+	intro_story_text.show()
+	await get_tree().create_timer(RACE_MESSAGE_DURATION).timeout
+	if not race_event_started:
+		intro_story_text.hide()
 
 
 func _on_carrera_area_body_entered(body: Node2D) -> void:
 	if race_event_started or body != player:
 		return
 	race_event_started = true
-	while not intro_finished:
-		await get_tree().process_frame
-	intro_story_text.text = "Kespi participa en la carrera tradicional de Yocalla."
-	intro_story_text.show()
-	await get_tree().create_timer(RACE_MESSAGE_DURATION).timeout
 	intro_story_text.text = "¡Kespi gana la carrera!"
+	intro_story_text.show()
 	await get_tree().create_timer(RACE_MESSAGE_DURATION).timeout
 	intro_story_text.hide()
 	lucero.call(&"reveal")
+	objective_label.text = "Objetivo: Explora Yocalla y dirígete al Complejo del Jefe Inca"
+	objective_label.show()
 
 
 func _on_mission_assigned(objective: String) -> void:
