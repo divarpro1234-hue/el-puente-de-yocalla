@@ -7,7 +7,7 @@ const FALL_LIMIT_Y: float = 900.0
 
 var max_health: int = 100
 var current_health: int = 100
-var is_dead: bool = false
+var is_respawning: bool = false
 
 @onready var health_label: Label = get_node_or_null("PlayerHUD/HealthLabel")
 
@@ -30,12 +30,12 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-	if global_position.y > FALL_LIMIT_Y and not is_dead:
+	if global_position.y > FALL_LIMIT_Y and not is_respawning:
 		take_damage(100)
 
 
 func take_damage(amount: int) -> void:
-	if amount <= 0 or is_dead:
+	if amount <= 0 or is_respawning:
 		return
 
 	current_health = maxi(current_health - amount, 0)
@@ -46,13 +46,10 @@ func take_damage(amount: int) -> void:
 	if current_health > 0:
 		return
 
-	is_dead = true
-
-	await get_tree().create_timer(0.8).timeout
-
+	is_respawning = true
 	reset_health()
 	_respawn_at_checkpoint()
-	is_dead = false
+	is_respawning = false
 
 
 func reset_health() -> void:
