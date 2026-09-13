@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dxekm034v8qcp"]
+
+[ext_resource type="Script" uid="uid://dvhwtvegtpufq" path="res://scripts/npc/guardia_inca_test.gd" id="1_rgljp"]
+
+[node name="GuardiaInca_Test" type="Node2D" unique_id=393332264]
+visible = false
+script = ExtResource("1_rgljp")
+
+[node name="Visual" type="Polygon2D" parent="." unique_id=391925278]
+color = Color(0.48, 0.16, 0.12, 1)
+polygon = PackedVector2Array(-19, 0, 19, 0, 15, -52, -15, -52)
+
+[node name="Emblem" type="Polygon2D" parent="." unique_id=969327366]
+position = Vector2(0, -28)
+color = Color(0.88, 0.68, 0.2, 1)
+polygon = PackedVector2Array(-7, 5, 0, -8, 7, 5)
+
+[node name="DialogueText" type="Label" parent="." unique_id=1333561007]
+visible = false
+custom_minimum_size = Vector2(440, 0)
+offset_left = -220.0
+offset_top = -98.0
+offset_right = 220.0
+offset_bottom = -58.0
+text = "Guardia: Kespi, el Jefe Inca exige tu presencia."
+horizontal_alignment = 1
+autowrap_mode = 3
