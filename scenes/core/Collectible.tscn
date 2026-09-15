@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://b6cq2rv1adftk"]
+
+[ext_resource type="Script" uid="uid://bsbxvtwjmekky" path="res://scripts/core/collectible.gd" id="1_3p3ur"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s070u"]
+size = Vector2(88, 80)
+
+[node name="Collectible" type="Node2D" unique_id=1204342139]
+script = ExtResource("1_3p3ur")
+
+[node name="VisualRoot" type="Node2D" parent="." unique_id=2144212004]
+
+[node name="AppleVisual" type="Node2D" parent="VisualRoot" unique_id=716894220]
+
+[node name="Fruit" type="Polygon2D" parent="VisualRoot/AppleVisual" unique_id=1021618147]
+color = Color(0.84, 0.18, 0.16, 1)
+antialiased = true
+polygon = PackedVector2Array(-14, -26, -6, -34, 6, -34, 15, -25, 17, -12, 10, -1, 0, 3, -10, -1, -17, -12)
+
+[node name="Leaf" type="Polygon2D" parent="VisualRoot/AppleVisual" unique_id=1699417000]
+color = Color(0.26, 0.56, 0.22, 1)
+antialiased = true
+polygon = PackedVector2Array(0, -33, 8, -45, 18, -42, 8, -34)
+
+[node name="HerbVisual" type="Node2D" parent="VisualRoot" unique_id=1403236486]
+
+[node name="LeafLeft" type="Polygon2D" parent="VisualRoot/HerbVisual" unique_id=1200111248]
+color = Color(0.24, 0.61, 0.27, 1)
+antialiased = true
+polygon = PackedVector2Array(-3, 2, -24, -23, -17, -35, -2, -13)
+
+[node name="LeafCenter" type="Polygon2D" parent="VisualRoot/HerbVisual" unique_id=576885789]
+color = Color(0.31, 0.72, 0.32, 1)
+antialiased = true
+polygon = PackedVector2Array(-4, 2, -7, -39, 3, -50, 8, -12)
+
+[node name="LeafRight" type="Polygon2D" parent="VisualRoot/HerbVisual" unique_id=1206288255]
+color = Color(0.21, 0.55, 0.25, 1)
+antialiased = true
+polygon = PackedVector2Array(2, 2, 16, -34, 27, -25, 9, -7)
+
+[node name="WaterVisual" type="Node2D" parent="VisualRoot" unique_id=1346932756]
+
+[node name="Container" type="Polygon2D" parent="VisualRoot/WaterVisual" unique_id=1719577694]
+color = Color(0.48, 0.57, 0.62, 1)
+antialiased = true
+polygon = PackedVector2Array(-20, -36, 20, -36, 17, 2, -17, 2)
+
+[node name="Water" type="Polygon2D" parent="VisualRoot/WaterVisual" unique_id=753394864]
+color = Color(0.15, 0.6, 0.84, 1)
+antialiased = true
+polygon = PackedVector2Array(-16, -22, 16, -22, 14, -1, -14, -1)
+
+[node name="Rim" type="Polygon2D" parent="VisualRoot/WaterVisual" unique_id=184334749]
+color = Color(0.7, 0.76, 0.78, 1)
+antialiased = true
+polygon = PackedVector2Array(-22, -39, 22, -39, 22, -33, -22, -33)
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=361908372]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=47624506]
+position = Vector2(0, -20)
+shape = SubResource("RectangleShape2D_s070u")
+
+[node name="InteractionPrompt" type="Label" parent="." unique_id=89600047]
+offset_left = -72.0
+offset_top = -82.0
+offset_right = 72.0
+offset_bottom = -54.0
+theme_override_colors/font_color = Color(1, 0.93, 0.68, 1)
+theme_override_colors/font_outline_color = Color(0.08, 0.07, 0.05, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 17
+text = "[E] Recoger"
+horizontal_alignment = 1

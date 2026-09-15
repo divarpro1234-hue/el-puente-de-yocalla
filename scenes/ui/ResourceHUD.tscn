@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://clx28geadsgyg"]
+
+[ext_resource type="Script" uid="uid://d05vyn00xgr67" path="res://scripts/ui/resource_hud.gd" id="1_jaayj"]
+
+[node name="ResourceHUD" type="CanvasLayer" unique_id=1499777590]
+layer = 2
+script = ExtResource("1_jaayj")
+
+[node name="ApplesLabel" type="Label" parent="." unique_id=506952761]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -244.0
+offset_top = 76.0
+offset_right = -24.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 0.78, 0.72, 1)
+theme_override_colors/font_outline_color = Color(0.06, 0.07, 0.08, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 17
+text = "Manzanas: 0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="HerbsLabel" type="Label" parent="." unique_id=1485479813]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -244.0
+offset_top = 102.0
+offset_right = -24.0
+offset_bottom = 126.0
+theme_override_colors/font_color = Color(0.72, 1, 0.72, 1)
+theme_override_colors/font_outline_color = Color(0.06, 0.07, 0.08, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 17
+text = "Hierbas: 0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="WaterLabel" type="Label" parent="." unique_id=396499623]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -244.0
+offset_top = 128.0
+offset_right = -24.0
+offset_bottom = 152.0
+theme_override_colors/font_color = Color(0.7, 0.88, 1, 1)
+theme_override_colors/font_outline_color = Color(0.06, 0.07, 0.08, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 17
+text = "Agua: 0"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="FeedbackLabel" type="Label" parent="." unique_id=465610462]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -244.0
+offset_top = 164.0
+offset_right = -24.0
+offset_bottom = 194.0
+theme_override_colors/font_color = Color(1, 0.92, 0.62, 1)
+theme_override_colors/font_outline_color = Color(0.06, 0.07, 0.08, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="FeedbackTimer" type="Timer" parent="." unique_id=1138202557]
+wait_time = 1.25
+one_shot = true

@@ -4,6 +4,11 @@ const INFO_IDS: Array[String] = ["info_01", "info_02", "info_03"]
 const NEXT_LEVEL_PATH: String = "res://scenes/levels/Nivel03_Puente_Yocalla.tscn"
 
 var collected_info_ids: Dictionary = {}
+var collected_resources: Dictionary = {
+	"apple": 0,
+	"herb": 0,
+	"water": 0,
+}
 var return_mission_assigned: bool = false
 var level_completed: bool = false
 var level_transition_started: bool = false
@@ -14,6 +19,8 @@ var level_transition_started: bool = false
 @onready var level_end_area: Area2D = $SenderosRegreso/LevelEndArea
 @onready var level_complete_label: Label = $ObjectiveHUD/LevelCompleteLabel
 @onready var level_transition_timer: Timer = $LevelTransitionTimer
+@onready var resource_hud: CanvasLayer = $ResourceHUD
+@onready var collectibles_root: Node2D = $Collectibles
 @onready var info_points: Array[Node2D] = [
 	$ZonaReconocimiento/InfoPoint_01,
 	$ZonaReconocimiento/InfoPoint_02,
@@ -30,7 +37,10 @@ func _ready() -> void:
 	level_transition_timer.timeout.connect(_on_level_transition_timer_timeout)
 	for point: Node2D in info_points:
 		point.connect(&"information_collected", _on_information_collected)
+	for collectible: Node in collectibles_root.get_children():
+		collectible.connect(&"collectible_collected", _on_collectible_collected)
 	_update_info_counter()
+	_update_resource_hud()
 
 
 func _on_information_collected(info_id: String) -> void:
@@ -64,6 +74,23 @@ func _on_level_end_body_entered(body: Node2D) -> void:
 	if not level_transition_started:
 		level_transition_started = true
 		level_transition_timer.start()
+
+
+func _on_collectible_collected(collectible_type: String, amount: int) -> void:
+	if not collected_resources.has(collectible_type) or amount <= 0:
+		return
+	collected_resources[collectible_type] = int(collected_resources[collectible_type]) + amount
+	_update_resource_hud()
+	resource_hud.call(&"show_collection_feedback", collectible_type, amount)
+
+
+func _update_resource_hud() -> void:
+	resource_hud.call(
+		&"update_counts",
+		int(collected_resources["apple"]),
+		int(collected_resources["herb"]),
+		int(collected_resources["water"]),
+	)
 
 
 func _update_info_counter() -> void:
