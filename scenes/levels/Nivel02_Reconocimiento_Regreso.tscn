@@ -167,6 +167,9 @@ size = Vector2(300, 36)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7g6w7"]
 size = Vector2(340, 36)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6edud"]
+size = Vector2(6000, 720)
+
 [node name="Nivel02_Reconocimiento_Regreso" type="Node2D" unique_id=880944882]
 script = ExtResource("1_ilpqe")
 
@@ -887,6 +890,13 @@ polygon = PackedVector2Array(-170, -18, 170, -18, 170, 18, -170, 18)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaTormenta/SafeLedge_02" unique_id=1879399872]
 shape = SubResource("RectangleShape2D_7g6w7")
 
+[node name="StormDamageArea" type="Area2D" parent="ZonaTormenta" unique_id=1897232882]
+position = Vector2(52000, 300)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaTormenta/StormDamageArea" unique_id=1975697551]
+shape = SubResource("RectangleShape2D_6edud")
+
 [node name="ResourceHUD" parent="." unique_id=1499777590 instance=ExtResource("6_auhyr")]
 
 [node name="Collectibles" type="Node2D" parent="." unique_id=59649899]
@@ -919,3 +929,6 @@ position = Vector2(37620, 500)
 [node name="Water_02" parent="Collectibles" unique_id=1054066345 instance=ExtResource("7_lwtln")]
 position = Vector2(50500, 500)
 collectible_type = "water"
+
+[node name="StormDamageTimer" type="Timer" parent="." unique_id=1501437249]
+wait_time = 4.0

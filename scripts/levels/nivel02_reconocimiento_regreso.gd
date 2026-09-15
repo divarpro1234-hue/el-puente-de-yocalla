@@ -3,6 +3,8 @@ extends Node2D
 const INFO_IDS: Array[String] = ["info_01", "info_02", "info_03"]
 const NEXT_LEVEL_PATH: String = "res://scenes/levels/Nivel03_Puente_Yocalla.tscn"
 const HERB_HEAL_AMOUNT: int = 20
+const STORM_DAMAGE_AMOUNT: int = 10
+const STORM_DAMAGE_INTERVAL: float = 4.0
 
 var collected_info_ids: Dictionary = {}
 var collected_resources: Dictionary = {
@@ -13,6 +15,7 @@ var collected_resources: Dictionary = {
 var return_mission_assigned: bool = false
 var level_completed: bool = false
 var level_transition_started: bool = false
+var is_player_in_storm_damage_area: bool = false
 
 @onready var objective_label: Label = $ObjectiveHUD/ObjectiveLabel
 @onready var info_counter: Label = $ObjectiveHUD/InfoCounter
@@ -23,6 +26,8 @@ var level_transition_started: bool = false
 @onready var resource_hud: CanvasLayer = $ResourceHUD
 @onready var collectibles_root: Node2D = $Collectibles
 @onready var player: CharacterBody2D = $Player
+@onready var storm_damage_area: Area2D = $ZonaTormenta/StormDamageArea
+@onready var storm_damage_timer: Timer = $StormDamageTimer
 @onready var info_points: Array[Node2D] = [
 	$ZonaReconocimiento/InfoPoint_01,
 	$ZonaReconocimiento/InfoPoint_02,
@@ -35,6 +40,9 @@ func _ready() -> void:
 	objective_label.show()
 	level_complete_label.hide()
 	level_end_area.body_entered.connect(_on_level_end_body_entered)
+	storm_damage_area.body_entered.connect(_on_storm_damage_area_body_entered)
+	storm_damage_area.body_exited.connect(_on_storm_damage_area_body_exited)
+	storm_damage_timer.timeout.connect(_on_storm_damage_timer_timeout)
 	mensajero.connect(&"return_mission_assigned", _on_return_mission_assigned)
 	level_transition_timer.timeout.connect(_on_level_transition_timer_timeout)
 	for point: Node2D in info_points:
@@ -72,7 +80,7 @@ func _on_level_end_body_entered(body: Node2D) -> void:
 		return
 	if collected_info_ids.size() != INFO_IDS.size():
 		return
-	if not (body is CharacterBody2D) or body != get_node("Player"):
+	if not (body is CharacterBody2D) or body != player:
 		return
 	level_completed = true
 	level_complete_label.show()
@@ -105,6 +113,36 @@ func _try_use_herb() -> void:
 	collected_resources["herb"] = int(collected_resources["herb"]) - 1
 	_update_resource_hud()
 	resource_hud.call(&"show_feedback", "Hierba usada: +%d vida" % HERB_HEAL_AMOUNT)
+
+
+func _on_storm_damage_area_body_entered(body: Node2D) -> void:
+	if body != player or is_player_in_storm_damage_area:
+		return
+	is_player_in_storm_damage_area = true
+	resource_hud.call(&"show_feedback", "La tormenta está debilitando a Kespi.")
+	storm_damage_timer.start(STORM_DAMAGE_INTERVAL)
+
+
+func _on_storm_damage_area_body_exited(body: Node2D) -> void:
+	if body == player:
+		_stop_storm_damage()
+
+
+func _on_storm_damage_timer_timeout() -> void:
+	if not is_player_in_storm_damage_area or not storm_damage_area.overlaps_body(player):
+		_stop_storm_damage()
+		return
+
+	var health_before_damage: int = int(player.get("current_health"))
+	player.call(&"take_damage", STORM_DAMAGE_AMOUNT)
+
+	if health_before_damage <= STORM_DAMAGE_AMOUNT:
+		_stop_storm_damage()
+
+
+func _stop_storm_damage() -> void:
+	is_player_in_storm_damage_area = false
+	storm_damage_timer.stop()
 
 
 func _update_resource_hud() -> void:
