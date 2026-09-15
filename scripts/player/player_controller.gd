@@ -59,6 +59,20 @@ func reset_health() -> void:
 		health_label.text = "❤ Vida: %d" % current_health
 
 
+func can_heal() -> bool:
+	return not is_respawning and current_health > 0 and current_health < max_health
+
+
+func heal(amount: int) -> void:
+	if amount <= 0 or not can_heal():
+		return
+
+	current_health = mini(current_health + amount, max_health)
+
+	if health_label:
+		health_label.text = "❤ Vida: %d" % current_health
+
+
 func _respawn_at_checkpoint() -> void:
 	global_position = CheckpointManager.get_respawn_position()
 	velocity = Vector2.ZERO

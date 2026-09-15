@@ -30,10 +30,16 @@ func show_collection_feedback(collectible_type: String, amount: int) -> void:
 		"herb": "Hierbas",
 		"water": "Agua",
 	}
+	var message: String
 	if amount == 1:
-		feedback_label.text = str(singular_messages.get(collectible_type, "Recurso obtenido"))
+		message = str(singular_messages.get(collectible_type, "Recurso obtenido"))
 	else:
-		feedback_label.text = "%s obtenidas: %d" % [str(plural_names.get(collectible_type, "Recursos")), amount]
+		message = "%s obtenidas: %d" % [str(plural_names.get(collectible_type, "Recursos")), amount]
+	show_feedback(message)
+
+
+func show_feedback(message: String) -> void:
+	feedback_label.text = message
 	feedback_label.show()
 	feedback_timer.start()
 
