@@ -932,3 +932,9 @@ collectible_type = "water"
 
 [node name="StormDamageTimer" type="Timer" parent="." unique_id=1501437249]
 wait_time = 4.0
+
+[node name="Checkpoint_Intermedio_01" parent="." unique_id=1217148391 instance=ExtResource("5_dig7p")]
+position = Vector2(11300, 500)
+
+[node name="Checkpoint_Intermedio_02" parent="." unique_id=1474358479 instance=ExtResource("5_dig7p")]
+position = Vector2(46200, 500)
