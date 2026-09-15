@@ -33,6 +33,108 @@ size = Vector2(520, 190)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nduto"]
 size = Vector2(180, 140)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khcee"]
+size = Vector2(3000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qena5"]
+size = Vector2(3000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_io7ac"]
+size = Vector2(2000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_751wh"]
+size = Vector2(105, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8q84d"]
+size = Vector2(145, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3kfx"]
+size = Vector2(280, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ieej"]
+size = Vector2(2000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6x5pv"]
+size = Vector2(2000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pw0af"]
+size = Vector2(2000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eejyn"]
+size = Vector2(2000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pdlq5"]
+size = Vector2(130, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x0ube"]
+size = Vector2(115, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7vu8g"]
+size = Vector2(160, 78)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a7hue"]
+size = Vector2(260, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ksh7v"]
+size = Vector2(260, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gkud6"]
+size = Vector2(2000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dogf6"]
+size = Vector2(2000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ji4eu"]
+size = Vector2(2000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jityb"]
+size = Vector2(2000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cf3vr"]
+size = Vector2(380, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aoe33"]
+size = Vector2(360, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5q6wi"]
+size = Vector2(150, 76)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4b7bi"]
+size = Vector2(170, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4iy3"]
+size = Vector2(2000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_se146"]
+size = Vector2(2000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6bu6"]
+size = Vector2(2000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x78ml"]
+size = Vector2(2000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otgi5"]
+size = Vector2(1000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hjkbi"]
+size = Vector2(230, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nd60d"]
+size = Vector2(190, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kh7q"]
+size = Vector2(320, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_47vhd"]
+size = Vector2(2000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwent"]
+size = Vector2(1000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8nqko"]
+size = Vector2(135, 72)
+
 [node name="Nivel03_Puente_Yocalla" type="Node2D" unique_id=2100613900]
 script = ExtResource("1_m53sp")
 
@@ -40,6 +142,7 @@ script = ExtResource("1_m53sp")
 position = Vector2(300, 500)
 
 [node name="ZonaRioPuente" type="Node2D" parent="." unique_id=44802814]
+position = Vector2(36000, 0)
 
 [node name="Ground_Izquierda" type="StaticBody2D" parent="ZonaRioPuente" unique_id=1183558644]
 position = Vector2(600, 644)
@@ -159,6 +262,7 @@ shape = SubResource("RectangleShape2D_y1gpa")
 disabled = true
 
 [node name="ZonaEpilogo" type="Node2D" parent="." unique_id=464544751]
+position = Vector2(36000, 0)
 
 [node name="Ground_Final" type="StaticBody2D" parent="ZonaEpilogo" unique_id=946044868]
 position = Vector2(3300, 644)
@@ -294,7 +398,7 @@ offset_bottom = 88.0
 text = "El puente todavía no está listo. Debo esperar."
 
 [node name="PactArea" type="Area2D" parent="." unique_id=349111852]
-position = Vector2(1080, 470)
+position = Vector2(37080, 470)
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PactArea" unique_id=1368199581]
@@ -310,14 +414,14 @@ offset_bottom = -100.0
 text = "[E] Pedir ayuda"
 
 [node name="Satanas" parent="." unique_id=696938969 instance=ExtResource("3_587l1")]
-position = Vector2(1320, 480)
+position = Vector2(37320, 480)
 
 [node name="OutcomeTimer" type="Timer" parent="." unique_id=700191916]
 wait_time = 0.9
 one_shot = true
 
 [node name="Guardian" parent="." unique_id=1398259284 instance=ExtResource("4_p6wyq")]
-position = Vector2(1760, 478)
+position = Vector2(37760, 478)
 
 [node name="FinalStoryTimer" type="Timer" parent="." unique_id=1293282999]
 wait_time = 2.0
@@ -333,3 +437,463 @@ position = Vector2(300, 500)
 [node name="BridgeBlockedMessageTimer" type="Timer" parent="." unique_id=1811182205]
 wait_time = 2.0
 one_shot = true
+
+[node name="ApproachBackground" type="Node2D" parent="." unique_id=1894172208]
+z_index = -20
+
+[node name="Sky" type="Polygon2D" parent="ApproachBackground" unique_id=1164067894]
+z_index = -20
+position = Vector2(20500, 20)
+color = Color(0.57, 0.7, 0.74, 1)
+polygon = PackedVector2Array(-20500, -600, 20500, -600, 20500, 600, -20500, 600)
+
+[node name="MountainsFar" type="Polygon2D" parent="ApproachBackground" unique_id=1079680190]
+z_index = -19
+color = Color(0.28, 0.36, 0.38, 1)
+polygon = PackedVector2Array(0, 440, 2300, 100, 4900, 400, 7600, 20, 10600, 390, 13900, 50, 17100, 410, 20500, -10, 24100, 390, 27800, 20, 31500, 380, 35100, -20, 39000, 400, 41000, 150, 41000, 524, 0, 524)
+
+[node name="MountainsNear" type="Polygon2D" parent="ApproachBackground" unique_id=15756097]
+z_index = -18
+color = Color(0.38, 0.44, 0.41, 1)
+polygon = PackedVector2Array(0, 470, 3200, 270, 6100, 460, 9800, 220, 13200, 470, 16900, 200, 20500, 460, 24600, 190, 28600, 465, 32600, 170, 36500, 460, 41000, 210, 41000, 524, 0, 524)
+
+[node name="SenderoMontana" type="Node2D" parent="." unique_id=641905396]
+
+[node name="Ground_Sendero_01" type="StaticBody2D" parent="SenderoMontana" unique_id=269447165]
+position = Vector2(1500, 572)
+
+[node name="Visual" type="Polygon2D" parent="SenderoMontana/Ground_Sendero_01" unique_id=538555430]
+color = Color(0.45, 0.34, 0.23, 1)
+polygon = PackedVector2Array(-1500, -48, 1500, -48, 1500, 48, -1500, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SenderoMontana/Ground_Sendero_01" unique_id=2041386758]
+shape = SubResource("RectangleShape2D_khcee")
+
+[node name="Ground_Sendero_02" type="StaticBody2D" parent="SenderoMontana" unique_id=1407313774]
+position = Vector2(4500, 572)
+
+[node name="Visual" type="Polygon2D" parent="SenderoMontana/Ground_Sendero_02" unique_id=425712272]
+color = Color(0.48, 0.36, 0.24, 1)
+polygon = PackedVector2Array(-1500, -48, 1500, -48, 1500, 48, -1500, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SenderoMontana/Ground_Sendero_02" unique_id=958983071]
+shape = SubResource("RectangleShape2D_qena5")
+
+[node name="Ground_Sendero_03" type="StaticBody2D" parent="SenderoMontana" unique_id=1804708226]
+position = Vector2(7000, 572)
+
+[node name="Visual" type="Polygon2D" parent="SenderoMontana/Ground_Sendero_03" unique_id=1839630522]
+color = Color(0.5, 0.38, 0.25, 1)
+polygon = PackedVector2Array(-1000, -48, 1000, -48, 1000, 48, -1000, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SenderoMontana/Ground_Sendero_03" unique_id=2093294446]
+shape = SubResource("RectangleShape2D_io7ac")
+
+[node name="Rock_Sendero_01" type="StaticBody2D" parent="SenderoMontana" unique_id=1820616393]
+position = Vector2(1750, 495)
+
+[node name="Visual" type="Polygon2D" parent="SenderoMontana/Rock_Sendero_01" unique_id=2121282673]
+color = Color(0.42, 0.39, 0.34, 1)
+polygon = PackedVector2Array(-52.5, -29, 52.5, -29, 52.5, 29, -52.5, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SenderoMontana/Rock_Sendero_01" unique_id=1144952400]
+shape = SubResource("RectangleShape2D_751wh")
+
+[node name="Rock_Sendero_02" type="StaticBody2D" parent="SenderoMontana" unique_id=275501618]
+position = Vector2(5200, 486)
+
+[node name="Visual" type="Polygon2D" parent="SenderoMontana/Rock_Sendero_02" unique_id=1297532256]
+color = Color(0.46, 0.42, 0.35, 1)
+polygon = PackedVector2Array(-72.5, -38, 72.5, -38, 72.5, 38, -72.5, 38)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SenderoMontana/Rock_Sendero_02" unique_id=903588317]
+shape = SubResource("RectangleShape2D_8q84d")
+
+[node name="LowPlatform_Sendero" type="StaticBody2D" parent="SenderoMontana" unique_id=606193893]
+position = Vector2(6750, 445)
+
+[node name="Visual" type="Polygon2D" parent="SenderoMontana/LowPlatform_Sendero" unique_id=1763348921]
+color = Color(0.6, 0.49, 0.31, 1)
+polygon = PackedVector2Array(-140, -18, 140, -18, 140, 18, -140, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SenderoMontana/LowPlatform_Sendero" unique_id=1626091015]
+shape = SubResource("RectangleShape2D_k3kfx")
+
+[node name="Bush_Sendero_01" type="Node2D" parent="SenderoMontana" unique_id=838743369]
+position = Vector2(900, 524)
+
+[node name="Foliage" type="Polygon2D" parent="SenderoMontana/Bush_Sendero_01" unique_id=315055208]
+color = Color(0.31, 0.48, 0.28, 1)
+polygon = PackedVector2Array(-34, 0, -26, -32, -8, -18, 4, -45, 19, -19, 36, -29, 42, 0)
+
+[node name="Bush_Sendero_02" type="Node2D" parent="SenderoMontana" unique_id=2111050167]
+position = Vector2(3900, 524)
+
+[node name="Foliage" type="Polygon2D" parent="SenderoMontana/Bush_Sendero_02" unique_id=668719709]
+color = Color(0.29, 0.43, 0.27, 1)
+polygon = PackedVector2Array(-34, 0, -26, -32, -8, -18, 4, -45, 19, -19, 36, -29, 42, 0)
+
+[node name="Tree_Sendero_01" type="Node2D" parent="SenderoMontana" unique_id=839294323]
+position = Vector2(7450, 524)
+
+[node name="Trunk" type="Polygon2D" parent="SenderoMontana/Tree_Sendero_01" unique_id=879566659]
+position = Vector2(0, -38)
+color = Color(0.27, 0.18, 0.11, 1)
+polygon = PackedVector2Array(-8, -38, 8, -38, 8, 38, -8, 38)
+
+[node name="Crown" type="Polygon2D" parent="SenderoMontana/Tree_Sendero_01" unique_id=1616700984]
+color = Color(0.26, 0.4, 0.25, 1)
+polygon = PackedVector2Array(-48, -62, -19, -119, 2, -95, 27, -130, 54, -62)
+
+[node name="AscensoRocoso" type="Node2D" parent="." unique_id=1092429450]
+
+[node name="Ground_Ascenso_01" type="StaticBody2D" parent="AscensoRocoso" unique_id=1856771872]
+position = Vector2(9000, 572)
+
+[node name="Visual" type="Polygon2D" parent="AscensoRocoso/Ground_Ascenso_01" unique_id=1971096277]
+color = Color(0.45, 0.41, 0.34, 1)
+polygon = PackedVector2Array(-1000, -48, 1000, -48, 1000, 48, -1000, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AscensoRocoso/Ground_Ascenso_01" unique_id=725341032]
+shape = SubResource("RectangleShape2D_3ieej")
+
+[node name="Ground_Ascenso_02" type="StaticBody2D" parent="AscensoRocoso" unique_id=1491291577]
+position = Vector2(11000, 560)
+
+[node name="Visual" type="Polygon2D" parent="AscensoRocoso/Ground_Ascenso_02" unique_id=658389658]
+color = Color(0.45, 0.41, 0.34, 1)
+polygon = PackedVector2Array(-1000, -48, 1000, -48, 1000, 48, -1000, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AscensoRocoso/Ground_Ascenso_02" unique_id=1681714010]
+shape = SubResource("RectangleShape2D_6x5pv")
+
+[node name="Ground_Ascenso_03" type="StaticBody2D" parent="AscensoRocoso" unique_id=1249659299]
+position = Vector2(13000, 548)
+
+[node name="Visual" type="Polygon2D" parent="AscensoRocoso/Ground_Ascenso_03" unique_id=1670886663]
+color = Color(0.45, 0.41, 0.34, 1)
+polygon = PackedVector2Array(-1000, -48, 1000, -48, 1000, 48, -1000, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AscensoRocoso/Ground_Ascenso_03" unique_id=306140385]
+shape = SubResource("RectangleShape2D_pw0af")
+
+[node name="Ground_Ascenso_04" type="StaticBody2D" parent="AscensoRocoso" unique_id=31963498]
+position = Vector2(15000, 560)
+
+[node name="Visual" type="Polygon2D" parent="AscensoRocoso/Ground_Ascenso_04" unique_id=176344154]
+color = Color(0.45, 0.41, 0.34, 1)
+polygon = PackedVector2Array(-1000, -48, 1000, -48, 1000, 48, -1000, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AscensoRocoso/Ground_Ascenso_04" unique_id=1607266580]
+shape = SubResource("RectangleShape2D_eejyn")
+
+[node name="Rock_Ascenso_01" type="StaticBody2D" parent="AscensoRocoso" unique_id=148231441]
+position = Vector2(9300, 490)
+
+[node name="Visual" type="Polygon2D" parent="AscensoRocoso/Rock_Ascenso_01" unique_id=1508967118]
+color = Color(0.4, 0.4, 0.39, 1)
+polygon = PackedVector2Array(-65, -34, 65, -34, 65, 34, -65, 34)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AscensoRocoso/Rock_Ascenso_01" unique_id=247570321]
+shape = SubResource("RectangleShape2D_pdlq5")
+
+[node name="Rock_Ascenso_02" type="StaticBody2D" parent="AscensoRocoso" unique_id=1831843459]
+position = Vector2(11900, 489)
+
+[node name="Visual" type="Polygon2D" parent="AscensoRocoso/Rock_Ascenso_02" unique_id=135183603]
+color = Color(0.37, 0.38, 0.38, 1)
+polygon = PackedVector2Array(-57.5, -35, 57.5, -35, 57.5, 35, -57.5, 35)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AscensoRocoso/Rock_Ascenso_02" unique_id=1469502666]
+shape = SubResource("RectangleShape2D_x0ube")
+
+[node name="Rock_Ascenso_03" type="StaticBody2D" parent="AscensoRocoso" unique_id=1406500116]
+position = Vector2(14500, 480)
+
+[node name="Visual" type="Polygon2D" parent="AscensoRocoso/Rock_Ascenso_03" unique_id=261617745]
+color = Color(0.42, 0.41, 0.39, 1)
+polygon = PackedVector2Array(-80, -39, 80, -39, 80, 39, -80, 39)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AscensoRocoso/Rock_Ascenso_03" unique_id=1876875882]
+shape = SubResource("RectangleShape2D_7vu8g")
+
+[node name="Step_Ascenso_01" type="StaticBody2D" parent="AscensoRocoso" unique_id=669196105]
+position = Vector2(10600, 430)
+
+[node name="Visual" type="Polygon2D" parent="AscensoRocoso/Step_Ascenso_01" unique_id=1568228985]
+color = Color(0.53, 0.49, 0.4, 1)
+polygon = PackedVector2Array(-130, -17, 130, -17, 130, 17, -130, 17)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AscensoRocoso/Step_Ascenso_01" unique_id=1682438458]
+shape = SubResource("RectangleShape2D_a7hue")
+
+[node name="Step_Ascenso_02" type="StaticBody2D" parent="AscensoRocoso" unique_id=1285889554]
+position = Vector2(10910, 390)
+
+[node name="Visual" type="Polygon2D" parent="AscensoRocoso/Step_Ascenso_02" unique_id=1315734208]
+color = Color(0.55, 0.51, 0.42, 1)
+polygon = PackedVector2Array(-130, -17, 130, -17, 130, 17, -130, 17)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AscensoRocoso/Step_Ascenso_02" unique_id=668810099]
+shape = SubResource("RectangleShape2D_ksh7v")
+
+[node name="RockWallBack" type="Polygon2D" parent="AscensoRocoso" unique_id=484523002]
+z_index = -2
+color = Color(0.34, 0.35, 0.34, 1)
+polygon = PackedVector2Array(12800, 524, 13200, 230, 13500, 524, 14000, 524, 14350, 280, 14750, 524)
+
+[node name="Quebrada" type="Node2D" parent="." unique_id=1042405553]
+
+[node name="Ground_Quebrada_01" type="StaticBody2D" parent="Quebrada" unique_id=508903918]
+position = Vector2(17000, 572)
+
+[node name="Visual" type="Polygon2D" parent="Quebrada/Ground_Quebrada_01" unique_id=700111160]
+color = Color(0.43, 0.34, 0.29, 1)
+polygon = PackedVector2Array(-1000, -48, 1000, -48, 1000, 48, -1000, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Quebrada/Ground_Quebrada_01" unique_id=1453922845]
+shape = SubResource("RectangleShape2D_gkud6")
+
+[node name="Ground_Quebrada_02" type="StaticBody2D" parent="Quebrada" unique_id=1378396608]
+position = Vector2(19000, 572)
+
+[node name="Visual" type="Polygon2D" parent="Quebrada/Ground_Quebrada_02" unique_id=1709885802]
+color = Color(0.43, 0.34, 0.29, 1)
+polygon = PackedVector2Array(-1000, -48, 1000, -48, 1000, 48, -1000, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Quebrada/Ground_Quebrada_02" unique_id=785777345]
+shape = SubResource("RectangleShape2D_dogf6")
+
+[node name="Ground_Quebrada_03" type="StaticBody2D" parent="Quebrada" unique_id=1135843826]
+position = Vector2(21000, 572)
+
+[node name="Visual" type="Polygon2D" parent="Quebrada/Ground_Quebrada_03" unique_id=37816748]
+color = Color(0.43, 0.34, 0.29, 1)
+polygon = PackedVector2Array(-1000, -48, 1000, -48, 1000, 48, -1000, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Quebrada/Ground_Quebrada_03" unique_id=1734571168]
+shape = SubResource("RectangleShape2D_ji4eu")
+
+[node name="Ground_Quebrada_04" type="StaticBody2D" parent="Quebrada" unique_id=131435365]
+position = Vector2(23000, 572)
+
+[node name="Visual" type="Polygon2D" parent="Quebrada/Ground_Quebrada_04" unique_id=1339352240]
+color = Color(0.43, 0.34, 0.29, 1)
+polygon = PackedVector2Array(-1000, -48, 1000, -48, 1000, 48, -1000, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Quebrada/Ground_Quebrada_04" unique_id=1368116728]
+shape = SubResource("RectangleShape2D_jityb")
+
+[node name="RavineWallBack" type="Polygon2D" parent="Quebrada" unique_id=1442818940]
+z_index = -3
+color = Color(0.3, 0.3, 0.3, 1)
+polygon = PackedVector2Array(16000, 524, 16600, 120, 17300, 524, 22600, 524, 23300, 150, 24000, 524)
+
+[node name="WaterThread_01" type="Polygon2D" parent="Quebrada" unique_id=740085102]
+z_index = -1
+position = Vector2(18200, 514)
+color = Color(0.2, 0.49, 0.6, 0.85)
+polygon = PackedVector2Array(-450, -9, 450, -9, 450, 9, -450, 9)
+
+[node name="WaterThread_02" type="Polygon2D" parent="Quebrada" unique_id=1654409612]
+z_index = -1
+position = Vector2(21700, 514)
+color = Color(0.18, 0.45, 0.57, 0.8)
+polygon = PackedVector2Array(-380, -8, 380, -8, 380, 8, -380, 8)
+
+[node name="NarrowPass_01" type="StaticBody2D" parent="Quebrada" unique_id=16819806]
+position = Vector2(19000, 458)
+
+[node name="Visual" type="Polygon2D" parent="Quebrada/NarrowPass_01" unique_id=1589174723]
+color = Color(0.48, 0.42, 0.35, 1)
+polygon = PackedVector2Array(-190, -17, 190, -17, 190, 17, -190, 17)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Quebrada/NarrowPass_01" unique_id=1169498796]
+shape = SubResource("RectangleShape2D_cf3vr")
+
+[node name="NarrowPass_02" type="StaticBody2D" parent="Quebrada" unique_id=2046027898]
+position = Vector2(19450, 430)
+
+[node name="Visual" type="Polygon2D" parent="Quebrada/NarrowPass_02" unique_id=333670947]
+color = Color(0.48, 0.42, 0.35, 1)
+polygon = PackedVector2Array(-180, -17, 180, -17, 180, 17, -180, 17)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Quebrada/NarrowPass_02" unique_id=216839046]
+shape = SubResource("RectangleShape2D_aoe33")
+
+[node name="Rock_Quebrada_01" type="StaticBody2D" parent="Quebrada" unique_id=754375132]
+position = Vector2(20500, 486)
+
+[node name="Visual" type="Polygon2D" parent="Quebrada/Rock_Quebrada_01" unique_id=1027251358]
+color = Color(0.39, 0.36, 0.34, 1)
+polygon = PackedVector2Array(-75, -38, 75, -38, 75, 38, -75, 38)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Quebrada/Rock_Quebrada_01" unique_id=1587129217]
+shape = SubResource("RectangleShape2D_5q6wi")
+
+[node name="Rock_Quebrada_02" type="StaticBody2D" parent="Quebrada" unique_id=2135632672]
+position = Vector2(22900, 492)
+
+[node name="Visual" type="Polygon2D" parent="Quebrada/Rock_Quebrada_02" unique_id=1841251009]
+color = Color(0.4, 0.37, 0.34, 1)
+polygon = PackedVector2Array(-85, -32, 85, -32, 85, 32, -85, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Quebrada/Rock_Quebrada_02" unique_id=1911310017]
+shape = SubResource("RectangleShape2D_4b7bi")
+
+[node name="PasoTormenta" type="Node2D" parent="." unique_id=1121644065]
+
+[node name="Ground_Tormenta_01" type="StaticBody2D" parent="PasoTormenta" unique_id=144560457]
+position = Vector2(25000, 572)
+
+[node name="Visual" type="Polygon2D" parent="PasoTormenta/Ground_Tormenta_01" unique_id=667904890]
+color = Color(0.31, 0.33, 0.36, 1)
+polygon = PackedVector2Array(-1000, -48, 1000, -48, 1000, 48, -1000, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PasoTormenta/Ground_Tormenta_01" unique_id=724936116]
+shape = SubResource("RectangleShape2D_t4iy3")
+
+[node name="Ground_Tormenta_02" type="StaticBody2D" parent="PasoTormenta" unique_id=709432333]
+position = Vector2(27000, 572)
+
+[node name="Visual" type="Polygon2D" parent="PasoTormenta/Ground_Tormenta_02" unique_id=438395151]
+color = Color(0.31, 0.33, 0.36, 1)
+polygon = PackedVector2Array(-1000, -48, 1000, -48, 1000, 48, -1000, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PasoTormenta/Ground_Tormenta_02" unique_id=548011854]
+shape = SubResource("RectangleShape2D_se146")
+
+[node name="Ground_Tormenta_03" type="StaticBody2D" parent="PasoTormenta" unique_id=1366831717]
+position = Vector2(29000, 572)
+
+[node name="Visual" type="Polygon2D" parent="PasoTormenta/Ground_Tormenta_03" unique_id=1552416288]
+color = Color(0.31, 0.33, 0.36, 1)
+polygon = PackedVector2Array(-1000, -48, 1000, -48, 1000, 48, -1000, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PasoTormenta/Ground_Tormenta_03" unique_id=1133577477]
+shape = SubResource("RectangleShape2D_x6bu6")
+
+[node name="Ground_Tormenta_04" type="StaticBody2D" parent="PasoTormenta" unique_id=235261481]
+position = Vector2(31000, 572)
+
+[node name="Visual" type="Polygon2D" parent="PasoTormenta/Ground_Tormenta_04" unique_id=1808149490]
+color = Color(0.31, 0.33, 0.36, 1)
+polygon = PackedVector2Array(-1000, -48, 1000, -48, 1000, 48, -1000, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PasoTormenta/Ground_Tormenta_04" unique_id=658293743]
+shape = SubResource("RectangleShape2D_x78ml")
+
+[node name="Ground_Tormenta_05" type="StaticBody2D" parent="PasoTormenta" unique_id=2143997271]
+position = Vector2(32500, 572)
+
+[node name="Visual" type="Polygon2D" parent="PasoTormenta/Ground_Tormenta_05" unique_id=1427147412]
+color = Color(0.29, 0.31, 0.35, 1)
+polygon = PackedVector2Array(-500, -48, 500, -48, 500, 48, -500, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PasoTormenta/Ground_Tormenta_05" unique_id=1570727548]
+shape = SubResource("RectangleShape2D_otgi5")
+
+[node name="StormShade" type="Polygon2D" parent="PasoTormenta" unique_id=1939366810]
+z_index = 2
+position = Vector2(28500, 150)
+color = Color(0.035, 0.055, 0.11, 0.34)
+polygon = PackedVector2Array(-4500, -450, 4500, -450, 4500, 450, -4500, 450)
+
+[node name="Rain_01" type="Polygon2D" parent="PasoTormenta" unique_id=1757439550]
+z_index = 4
+color = Color(0.67, 0.81, 0.94, 0.42)
+polygon = PackedVector2Array(24000, -40, 24004, -40, 23988, 8, 23984, 8, 24000, 150, 24004, 150, 23988, 198, 23984, 198, 24000, 340, 24004, 340, 23988, 388, 23984, 388, 24409.092, -40, 24413.092, -40, 24397.092, 8, 24393.092, 8, 24409.092, 150, 24413.092, 150, 24397.092, 198, 24393.092, 198, 24409.092, 340, 24413.092, 340, 24397.092, 388, 24393.092, 388, 24818.182, -40, 24822.182, -40, 24806.182, 8, 24802.182, 8, 24818.182, 150, 24822.182, 150, 24806.182, 198, 24802.182, 198, 24818.182, 340, 24822.182, 340, 24806.182, 388, 24802.182, 388, 25227.273, -40, 25231.273, -40, 25215.273, 8, 25211.273, 8, 25227.273, 150, 25231.273, 150, 25215.273, 198, 25211.273, 198, 25227.273, 340, 25231.273, 340, 25215.273, 388, 25211.273, 388, 25636.363, -40, 25640.363, -40, 25624.363, 8, 25620.363, 8, 25636.363, 150, 25640.363, 150, 25624.363, 198, 25620.363, 198, 25636.363, 340, 25640.363, 340, 25624.363, 388, 25620.363, 388, 26045.455, -40, 26049.455, -40, 26033.455, 8, 26029.455, 8, 26045.455, 150, 26049.455, 150, 26033.455, 198, 26029.455, 198, 26045.455, 340, 26049.455, 340, 26033.455, 388, 26029.455, 388, 26454.545, -40, 26458.545, -40, 26442.545, 8, 26438.545, 8, 26454.545, 150, 26458.545, 150, 26442.545, 198, 26438.545, 198, 26454.545, 340, 26458.545, 340, 26442.545, 388, 26438.545, 388, 26863.637, -40, 26867.637, -40, 26851.637, 8, 26847.637, 8, 26863.637, 150, 26867.637, 150, 26851.637, 198, 26847.637, 198, 26863.637, 340, 26867.637, 340, 26851.637, 388, 26847.637, 388, 27272.727, -40, 27276.727, -40, 27260.727, 8, 27256.727, 8, 27272.727, 150, 27276.727, 150, 27260.727, 198, 27256.727, 198, 27272.727, 340, 27276.727, 340, 27260.727, 388, 27256.727, 388, 27681.818, -40, 27685.818, -40, 27669.818, 8, 27665.818, 8, 27681.818, 150, 27685.818, 150, 27669.818, 198, 27665.818, 198, 27681.818, 340, 27685.818, 340, 27669.818, 388, 27665.818, 388, 28090.908, -40, 28094.908, -40, 28078.908, 8, 28074.908, 8, 28090.908, 150, 28094.908, 150, 28078.908, 198, 28074.908, 198, 28090.908, 340, 28094.908, 340, 28078.908, 388, 28074.908, 388, 28500, -40, 28504, -40, 28488, 8, 28484, 8, 28500, 150, 28504, 150, 28488, 198, 28484, 198, 28500, 340, 28504, 340, 28488, 388, 28484, 388, 28909.092, -40, 28913.092, -40, 28897.092, 8, 28893.092, 8, 28909.092, 150, 28913.092, 150, 28897.092, 198, 28893.092, 198, 28909.092, 340, 28913.092, 340, 28897.092, 388, 28893.092, 388, 29318.182, -40, 29322.182, -40, 29306.182, 8, 29302.182, 8, 29318.182, 150, 29322.182, 150, 29306.182, 198, 29302.182, 198, 29318.182, 340, 29322.182, 340, 29306.182, 388, 29302.182, 388, 29727.273, -40, 29731.273, -40, 29715.273, 8, 29711.273, 8, 29727.273, 150, 29731.273, 150, 29715.273, 198, 29711.273, 198, 29727.273, 340, 29731.273, 340, 29715.273, 388, 29711.273, 388, 30136.363, -40, 30140.363, -40, 30124.363, 8, 30120.363, 8, 30136.363, 150, 30140.363, 150, 30124.363, 198, 30120.363, 198, 30136.363, 340, 30140.363, 340, 30124.363, 388, 30120.363, 388, 30545.455, -40, 30549.455, -40, 30533.455, 8, 30529.455, 8, 30545.455, 150, 30549.455, 150, 30533.455, 198, 30529.455, 198, 30545.455, 340, 30549.455, 340, 30533.455, 388, 30529.455, 388, 30954.545, -40, 30958.545, -40, 30942.545, 8, 30938.545, 8, 30954.545, 150, 30958.545, 150, 30942.545, 198, 30938.545, 198, 30954.545, 340, 30958.545, 340, 30942.545, 388, 30938.545, 388, 31363.637, -40, 31367.637, -40, 31351.637, 8, 31347.637, 8, 31363.637, 150, 31367.637, 150, 31351.637, 198, 31347.637, 198, 31363.637, 340, 31367.637, 340, 31351.637, 388, 31347.637, 388, 31772.727, -40, 31776.727, -40, 31760.727, 8, 31756.727, 8, 31772.727, 150, 31776.727, 150, 31760.727, 198, 31756.727, 198, 31772.727, 340, 31776.727, 340, 31760.727, 388, 31756.727, 388, 32181.818, -40, 32185.818, -40, 32169.818, 8, 32165.818, 8, 32181.818, 150, 32185.818, 150, 32169.818, 198, 32165.818, 198, 32181.818, 340, 32185.818, 340, 32169.818, 388, 32165.818, 388, 32590.908, -40, 32594.908, -40, 32578.908, 8, 32574.908, 8, 32590.908, 150, 32594.908, 150, 32578.908, 198, 32574.908, 198, 32590.908, 340, 32594.908, 340, 32578.908, 388, 32574.908, 388)
+polygons = [PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(16, 17, 18, 19), PackedInt32Array(20, 21, 22, 23), PackedInt32Array(24, 25, 26, 27), PackedInt32Array(28, 29, 30, 31), PackedInt32Array(32, 33, 34, 35), PackedInt32Array(36, 37, 38, 39), PackedInt32Array(40, 41, 42, 43), PackedInt32Array(44, 45, 46, 47), PackedInt32Array(48, 49, 50, 51), PackedInt32Array(52, 53, 54, 55), PackedInt32Array(56, 57, 58, 59), PackedInt32Array(60, 61, 62, 63), PackedInt32Array(64, 65, 66, 67), PackedInt32Array(68, 69, 70, 71), PackedInt32Array(72, 73, 74, 75), PackedInt32Array(76, 77, 78, 79), PackedInt32Array(80, 81, 82, 83), PackedInt32Array(84, 85, 86, 87), PackedInt32Array(88, 89, 90, 91), PackedInt32Array(92, 93, 94, 95), PackedInt32Array(96, 97, 98, 99), PackedInt32Array(100, 101, 102, 103), PackedInt32Array(104, 105, 106, 107), PackedInt32Array(108, 109, 110, 111), PackedInt32Array(112, 113, 114, 115), PackedInt32Array(116, 117, 118, 119), PackedInt32Array(120, 121, 122, 123), PackedInt32Array(124, 125, 126, 127), PackedInt32Array(128, 129, 130, 131), PackedInt32Array(132, 133, 134, 135), PackedInt32Array(136, 137, 138, 139), PackedInt32Array(140, 141, 142, 143), PackedInt32Array(144, 145, 146, 147), PackedInt32Array(148, 149, 150, 151), PackedInt32Array(152, 153, 154, 155), PackedInt32Array(156, 157, 158, 159), PackedInt32Array(160, 161, 162, 163), PackedInt32Array(164, 165, 166, 167), PackedInt32Array(168, 169, 170, 171), PackedInt32Array(172, 173, 174, 175), PackedInt32Array(176, 177, 178, 179), PackedInt32Array(180, 181, 182, 183), PackedInt32Array(184, 185, 186, 187), PackedInt32Array(188, 189, 190, 191), PackedInt32Array(192, 193, 194, 195), PackedInt32Array(196, 197, 198, 199), PackedInt32Array(200, 201, 202, 203), PackedInt32Array(204, 205, 206, 207), PackedInt32Array(208, 209, 210, 211), PackedInt32Array(212, 213, 214, 215), PackedInt32Array(216, 217, 218, 219), PackedInt32Array(220, 221, 222, 223), PackedInt32Array(224, 225, 226, 227), PackedInt32Array(228, 229, 230, 231), PackedInt32Array(232, 233, 234, 235), PackedInt32Array(236, 237, 238, 239), PackedInt32Array(240, 241, 242, 243), PackedInt32Array(244, 245, 246, 247), PackedInt32Array(248, 249, 250, 251), PackedInt32Array(252, 253, 254, 255), PackedInt32Array(256, 257, 258, 259), PackedInt32Array(260, 261, 262, 263)]
+
+[node name="Rain_02" type="Polygon2D" parent="PasoTormenta" unique_id=834066974]
+z_index = 4
+color = Color(0.67, 0.81, 0.94, 0.42)
+polygon = PackedVector2Array(24200, 25, 24204, 25, 24188, 73, 24184, 73, 24200, 215, 24204, 215, 24188, 263, 24184, 263, 24200, 405, 24204, 405, 24188, 453, 24184, 453, 24609.092, 25, 24613.092, 25, 24597.092, 73, 24593.092, 73, 24609.092, 215, 24613.092, 215, 24597.092, 263, 24593.092, 263, 24609.092, 405, 24613.092, 405, 24597.092, 453, 24593.092, 453, 25018.182, 25, 25022.182, 25, 25006.182, 73, 25002.182, 73, 25018.182, 215, 25022.182, 215, 25006.182, 263, 25002.182, 263, 25018.182, 405, 25022.182, 405, 25006.182, 453, 25002.182, 453, 25427.273, 25, 25431.273, 25, 25415.273, 73, 25411.273, 73, 25427.273, 215, 25431.273, 215, 25415.273, 263, 25411.273, 263, 25427.273, 405, 25431.273, 405, 25415.273, 453, 25411.273, 453, 25836.363, 25, 25840.363, 25, 25824.363, 73, 25820.363, 73, 25836.363, 215, 25840.363, 215, 25824.363, 263, 25820.363, 263, 25836.363, 405, 25840.363, 405, 25824.363, 453, 25820.363, 453, 26245.455, 25, 26249.455, 25, 26233.455, 73, 26229.455, 73, 26245.455, 215, 26249.455, 215, 26233.455, 263, 26229.455, 263, 26245.455, 405, 26249.455, 405, 26233.455, 453, 26229.455, 453, 26654.545, 25, 26658.545, 25, 26642.545, 73, 26638.545, 73, 26654.545, 215, 26658.545, 215, 26642.545, 263, 26638.545, 263, 26654.545, 405, 26658.545, 405, 26642.545, 453, 26638.545, 453, 27063.637, 25, 27067.637, 25, 27051.637, 73, 27047.637, 73, 27063.637, 215, 27067.637, 215, 27051.637, 263, 27047.637, 263, 27063.637, 405, 27067.637, 405, 27051.637, 453, 27047.637, 453, 27472.727, 25, 27476.727, 25, 27460.727, 73, 27456.727, 73, 27472.727, 215, 27476.727, 215, 27460.727, 263, 27456.727, 263, 27472.727, 405, 27476.727, 405, 27460.727, 453, 27456.727, 453, 27881.818, 25, 27885.818, 25, 27869.818, 73, 27865.818, 73, 27881.818, 215, 27885.818, 215, 27869.818, 263, 27865.818, 263, 27881.818, 405, 27885.818, 405, 27869.818, 453, 27865.818, 453, 28290.908, 25, 28294.908, 25, 28278.908, 73, 28274.908, 73, 28290.908, 215, 28294.908, 215, 28278.908, 263, 28274.908, 263, 28290.908, 405, 28294.908, 405, 28278.908, 453, 28274.908, 453, 28700, 25, 28704, 25, 28688, 73, 28684, 73, 28700, 215, 28704, 215, 28688, 263, 28684, 263, 28700, 405, 28704, 405, 28688, 453, 28684, 453, 29109.092, 25, 29113.092, 25, 29097.092, 73, 29093.092, 73, 29109.092, 215, 29113.092, 215, 29097.092, 263, 29093.092, 263, 29109.092, 405, 29113.092, 405, 29097.092, 453, 29093.092, 453, 29518.182, 25, 29522.182, 25, 29506.182, 73, 29502.182, 73, 29518.182, 215, 29522.182, 215, 29506.182, 263, 29502.182, 263, 29518.182, 405, 29522.182, 405, 29506.182, 453, 29502.182, 453, 29927.273, 25, 29931.273, 25, 29915.273, 73, 29911.273, 73, 29927.273, 215, 29931.273, 215, 29915.273, 263, 29911.273, 263, 29927.273, 405, 29931.273, 405, 29915.273, 453, 29911.273, 453, 30336.363, 25, 30340.363, 25, 30324.363, 73, 30320.363, 73, 30336.363, 215, 30340.363, 215, 30324.363, 263, 30320.363, 263, 30336.363, 405, 30340.363, 405, 30324.363, 453, 30320.363, 453, 30745.455, 25, 30749.455, 25, 30733.455, 73, 30729.455, 73, 30745.455, 215, 30749.455, 215, 30733.455, 263, 30729.455, 263, 30745.455, 405, 30749.455, 405, 30733.455, 453, 30729.455, 453, 31154.545, 25, 31158.545, 25, 31142.545, 73, 31138.545, 73, 31154.545, 215, 31158.545, 215, 31142.545, 263, 31138.545, 263, 31154.545, 405, 31158.545, 405, 31142.545, 453, 31138.545, 453, 31563.637, 25, 31567.637, 25, 31551.637, 73, 31547.637, 73, 31563.637, 215, 31567.637, 215, 31551.637, 263, 31547.637, 263, 31563.637, 405, 31567.637, 405, 31551.637, 453, 31547.637, 453, 31972.727, 25, 31976.727, 25, 31960.727, 73, 31956.727, 73, 31972.727, 215, 31976.727, 215, 31960.727, 263, 31956.727, 263, 31972.727, 405, 31976.727, 405, 31960.727, 453, 31956.727, 453, 32381.818, 25, 32385.818, 25, 32369.818, 73, 32365.818, 73, 32381.818, 215, 32385.818, 215, 32369.818, 263, 32365.818, 263, 32381.818, 405, 32385.818, 405, 32369.818, 453, 32365.818, 453, 32790.91, 25, 32794.91, 25, 32778.91, 73, 32774.91, 73, 32790.91, 215, 32794.91, 215, 32778.91, 263, 32774.91, 263, 32790.91, 405, 32794.91, 405, 32778.91, 453, 32774.91, 453)
+polygons = [PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(16, 17, 18, 19), PackedInt32Array(20, 21, 22, 23), PackedInt32Array(24, 25, 26, 27), PackedInt32Array(28, 29, 30, 31), PackedInt32Array(32, 33, 34, 35), PackedInt32Array(36, 37, 38, 39), PackedInt32Array(40, 41, 42, 43), PackedInt32Array(44, 45, 46, 47), PackedInt32Array(48, 49, 50, 51), PackedInt32Array(52, 53, 54, 55), PackedInt32Array(56, 57, 58, 59), PackedInt32Array(60, 61, 62, 63), PackedInt32Array(64, 65, 66, 67), PackedInt32Array(68, 69, 70, 71), PackedInt32Array(72, 73, 74, 75), PackedInt32Array(76, 77, 78, 79), PackedInt32Array(80, 81, 82, 83), PackedInt32Array(84, 85, 86, 87), PackedInt32Array(88, 89, 90, 91), PackedInt32Array(92, 93, 94, 95), PackedInt32Array(96, 97, 98, 99), PackedInt32Array(100, 101, 102, 103), PackedInt32Array(104, 105, 106, 107), PackedInt32Array(108, 109, 110, 111), PackedInt32Array(112, 113, 114, 115), PackedInt32Array(116, 117, 118, 119), PackedInt32Array(120, 121, 122, 123), PackedInt32Array(124, 125, 126, 127), PackedInt32Array(128, 129, 130, 131), PackedInt32Array(132, 133, 134, 135), PackedInt32Array(136, 137, 138, 139), PackedInt32Array(140, 141, 142, 143), PackedInt32Array(144, 145, 146, 147), PackedInt32Array(148, 149, 150, 151), PackedInt32Array(152, 153, 154, 155), PackedInt32Array(156, 157, 158, 159), PackedInt32Array(160, 161, 162, 163), PackedInt32Array(164, 165, 166, 167), PackedInt32Array(168, 169, 170, 171), PackedInt32Array(172, 173, 174, 175), PackedInt32Array(176, 177, 178, 179), PackedInt32Array(180, 181, 182, 183), PackedInt32Array(184, 185, 186, 187), PackedInt32Array(188, 189, 190, 191), PackedInt32Array(192, 193, 194, 195), PackedInt32Array(196, 197, 198, 199), PackedInt32Array(200, 201, 202, 203), PackedInt32Array(204, 205, 206, 207), PackedInt32Array(208, 209, 210, 211), PackedInt32Array(212, 213, 214, 215), PackedInt32Array(216, 217, 218, 219), PackedInt32Array(220, 221, 222, 223), PackedInt32Array(224, 225, 226, 227), PackedInt32Array(228, 229, 230, 231), PackedInt32Array(232, 233, 234, 235), PackedInt32Array(236, 237, 238, 239), PackedInt32Array(240, 241, 242, 243), PackedInt32Array(244, 245, 246, 247), PackedInt32Array(248, 249, 250, 251), PackedInt32Array(252, 253, 254, 255), PackedInt32Array(256, 257, 258, 259), PackedInt32Array(260, 261, 262, 263)]
+
+[node name="Rain_03" type="Polygon2D" parent="PasoTormenta" unique_id=401271013]
+z_index = 4
+color = Color(0.67, 0.81, 0.94, 0.42)
+polygon = PackedVector2Array(24400, 90, 24404, 90, 24388, 138, 24384, 138, 24400, 280, 24404, 280, 24388, 328, 24384, 328, 24400, 470, 24404, 470, 24388, 518, 24384, 518, 24809.092, 90, 24813.092, 90, 24797.092, 138, 24793.092, 138, 24809.092, 280, 24813.092, 280, 24797.092, 328, 24793.092, 328, 24809.092, 470, 24813.092, 470, 24797.092, 518, 24793.092, 518, 25218.182, 90, 25222.182, 90, 25206.182, 138, 25202.182, 138, 25218.182, 280, 25222.182, 280, 25206.182, 328, 25202.182, 328, 25218.182, 470, 25222.182, 470, 25206.182, 518, 25202.182, 518, 25627.273, 90, 25631.273, 90, 25615.273, 138, 25611.273, 138, 25627.273, 280, 25631.273, 280, 25615.273, 328, 25611.273, 328, 25627.273, 470, 25631.273, 470, 25615.273, 518, 25611.273, 518, 26036.363, 90, 26040.363, 90, 26024.363, 138, 26020.363, 138, 26036.363, 280, 26040.363, 280, 26024.363, 328, 26020.363, 328, 26036.363, 470, 26040.363, 470, 26024.363, 518, 26020.363, 518, 26445.455, 90, 26449.455, 90, 26433.455, 138, 26429.455, 138, 26445.455, 280, 26449.455, 280, 26433.455, 328, 26429.455, 328, 26445.455, 470, 26449.455, 470, 26433.455, 518, 26429.455, 518, 26854.545, 90, 26858.545, 90, 26842.545, 138, 26838.545, 138, 26854.545, 280, 26858.545, 280, 26842.545, 328, 26838.545, 328, 26854.545, 470, 26858.545, 470, 26842.545, 518, 26838.545, 518, 27263.637, 90, 27267.637, 90, 27251.637, 138, 27247.637, 138, 27263.637, 280, 27267.637, 280, 27251.637, 328, 27247.637, 328, 27263.637, 470, 27267.637, 470, 27251.637, 518, 27247.637, 518, 27672.727, 90, 27676.727, 90, 27660.727, 138, 27656.727, 138, 27672.727, 280, 27676.727, 280, 27660.727, 328, 27656.727, 328, 27672.727, 470, 27676.727, 470, 27660.727, 518, 27656.727, 518, 28081.818, 90, 28085.818, 90, 28069.818, 138, 28065.818, 138, 28081.818, 280, 28085.818, 280, 28069.818, 328, 28065.818, 328, 28081.818, 470, 28085.818, 470, 28069.818, 518, 28065.818, 518, 28490.908, 90, 28494.908, 90, 28478.908, 138, 28474.908, 138, 28490.908, 280, 28494.908, 280, 28478.908, 328, 28474.908, 328, 28490.908, 470, 28494.908, 470, 28478.908, 518, 28474.908, 518, 28900, 90, 28904, 90, 28888, 138, 28884, 138, 28900, 280, 28904, 280, 28888, 328, 28884, 328, 28900, 470, 28904, 470, 28888, 518, 28884, 518, 29309.092, 90, 29313.092, 90, 29297.092, 138, 29293.092, 138, 29309.092, 280, 29313.092, 280, 29297.092, 328, 29293.092, 328, 29309.092, 470, 29313.092, 470, 29297.092, 518, 29293.092, 518, 29718.182, 90, 29722.182, 90, 29706.182, 138, 29702.182, 138, 29718.182, 280, 29722.182, 280, 29706.182, 328, 29702.182, 328, 29718.182, 470, 29722.182, 470, 29706.182, 518, 29702.182, 518, 30127.273, 90, 30131.273, 90, 30115.273, 138, 30111.273, 138, 30127.273, 280, 30131.273, 280, 30115.273, 328, 30111.273, 328, 30127.273, 470, 30131.273, 470, 30115.273, 518, 30111.273, 518, 30536.363, 90, 30540.363, 90, 30524.363, 138, 30520.363, 138, 30536.363, 280, 30540.363, 280, 30524.363, 328, 30520.363, 328, 30536.363, 470, 30540.363, 470, 30524.363, 518, 30520.363, 518, 30945.455, 90, 30949.455, 90, 30933.455, 138, 30929.455, 138, 30945.455, 280, 30949.455, 280, 30933.455, 328, 30929.455, 328, 30945.455, 470, 30949.455, 470, 30933.455, 518, 30929.455, 518, 31354.545, 90, 31358.545, 90, 31342.545, 138, 31338.545, 138, 31354.545, 280, 31358.545, 280, 31342.545, 328, 31338.545, 328, 31354.545, 470, 31358.545, 470, 31342.545, 518, 31338.545, 518, 31763.637, 90, 31767.637, 90, 31751.637, 138, 31747.637, 138, 31763.637, 280, 31767.637, 280, 31751.637, 328, 31747.637, 328, 31763.637, 470, 31767.637, 470, 31751.637, 518, 31747.637, 518, 32172.727, 90, 32176.727, 90, 32160.727, 138, 32156.727, 138, 32172.727, 280, 32176.727, 280, 32160.727, 328, 32156.727, 328, 32172.727, 470, 32176.727, 470, 32160.727, 518, 32156.727, 518, 32581.818, 90, 32585.818, 90, 32569.818, 138, 32565.818, 138, 32581.818, 280, 32585.818, 280, 32569.818, 328, 32565.818, 328, 32581.818, 470, 32585.818, 470, 32569.818, 518, 32565.818, 518, 32990.91, 90, 32994.91, 90, 32978.91, 138, 32974.91, 138, 32990.91, 280, 32994.91, 280, 32978.91, 328, 32974.91, 328, 32990.91, 470, 32994.91, 470, 32978.91, 518, 32974.91, 518)
+polygons = [PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(16, 17, 18, 19), PackedInt32Array(20, 21, 22, 23), PackedInt32Array(24, 25, 26, 27), PackedInt32Array(28, 29, 30, 31), PackedInt32Array(32, 33, 34, 35), PackedInt32Array(36, 37, 38, 39), PackedInt32Array(40, 41, 42, 43), PackedInt32Array(44, 45, 46, 47), PackedInt32Array(48, 49, 50, 51), PackedInt32Array(52, 53, 54, 55), PackedInt32Array(56, 57, 58, 59), PackedInt32Array(60, 61, 62, 63), PackedInt32Array(64, 65, 66, 67), PackedInt32Array(68, 69, 70, 71), PackedInt32Array(72, 73, 74, 75), PackedInt32Array(76, 77, 78, 79), PackedInt32Array(80, 81, 82, 83), PackedInt32Array(84, 85, 86, 87), PackedInt32Array(88, 89, 90, 91), PackedInt32Array(92, 93, 94, 95), PackedInt32Array(96, 97, 98, 99), PackedInt32Array(100, 101, 102, 103), PackedInt32Array(104, 105, 106, 107), PackedInt32Array(108, 109, 110, 111), PackedInt32Array(112, 113, 114, 115), PackedInt32Array(116, 117, 118, 119), PackedInt32Array(120, 121, 122, 123), PackedInt32Array(124, 125, 126, 127), PackedInt32Array(128, 129, 130, 131), PackedInt32Array(132, 133, 134, 135), PackedInt32Array(136, 137, 138, 139), PackedInt32Array(140, 141, 142, 143), PackedInt32Array(144, 145, 146, 147), PackedInt32Array(148, 149, 150, 151), PackedInt32Array(152, 153, 154, 155), PackedInt32Array(156, 157, 158, 159), PackedInt32Array(160, 161, 162, 163), PackedInt32Array(164, 165, 166, 167), PackedInt32Array(168, 169, 170, 171), PackedInt32Array(172, 173, 174, 175), PackedInt32Array(176, 177, 178, 179), PackedInt32Array(180, 181, 182, 183), PackedInt32Array(184, 185, 186, 187), PackedInt32Array(188, 189, 190, 191), PackedInt32Array(192, 193, 194, 195), PackedInt32Array(196, 197, 198, 199), PackedInt32Array(200, 201, 202, 203), PackedInt32Array(204, 205, 206, 207), PackedInt32Array(208, 209, 210, 211), PackedInt32Array(212, 213, 214, 215), PackedInt32Array(216, 217, 218, 219), PackedInt32Array(220, 221, 222, 223), PackedInt32Array(224, 225, 226, 227), PackedInt32Array(228, 229, 230, 231), PackedInt32Array(232, 233, 234, 235), PackedInt32Array(236, 237, 238, 239), PackedInt32Array(240, 241, 242, 243), PackedInt32Array(244, 245, 246, 247), PackedInt32Array(248, 249, 250, 251), PackedInt32Array(252, 253, 254, 255), PackedInt32Array(256, 257, 258, 259), PackedInt32Array(260, 261, 262, 263)]
+
+[node name="ShelterRock_01" type="StaticBody2D" parent="PasoTormenta" unique_id=1591240333]
+position = Vector2(26400, 488)
+
+[node name="Visual" type="Polygon2D" parent="PasoTormenta/ShelterRock_01" unique_id=1058289320]
+color = Color(0.31, 0.33, 0.36, 1)
+polygon = PackedVector2Array(-115, -36, 115, -36, 115, 36, -115, 36)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PasoTormenta/ShelterRock_01" unique_id=2025547068]
+shape = SubResource("RectangleShape2D_hjkbi")
+
+[node name="ShelterRock_02" type="StaticBody2D" parent="PasoTormenta" unique_id=1070628012]
+position = Vector2(30200, 490)
+
+[node name="Visual" type="Polygon2D" parent="PasoTormenta/ShelterRock_02" unique_id=204495441]
+color = Color(0.29, 0.31, 0.35, 1)
+polygon = PackedVector2Array(-95, -34, 95, -34, 95, 34, -95, 34)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PasoTormenta/ShelterRock_02" unique_id=1034372333]
+shape = SubResource("RectangleShape2D_nd60d")
+
+[node name="ProtectedLedge_01" type="StaticBody2D" parent="PasoTormenta" unique_id=734257427]
+position = Vector2(28200, 438)
+
+[node name="Visual" type="Polygon2D" parent="PasoTormenta/ProtectedLedge_01" unique_id=633914879]
+color = Color(0.39, 0.41, 0.44, 1)
+polygon = PackedVector2Array(-160, -18, 160, -18, 160, 18, -160, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PasoTormenta/ProtectedLedge_01" unique_id=881583686]
+shape = SubResource("RectangleShape2D_1kh7q")
+
+[node name="LlegadaRio" type="Node2D" parent="." unique_id=1954608044]
+
+[node name="Ground_Llegada_01" type="StaticBody2D" parent="LlegadaRio" unique_id=165179572]
+position = Vector2(34000, 572)
+
+[node name="Visual" type="Polygon2D" parent="LlegadaRio/Ground_Llegada_01" unique_id=474417982]
+color = Color(0.28, 0.32, 0.33, 1)
+polygon = PackedVector2Array(-1000, -48, 1000, -48, 1000, 48, -1000, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LlegadaRio/Ground_Llegada_01" unique_id=1052325801]
+shape = SubResource("RectangleShape2D_47vhd")
+
+[node name="Ground_Llegada_02" type="StaticBody2D" parent="LlegadaRio" unique_id=1204306898]
+position = Vector2(35500, 572)
+
+[node name="Visual" type="Polygon2D" parent="LlegadaRio/Ground_Llegada_02" unique_id=1460320070]
+color = Color(0.25, 0.3, 0.31, 1)
+polygon = PackedVector2Array(-500, -48, 500, -48, 500, 48, -500, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LlegadaRio/Ground_Llegada_02" unique_id=846458520]
+shape = SubResource("RectangleShape2D_vwent")
+
+[node name="WetGround_01" type="Polygon2D" parent="LlegadaRio" unique_id=1854913633]
+z_index = -1
+position = Vector2(33700, 514)
+color = Color(0.16, 0.42, 0.51, 0.82)
+polygon = PackedVector2Array(-550, -9, 550, -9, 550, 9, -550, 9)
+
+[node name="WetGround_02" type="Polygon2D" parent="LlegadaRio" unique_id=604581297]
+z_index = -1
+position = Vector2(35100, 512)
+color = Color(0.12, 0.45, 0.59, 0.88)
+polygon = PackedVector2Array(-750, -11, 750, -11, 750, 11, -750, 11)
+
+[node name="RiverRock_01" type="StaticBody2D" parent="LlegadaRio" unique_id=98831230]
+position = Vector2(34500, 488)
+
+[node name="Visual" type="Polygon2D" parent="LlegadaRio/RiverRock_01" unique_id=1623272340]
+color = Color(0.31, 0.34, 0.35, 1)
+polygon = PackedVector2Array(-67.5, -36, 67.5, -36, 67.5, 36, -67.5, 36)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LlegadaRio/RiverRock_01" unique_id=438319333]
+shape = SubResource("RectangleShape2D_8nqko")
+
+[node name="SparseBush_Rio" type="Node2D" parent="LlegadaRio" unique_id=76602342]
+position = Vector2(33300, 524)
+
+[node name="Foliage" type="Polygon2D" parent="LlegadaRio/SparseBush_Rio" unique_id=146901723]
+color = Color(0.24, 0.34, 0.27, 1)
+polygon = PackedVector2Array(-34, 0, -26, -32, -8, -18, 4, -45, 19, -19, 36, -29, 42, 0)
