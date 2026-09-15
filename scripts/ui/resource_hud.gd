@@ -1,7 +1,9 @@
 extends CanvasLayer
 
 @onready var apples_label: Label = $ApplesLabel
+@onready var apple_hint_label: Label = $AppleHintLabel
 @onready var herbs_label: Label = $HerbsLabel
+@onready var herb_hint_label: Label = $HerbHintLabel
 @onready var water_label: Label = $WaterLabel
 @onready var feedback_label: Label = $FeedbackLabel
 @onready var feedback_timer: Timer = $FeedbackTimer
@@ -15,7 +17,9 @@ func _ready() -> void:
 
 func update_counts(apples: int, herbs: int, water: int) -> void:
 	apples_label.text = "Manzanas: %d" % apples
+	apple_hint_label.visible = apples > 0
 	herbs_label.text = "Hierbas: %d" % herbs
+	herb_hint_label.visible = herbs > 0
 	water_label.text = "Agua: %d" % water
 
 
