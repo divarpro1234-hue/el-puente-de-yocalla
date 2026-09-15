@@ -3,6 +3,7 @@ extends Node2D
 const INFO_IDS: Array[String] = ["info_01", "info_02", "info_03"]
 const NEXT_LEVEL_PATH: String = "res://scenes/levels/Nivel03_Puente_Yocalla.tscn"
 const HERB_HEAL_AMOUNT: int = 20
+const APPLE_HEAL_AMOUNT: int = 10
 const STORM_DAMAGE_AMOUNT: int = 10
 const STORM_DAMAGE_INTERVAL: float = 4.0
 
@@ -56,6 +57,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed(&"use_herb"):
 		_try_use_herb()
+	if Input.is_action_just_pressed(&"use_apple"):
+		_try_use_apple()
 
 
 func _on_information_collected(info_id: String) -> void:
@@ -113,6 +116,22 @@ func _try_use_herb() -> void:
 	collected_resources["herb"] = int(collected_resources["herb"]) - 1
 	_update_resource_hud()
 	resource_hud.call(&"show_feedback", "Hierba usada: +%d vida" % HERB_HEAL_AMOUNT)
+
+
+func _try_use_apple() -> void:
+	if int(collected_resources["apple"]) <= 0:
+		resource_hud.call(&"show_feedback", "No tienes manzanas")
+		return
+
+	if not bool(player.call(&"can_heal")):
+		if not bool(player.get("is_respawning")) and int(player.get("current_health")) >= int(player.get("max_health")):
+			resource_hud.call(&"show_feedback", "La vida ya está completa")
+		return
+
+	player.call(&"heal", APPLE_HEAL_AMOUNT)
+	collected_resources["apple"] = int(collected_resources["apple"]) - 1
+	_update_resource_hud()
+	resource_hud.call(&"show_feedback", "Manzana comida: +%d vida" % APPLE_HEAL_AMOUNT)
 
 
 func _on_storm_damage_area_body_entered(body: Node2D) -> void:
