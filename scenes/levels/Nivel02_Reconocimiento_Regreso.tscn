@@ -39,13 +39,13 @@ size = Vector2(7000, 96)
 size = Vector2(220, 44)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ybajc"]
-size = Vector2(150, 72)
+size = Vector2(150, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2oytp"]
 size = Vector2(80, 240)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hcm6a"]
-size = Vector2(150, 76)
+size = Vector2(150, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53e4b"]
 size = Vector2(2000, 96)
@@ -69,7 +69,7 @@ size = Vector2(2000, 96)
 size = Vector2(150, 68)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wxeoo"]
-size = Vector2(120, 92)
+size = Vector2(120, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b24s0"]
 size = Vector2(170, 56)
@@ -90,7 +90,7 @@ size = Vector2(1000, 96)
 size = Vector2(420, 72)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uxwc4"]
-size = Vector2(110, 80)
+size = Vector2(110, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ks4hd"]
 size = Vector2(150, 64)
@@ -117,7 +117,7 @@ size = Vector2(420, 36)
 size = Vector2(130, 64)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_madi1"]
-size = Vector2(120, 80)
+size = Vector2(120, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3y0cu"]
 size = Vector2(2000, 96)
@@ -126,7 +126,7 @@ size = Vector2(2000, 96)
 size = Vector2(1000, 96)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gofbp"]
-size = Vector2(160, 84)
+size = Vector2(160, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77vfk"]
 size = Vector2(2000, 96)
@@ -136,6 +136,9 @@ size = Vector2(2000, 96)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7hb8u"]
 size = Vector2(2000, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mensajero_04"]
+size = Vector2(500, 96)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eurns"]
 size = Vector2(2000, 96)
@@ -152,14 +155,17 @@ size = Vector2(2000, 96)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7oaxc"]
 size = Vector2(2000, 96)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tormenta_06"]
+size = Vector2(1000, 96)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lkpbv"]
 size = Vector2(1000, 96)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c7xr5"]
-size = Vector2(230, 104)
+size = Vector2(230, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f4njj"]
-size = Vector2(180, 88)
+size = Vector2(180, 60)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mqh1x"]
 size = Vector2(300, 36)
@@ -343,11 +349,11 @@ polygon = PackedVector2Array(370, 80, 374, 80, 358, 128, 354, 128, 370, 270, 374
 polygons = [PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(16, 17, 18, 19), PackedInt32Array(20, 21, 22, 23), PackedInt32Array(24, 25, 26, 27), PackedInt32Array(28, 29, 30, 31), PackedInt32Array(32, 33, 34, 35), PackedInt32Array(36, 37, 38, 39), PackedInt32Array(40, 41, 42, 43), PackedInt32Array(44, 45, 46, 47), PackedInt32Array(48, 49, 50, 51), PackedInt32Array(52, 53, 54, 55), PackedInt32Array(56, 57, 58, 59), PackedInt32Array(60, 61, 62, 63), PackedInt32Array(64, 65, 66, 67), PackedInt32Array(68, 69, 70, 71), PackedInt32Array(72, 73, 74, 75), PackedInt32Array(76, 77, 78, 79), PackedInt32Array(80, 81, 82, 83), PackedInt32Array(84, 85, 86, 87), PackedInt32Array(88, 89, 90, 91), PackedInt32Array(92, 93, 94, 95), PackedInt32Array(96, 97, 98, 99), PackedInt32Array(100, 101, 102, 103), PackedInt32Array(104, 105, 106, 107), PackedInt32Array(108, 109, 110, 111), PackedInt32Array(112, 113, 114, 115), PackedInt32Array(116, 117, 118, 119), PackedInt32Array(120, 121, 122, 123), PackedInt32Array(124, 125, 126, 127), PackedInt32Array(128, 129, 130, 131), PackedInt32Array(132, 133, 134, 135), PackedInt32Array(136, 137, 138, 139), PackedInt32Array(140, 141, 142, 143), PackedInt32Array(144, 145, 146, 147), PackedInt32Array(148, 149, 150, 151), PackedInt32Array(152, 153, 154, 155), PackedInt32Array(156, 157, 158, 159), PackedInt32Array(160, 161, 162, 163), PackedInt32Array(164, 165, 166, 167), PackedInt32Array(168, 169, 170, 171), PackedInt32Array(172, 173, 174, 175), PackedInt32Array(176, 177, 178, 179), PackedInt32Array(180, 181, 182, 183), PackedInt32Array(184, 185, 186, 187), PackedInt32Array(188, 189, 190, 191), PackedInt32Array(192, 193, 194, 195), PackedInt32Array(196, 197, 198, 199), PackedInt32Array(200, 201, 202, 203), PackedInt32Array(204, 205, 206, 207), PackedInt32Array(208, 209, 210, 211), PackedInt32Array(212, 213, 214, 215), PackedInt32Array(216, 217, 218, 219), PackedInt32Array(220, 221, 222, 223), PackedInt32Array(224, 225, 226, 227), PackedInt32Array(228, 229, 230, 231), PackedInt32Array(232, 233, 234, 235), PackedInt32Array(236, 237, 238, 239), PackedInt32Array(240, 241, 242, 243), PackedInt32Array(244, 245, 246, 247), PackedInt32Array(248, 249, 250, 251), PackedInt32Array(252, 253, 254, 255), PackedInt32Array(256, 257, 258, 259), PackedInt32Array(260, 261, 262, 263), PackedInt32Array(264, 265, 266, 267), PackedInt32Array(268, 269, 270, 271), PackedInt32Array(272, 273, 274, 275), PackedInt32Array(276, 277, 278, 279), PackedInt32Array(280, 281, 282, 283), PackedInt32Array(284, 285, 286, 287)]
 
 [node name="StormObstacle" type="StaticBody2D" parent="SenderosRegreso" unique_id=1317884842]
-position = Vector2(54800, 488)
+position = Vector2(54800, 494)
 
 [node name="Visual" type="Polygon2D" parent="SenderosRegreso/StormObstacle" unique_id=169196381]
 color = Color(0.37, 0.38, 0.42, 1)
-polygon = PackedVector2Array(-75, -36, 75, -36, 75, 36, -75, 36)
+polygon = PackedVector2Array(-75, -30, 75, -30, 75, 30, -75, 30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SenderosRegreso/StormObstacle" unique_id=2022949489]
 shape = SubResource("RectangleShape2D_ybajc")
@@ -360,11 +366,11 @@ collision_layer = 0
 shape = SubResource("RectangleShape2D_2oytp")
 
 [node name="Rock_Regreso_01" type="StaticBody2D" parent="SenderosRegreso" unique_id=1020885848]
-position = Vector2(44700, 486)
+position = Vector2(44700, 494)
 
 [node name="Visual" type="Polygon2D" parent="SenderosRegreso/Rock_Regreso_01" unique_id=939423815]
 color = Color(0.4, 0.42, 0.46, 1)
-polygon = PackedVector2Array(-75, -38, 75, -38, 75, 38, -75, 38)
+polygon = PackedVector2Array(-75, -30, 75, -30, 75, 30, -75, 30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SenderosRegreso/Rock_Regreso_01" unique_id=1654295194]
 shape = SubResource("RectangleShape2D_hcm6a")
@@ -522,11 +528,11 @@ polygon = PackedVector2Array(-75, -34, 75, -34, 75, 34, -75, 34)
 shape = SubResource("RectangleShape2D_yltgs")
 
 [node name="Rock_Paso_02" type="StaticBody2D" parent="PasoMontana" unique_id=2084051280]
-position = Vector2(15700, 478)
+position = Vector2(15700, 494)
 
 [node name="Visual" type="Polygon2D" parent="PasoMontana/Rock_Paso_02" unique_id=59680652]
 color = Color(0.39, 0.38, 0.37, 1)
-polygon = PackedVector2Array(-60, -46, 60, -46, 60, 46, -60, 46)
+polygon = PackedVector2Array(-60, -30, 60, -30, 60, 30, -60, 30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PasoMontana/Rock_Paso_02" unique_id=1130548461]
 shape = SubResource("RectangleShape2D_wxeoo")
@@ -594,11 +600,11 @@ polygon = PackedVector2Array(-210, -36, 210, -36, 210, 36, -210, 36)
 shape = SubResource("RectangleShape2D_sy34l")
 
 [node name="RockCluster_Zona2_01" type="StaticBody2D" parent="ReconocimientoZona2" unique_id=583343803]
-position = Vector2(20150, 484)
+position = Vector2(20150, 494)
 
 [node name="Visual" type="Polygon2D" parent="ReconocimientoZona2/RockCluster_Zona2_01" unique_id=2138576286]
 color = Color(0.37, 0.38, 0.39, 1)
-polygon = PackedVector2Array(-55, -40, 55, -40, 55, 40, -55, 40)
+polygon = PackedVector2Array(-55, -30, 55, -30, 55, 30, -55, 30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ReconocimientoZona2/RockCluster_Zona2_01" unique_id=230639103]
 shape = SubResource("RectangleShape2D_uxwc4")
@@ -692,11 +698,11 @@ polygon = PackedVector2Array(-65, -32, 65, -32, 65, 32, -65, 32)
 shape = SubResource("RectangleShape2D_lpnxd")
 
 [node name="Rock_Quebrada_02" type="StaticBody2D" parent="Quebrada" unique_id=21074398]
-position = Vector2(28400, 484)
+position = Vector2(28400, 494)
 
 [node name="Visual" type="Polygon2D" parent="Quebrada/Rock_Quebrada_02" unique_id=1893583997]
 color = Color(0.46, 0.37, 0.32, 1)
-polygon = PackedVector2Array(-60, -40, 60, -40, 60, 40, -60, 40)
+polygon = PackedVector2Array(-60, -30, 60, -30, 60, 30, -60, 30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Quebrada/Rock_Quebrada_02" unique_id=1965379687]
 shape = SubResource("RectangleShape2D_madi1")
@@ -729,11 +735,11 @@ color = Color(0.31, 0.31, 0.32, 1)
 polygon = PackedVector2Array(30700, 524, 31050, 250, 31320, 524, 31800, 524, 32100, 300, 32450, 524)
 
 [node name="Rock_Zona3_01" type="StaticBody2D" parent="ReconocimientoZona3" unique_id=982516090]
-position = Vector2(32200, 482)
+position = Vector2(32200, 494)
 
 [node name="Visual" type="Polygon2D" parent="ReconocimientoZona3/Rock_Zona3_01" unique_id=88085839]
 color = Color(0.36, 0.35, 0.35, 1)
-polygon = PackedVector2Array(-80, -42, 80, -42, 80, 42, -80, 42)
+polygon = PackedVector2Array(-80, -30, 80, -30, 80, 30, -80, 30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ReconocimientoZona3/Rock_Zona3_01" unique_id=1298473246]
 shape = SubResource("RectangleShape2D_gofbp")
@@ -769,6 +775,16 @@ polygon = PackedVector2Array(-1000, -48, 1000, -48, 1000, 48, -1000, 48)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaMensajero/Ground_Mensajero_03" unique_id=316295435]
 shape = SubResource("RectangleShape2D_7hb8u")
+
+[node name="Ground_Mensajero_04" type="StaticBody2D" parent="ZonaMensajero" unique_id=981240125]
+position = Vector2(39750, 572)
+
+[node name="Visual" type="Polygon2D" parent="ZonaMensajero/Ground_Mensajero_04" unique_id=183471029]
+color = Color(0.43, 0.39, 0.32, 1)
+polygon = PackedVector2Array(-250, -48, 250, -48, 250, 48, -250, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaMensajero/Ground_Mensajero_04" unique_id=194820194]
+shape = SubResource("RectangleShape2D_mensajero_04")
 
 [node name="Tree_Mensajero_01" type="Node2D" parent="ZonaMensajero" unique_id=151014212]
 position = Vector2(37400, 524)
@@ -840,6 +856,16 @@ polygon = PackedVector2Array(-1000, -48, 1000, -48, 1000, 48, -1000, 48)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaTormenta/Ground_Tormenta_05" unique_id=246251265]
 shape = SubResource("RectangleShape2D_7oaxc")
 
+[node name="Ground_Tormenta_06" type="StaticBody2D" parent="ZonaTormenta" unique_id=198274192]
+position = Vector2(57500, 572)
+
+[node name="Visual" type="Polygon2D" parent="ZonaTormenta/Ground_Tormenta_06" unique_id=128491823]
+color = Color(0.29, 0.32, 0.38, 1)
+polygon = PackedVector2Array(-500, -48, 500, -48, 500, 48, -500, 48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaTormenta/Ground_Tormenta_06" unique_id=184920184]
+shape = SubResource("RectangleShape2D_tormenta_06")
+
 [node name="Ground_Final" type="StaticBody2D" parent="ZonaTormenta" unique_id=1871509658]
 position = Vector2(58500, 572)
 
@@ -851,21 +877,21 @@ polygon = PackedVector2Array(-500, -48, 500, -48, 500, 48, -500, 48)
 shape = SubResource("RectangleShape2D_lkpbv")
 
 [node name="ShelterRock_01" type="StaticBody2D" parent="ZonaTormenta" unique_id=521581544]
-position = Vector2(49200, 472)
+position = Vector2(49200, 494)
 
 [node name="Visual" type="Polygon2D" parent="ZonaTormenta/ShelterRock_01" unique_id=1821765781]
 color = Color(0.32, 0.34, 0.38, 1)
-polygon = PackedVector2Array(-115, -52, 115, -52, 115, 52, -115, 52)
+polygon = PackedVector2Array(-115, -30, 115, -30, 115, 30, -115, 30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaTormenta/ShelterRock_01" unique_id=1775161278]
 shape = SubResource("RectangleShape2D_c7xr5")
 
 [node name="ShelterRock_02" type="StaticBody2D" parent="ZonaTormenta" unique_id=887506201]
-position = Vector2(53500, 480)
+position = Vector2(53500, 494)
 
 [node name="Visual" type="Polygon2D" parent="ZonaTormenta/ShelterRock_02" unique_id=1669103183]
 color = Color(0.3, 0.32, 0.36, 1)
-polygon = PackedVector2Array(-90, -44, 90, -44, 90, 44, -90, 44)
+polygon = PackedVector2Array(-90, -30, 90, -30, 90, 30, -90, 30)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaTormenta/ShelterRock_02" unique_id=1060870957]
 shape = SubResource("RectangleShape2D_f4njj")
