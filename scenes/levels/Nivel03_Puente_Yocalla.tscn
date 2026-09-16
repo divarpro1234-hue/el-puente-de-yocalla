@@ -897,3 +897,9 @@ position = Vector2(33300, 524)
 [node name="Foliage" type="Polygon2D" parent="LlegadaRio/SparseBush_Rio" unique_id=146901723]
 color = Color(0.24, 0.34, 0.27, 1)
 polygon = PackedVector2Array(-34, 0, -26, -32, -8, -18, 4, -45, 19, -19, 36, -29, 42, 0)
+
+[node name="Checkpoint_Intermedio_01" parent="." unique_id=859783896 instance=ExtResource("5_ku70w")]
+position = Vector2(15500, 490)
+
+[node name="Checkpoint_Intermedio_02" parent="." unique_id=1552381400 instance=ExtResource("5_ku70w")]
+position = Vector2(33500, 500)
