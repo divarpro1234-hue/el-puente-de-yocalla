@@ -24,6 +24,10 @@ _fennara_game_capture="*res://addons/fennara/runtime/game_capture_helper.gd"
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_mcp/plugin.cfg")
+
 [input]
 
 move_left={
