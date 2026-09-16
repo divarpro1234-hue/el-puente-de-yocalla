@@ -1,5 +1,7 @@
 extends Node2D
 
+const MAIN_MENU_PATH: String = "res://scenes/ui/MainMenu.tscn"
+
 @onready var player: CharacterBody2D = $Player
 @onready var pact_area: Area2D = $PactArea
 @onready var pact_prompt: Label = $PactArea/PactPrompt
@@ -12,6 +14,8 @@ extends Node2D
 @onready var epilogue_text: Label = $ObjectiveHUD/EpilogueText
 @onready var final_story_text: Label = $ObjectiveHUD/FinalStoryText
 @onready var legend_complete_panel: Control = $ObjectiveHUD/LegendCompletePanel
+@onready var return_to_menu_button: Button = $ObjectiveHUD/LegendCompletePanel/ReturnToMenuButton
+@onready var exit_button: Button = $ObjectiveHUD/LegendCompletePanel/ExitButton
 @onready var bridge_blocker: StaticBody2D = $ZonaRioPuente/BridgeZone/BridgeBlocker
 @onready var bridge_blocker_collision: CollisionShape2D = $ZonaRioPuente/BridgeZone/BridgeBlocker/CollisionShape2D
 @onready var bridge_blocked_text: Label = $ObjectiveHUD/BridgeBlockedText
@@ -49,6 +53,8 @@ func _ready() -> void:
 	epilogue_text.hide()
 	final_story_text.hide()
 	legend_complete_panel.hide()
+	return_to_menu_button.pressed.connect(_on_return_to_menu_button_pressed)
+	exit_button.pressed.connect(_on_exit_button_pressed)
 	bridge_blocked_text.hide()
 	bridge_blocker_collision.disabled = true
 	pact_area.body_entered.connect(_on_pact_area_body_entered)
@@ -180,4 +186,12 @@ func _on_legend_complete_timer_timeout() -> void:
 	epilogue_text.hide()
 	final_story_text.hide()
 	legend_complete_panel.show()
+	return_to_menu_button.grab_focus()
 	objective_label.text = "Objetivo completado: La leyenda de Yocalla terminó"
+
+func _on_return_to_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file(MAIN_MENU_PATH)
+
+
+func _on_exit_button_pressed() -> void:
+	get_tree().quit()
