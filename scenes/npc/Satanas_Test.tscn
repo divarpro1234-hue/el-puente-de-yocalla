@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://bk16hnkrfjjkf"]
 
 [ext_resource type="Script" uid="uid://ddxfe6b73dnvy" path="res://scripts/npc/satanas_test.gd" id="1_b3pso"]
+[ext_resource type="SpriteFrames" path="res://assets/characters/satanas/sprites/satanas_sprite_frames.tres" id="2_satanas"]
 
 [node name="Satanas_Test" type="Node2D" unique_id=696938969]
 visible = false
 script = ExtResource("1_b3pso")
 
-[node name="Visual" type="Polygon2D" parent="." unique_id=1610883697]
-color = Color(0.36, 0.05, 0.42, 1)
-polygon = PackedVector2Array(-30, 36, -34, -12, -20, -48, -8, -26, 0, -58, 8, -26, 20, -48, 34, -12, 30, 36)
+[node name="Visual" type="AnimatedSprite2D" parent="." unique_id=1610883697]
+position = Vector2(0, -6)
+scale = Vector2(0.6, 0.6)
+texture_filter = 1
+sprite_frames = ExtResource("2_satanas")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="DialogueText" type="Label" parent="." unique_id=23544295]
 visible = false

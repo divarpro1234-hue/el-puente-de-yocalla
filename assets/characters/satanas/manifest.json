@@ -1,0 +1,21 @@
+{
+  "character": "Satanás",
+  "target_folder": "assets/characters/satanas/",
+  "animation": "idle",
+  "frames": 4,
+  "cell_size": [
+    128,
+    128
+  ],
+  "strip_size": [
+    512,
+    128
+  ],
+  "speed_fps": 4,
+  "loop": true,
+  "files": [
+    "source/satanas_reference.png",
+    "sprites/satanas_idle.png",
+    "sprites/satanas_sprite_frames.tres"
+  ]
+}
