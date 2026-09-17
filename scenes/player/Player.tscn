@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ctqmbj22yfry2" path="res://scripts/player/player_controller.gd" id="1_wr5hl"]
 [ext_resource type="PackedScene" uid="uid://bpmyvxkuklhfe" path="res://scenes/ui/PlayerHUD.tscn" id="2_gfjak"]
+[ext_resource type="SpriteFrames" path="res://assets/characters/kespi/sprites/kespi_sprite_frames.tres" id="3_kespi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o8nba"]
 radius = 12.0
@@ -10,10 +11,13 @@ height = 48.0
 [node name="Player" type="CharacterBody2D" unique_id=1388814590]
 script = ExtResource("1_wr5hl")
 
-[node name="Visual" type="Polygon2D" parent="." unique_id=919570886]
-color = Color(0.76, 0.42, 0.2, 1)
-antialiased = true
-polygon = PackedVector2Array(-8, -24, 8, -24, 12, -20, 12, 20, 8, 24, -8, 24, -12, 20, -12, -20)
+[node name="Visual" type="AnimatedSprite2D" parent="." unique_id=919570886]
+position = Vector2(0, -4)
+scale = Vector2(0.5, 0.5)
+texture_filter = 1
+sprite_frames = ExtResource("3_kespi")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1739459837]
 shape = SubResource("CapsuleShape2D_o8nba")

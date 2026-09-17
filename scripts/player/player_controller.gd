@@ -10,6 +10,7 @@ var current_health: int = 100
 var is_respawning: bool = false
 
 @onready var health_label: Label = get_node_or_null("PlayerHUD/HealthLabel")
+@onready var animated_sprite: AnimatedSprite2D = $Visual
 
 
 func _ready() -> void:
@@ -29,6 +30,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 
 	move_and_slide()
+	_update_animation(direction)
 
 	if global_position.y > FALL_LIMIT_Y and not is_respawning:
 		take_damage(100)
@@ -76,3 +78,20 @@ func heal(amount: int) -> void:
 func _respawn_at_checkpoint() -> void:
 	global_position = CheckpointManager.get_respawn_position()
 	velocity = Vector2.ZERO
+
+func _update_animation(direction: float) -> void:
+	if direction != 0.0:
+		animated_sprite.flip_h = direction < 0.0
+
+	var next_animation: StringName = &"idle"
+
+	if not is_on_floor():
+		if velocity.y < 0.0:
+			next_animation = &"jump"
+		else:
+			next_animation = &"fall"
+	elif absf(velocity.x) > 0.1:
+		next_animation = &"run"
+
+	if animated_sprite.animation != next_animation:
+		animated_sprite.play(next_animation)
