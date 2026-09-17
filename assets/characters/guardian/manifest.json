@@ -1,0 +1,22 @@
+{
+  "character": "Guardián del Puente",
+  "target_folder": "assets/characters/guardian/",
+  "animation": "idle",
+  "frames": 4,
+  "cell_size": [
+    128,
+    128
+  ],
+  "strip_size": [
+    512,
+    128
+  ],
+  "speed_fps": 4,
+  "loop": true,
+  "recommended_scene_scale": 0.6,
+  "files": [
+    "source/guardian_reference.png",
+    "sprites/guardian_idle.png",
+    "sprites/guardian_sprite_frames.tres"
+  ]
+}
