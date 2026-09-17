@@ -1,0 +1,15 @@
+{
+  "character": "Jefe Inca",
+  "animation": "idle",
+  "frames": 4,
+  "cell_size": [
+    128,
+    128
+  ],
+  "strip_size": [
+    512,
+    128
+  ],
+  "speed_fps": 4,
+  "loop": true
+}

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bf7brq4pufq2b"]
 
 [ext_resource type="Script" uid="uid://1tqt58lransw" path="res://scripts/npc/jefe_inca_test.gd" id="1_hcyx3"]
+[ext_resource type="SpriteFrames" path="res://assets/characters/jefe_inca/sprites/jefe_inca_sprite_frames.tres" id="2_inca"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fgkrg"]
 size = Vector2(120, 80)
@@ -8,8 +9,13 @@ size = Vector2(120, 80)
 [node name="JefeInca_Test" type="Node2D" unique_id=401455346]
 script = ExtResource("1_hcyx3")
 
-[node name="Visual" type="Polygon2D" parent="." unique_id=1669630346]
-polygon = PackedVector2Array(-16, -28, 16, -28, 16, 28, -16, 28)
+[node name="Visual" type="AnimatedSprite2D" parent="." unique_id=1669630346]
+position = Vector2(0, -4)
+scale = Vector2(0.5, 0.5)
+texture_filter = 1
+sprite_frames = ExtResource("2_inca")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=1545988293]
 
