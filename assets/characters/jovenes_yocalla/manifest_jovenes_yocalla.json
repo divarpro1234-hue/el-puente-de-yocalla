@@ -1,0 +1,47 @@
+{
+  "package": "Jóvenes de Yocalla",
+  "target_folder": "assets/characters/jovenes_yocalla/",
+  "characters": [
+    {
+      "node": "JovenYocalla_01",
+      "asset": "joven_01",
+      "position": [
+        21020,
+        496
+      ],
+      "palette": "azul"
+    },
+    {
+      "node": "JovenYocalla_02",
+      "asset": "joven_02",
+      "position": [
+        21220,
+        496
+      ],
+      "palette": "ocre"
+    },
+    {
+      "node": "JovenYocalla_03",
+      "asset": "joven_03",
+      "position": [
+        21420,
+        496
+      ],
+      "palette": "verde"
+    }
+  ],
+  "animation": {
+    "name": "idle",
+    "frames": 4,
+    "cell": [
+      128,
+      128
+    ],
+    "fps": 4,
+    "loop": true
+  },
+  "recommended_scene_scale": [
+    0.5,
+    0.5
+  ]
+}

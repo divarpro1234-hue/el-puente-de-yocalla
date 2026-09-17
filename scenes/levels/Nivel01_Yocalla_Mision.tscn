@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://v7o6mfuf81ee"]
 
 [ext_resource type="Script" uid="uid://cojvwoyahg5hp" path="res://scripts/levels/nivel01_yocalla_mision.gd" id="1_85674"]
+[ext_resource type="SpriteFrames" path="res://assets/characters/jovenes_yocalla/joven_01/sprites/joven_01_sprite_frames.tres" id="joven_yocalla_01_frames"]
+[ext_resource type="SpriteFrames" path="res://assets/characters/jovenes_yocalla/joven_02/sprites/joven_02_sprite_frames.tres" id="joven_yocalla_02_frames"]
+[ext_resource type="SpriteFrames" path="res://assets/characters/jovenes_yocalla/joven_03/sprites/joven_03_sprite_frames.tres" id="joven_yocalla_03_frames"]
 [ext_resource type="PackedScene" uid="uid://bswelubn23x0h" path="res://scenes/player/Player.tscn" id="2_2v31h"]
 [ext_resource type="PackedScene" uid="uid://bjetk3r7mqn32" path="res://scenes/npc/Lucero_Test.tscn" id="3_sbgmi"]
 [ext_resource type="PackedScene" uid="uid://bf7brq4pufq2b" path="res://scenes/npc/JefeInca_Test.tscn" id="3_x1nsb"]
@@ -724,11 +727,16 @@ shape = SubResource("RectangleShape2D_w7fjn")
 z_index = -1
 position = Vector2(21020, 496)
 
-[node name="Visual" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/JovenYocalla_01" unique_id=556253414]
-color = Color(0.27, 0.46, 0.68, 1)
-polygon = PackedVector2Array(-16, 0, 16, 0, 12, -45, -12, -45)
+[node name="Visual" type="AnimatedSprite2D" parent="ZonaYocalla/PuebloYocalla/JovenYocalla_01" unique_id=556253414]
+position = Vector2(0, -4)
+scale = Vector2(0.5, 0.5)
+texture_filter = 1
+sprite_frames = ExtResource("joven_yocalla_01_frames")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="Head" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/JovenYocalla_01" unique_id=13586893]
+visible = false
 position = Vector2(0, -57)
 color = Color(0.67, 0.45, 0.29, 1)
 polygon = PackedVector2Array(-9, 8, 9, 8, 9, -8, -9, -8)
@@ -737,11 +745,16 @@ polygon = PackedVector2Array(-9, 8, 9, 8, 9, -8, -9, -8)
 z_index = -1
 position = Vector2(21220, 496)
 
-[node name="Visual" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/JovenYocalla_02" unique_id=724291181]
-color = Color(0.63, 0.35, 0.2, 1)
-polygon = PackedVector2Array(-16, 0, 16, 0, 12, -45, -12, -45)
+[node name="Visual" type="AnimatedSprite2D" parent="ZonaYocalla/PuebloYocalla/JovenYocalla_02" unique_id=724291181]
+position = Vector2(0, -4)
+scale = Vector2(0.5, 0.5)
+texture_filter = 1
+sprite_frames = ExtResource("joven_yocalla_02_frames")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="Head" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/JovenYocalla_02" unique_id=1937716373]
+visible = false
 position = Vector2(0, -57)
 color = Color(0.67, 0.45, 0.29, 1)
 polygon = PackedVector2Array(-9, 8, 9, 8, 9, -8, -9, -8)
@@ -750,11 +763,16 @@ polygon = PackedVector2Array(-9, 8, 9, 8, 9, -8, -9, -8)
 z_index = -1
 position = Vector2(21420, 496)
 
-[node name="Visual" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/JovenYocalla_03" unique_id=378845100]
-color = Color(0.3, 0.58, 0.34, 1)
-polygon = PackedVector2Array(-16, 0, 16, 0, 12, -45, -12, -45)
+[node name="Visual" type="AnimatedSprite2D" parent="ZonaYocalla/PuebloYocalla/JovenYocalla_03" unique_id=378845100]
+position = Vector2(0, -4)
+scale = Vector2(0.5, 0.5)
+texture_filter = 1
+sprite_frames = ExtResource("joven_yocalla_03_frames")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="Head" type="Polygon2D" parent="ZonaYocalla/PuebloYocalla/JovenYocalla_03" unique_id=884055247]
+visible = false
 position = Vector2(0, -57)
 color = Color(0.67, 0.45, 0.29, 1)
 polygon = PackedVector2Array(-9, 8, 9, 8, 9, -8, -9, -8)
