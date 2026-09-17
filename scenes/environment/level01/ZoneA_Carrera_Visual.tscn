@@ -1,0 +1,155 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/environments/level01/zone_a/backgrounds/zone_a_race_background.png" id="1_bg"]
+[ext_resource type="Texture2D" path="res://assets/environments/level01/zone_a/ground/race_ground_tile.png" id="2_ground"]
+[ext_resource type="Texture2D" path="res://assets/environments/level01/zone_a/props/fence_01.png" id="3_fence"]
+[ext_resource type="Texture2D" path="res://assets/environments/level01/zone_a/props/bush_01.png" id="4_bush"]
+[ext_resource type="Texture2D" path="res://assets/environments/level01/zone_a/props/rock_01.png" id="5_rock"]
+
+[node name="ZoneA_Carrera_Visual" type="Node2D"]
+
+[node name="Backdrop" type="Sprite2D" parent="."]
+z_index = -100
+centered = false
+texture_filter = 1
+texture = ExtResource("1_bg")
+
+[node name="GroundArt" type="Node2D" parent="."]
+
+[node name="Ground_01" type="Sprite2D" parent="GroundArt"]
+position = Vector2(1050, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2100, 96)
+texture = ExtResource("2_ground")
+
+[node name="Ground_02" type="Sprite2D" parent="GroundArt"]
+position = Vector2(3150, 556)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2100, 96)
+texture = ExtResource("2_ground")
+
+[node name="Ground_03" type="Sprite2D" parent="GroundArt"]
+position = Vector2(5250, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2100, 96)
+texture = ExtResource("2_ground")
+
+[node name="Ground_04" type="Sprite2D" parent="GroundArt"]
+position = Vector2(7350, 548)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2100, 96)
+texture = ExtResource("2_ground")
+
+[node name="Ground_05" type="Sprite2D" parent="GroundArt"]
+position = Vector2(9450, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2100, 96)
+texture = ExtResource("2_ground")
+
+[node name="Ground_06" type="Sprite2D" parent="GroundArt"]
+position = Vector2(11550, 556)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2100, 96)
+texture = ExtResource("2_ground")
+
+[node name="Ground_07" type="Sprite2D" parent="GroundArt"]
+position = Vector2(13650, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2100, 96)
+texture = ExtResource("2_ground")
+
+[node name="Decor" type="Node2D" parent="."]
+
+[node name="Fence_01" type="Sprite2D" parent="Decor"]
+position = Vector2(1120, 458)
+z_index = -2
+texture_filter = 1
+texture = ExtResource("3_fence")
+
+[node name="Fence_02" type="Sprite2D" parent="Decor"]
+position = Vector2(7750, 434)
+z_index = -2
+texture_filter = 1
+texture = ExtResource("3_fence")
+
+[node name="Fence_03" type="Sprite2D" parent="Decor"]
+position = Vector2(11950, 442)
+z_index = -2
+texture_filter = 1
+texture = ExtResource("3_fence")
+
+[node name="Bush_01" type="Sprite2D" parent="Decor"]
+position = Vector2(1750, 473)
+z_index = -1
+texture_filter = 1
+texture = ExtResource("4_bush")
+
+[node name="Bush_02" type="Sprite2D" parent="Decor"]
+position = Vector2(5900, 473)
+z_index = -1
+texture_filter = 1
+texture = ExtResource("4_bush")
+
+[node name="Bush_03" type="Sprite2D" parent="Decor"]
+position = Vector2(10150, 473)
+z_index = -1
+texture_filter = 1
+texture = ExtResource("4_bush")
+
+[node name="Bush_04" type="Sprite2D" parent="Decor"]
+position = Vector2(13750, 473)
+z_index = -1
+texture_filter = 1
+texture = ExtResource("4_bush")
+
+[node name="Rocks" type="Node2D" parent="."]
+
+[node name="Rock_01" type="Sprite2D" parent="Rocks"]
+position = Vector2(2550, 473)
+scale = Vector2(0.62, 0.62)
+texture_filter = 1
+texture = ExtResource("5_rock")
+
+[node name="Rock_02" type="Sprite2D" parent="Rocks"]
+position = Vector2(4680, 481)
+scale = Vector2(0.72, 0.72)
+texture_filter = 1
+texture = ExtResource("5_rock")
+
+[node name="Rock_03" type="Sprite2D" parent="Rocks"]
+position = Vector2(6820, 458)
+scale = Vector2(0.65, 0.65)
+texture_filter = 1
+texture = ExtResource("5_rock")
+
+[node name="Rock_04" type="Sprite2D" parent="Rocks"]
+position = Vector2(8950, 478)
+scale = Vector2(0.80, 0.80)
+texture_filter = 1
+texture = ExtResource("5_rock")
+
+[node name="Rock_05" type="Sprite2D" parent="Rocks"]
+position = Vector2(11150, 465)
+scale = Vector2(0.68, 0.68)
+texture_filter = 1
+texture = ExtResource("5_rock")
+
+[node name="Rock_06" type="Sprite2D" parent="Rocks"]
+position = Vector2(13050, 478)
+scale = Vector2(0.75, 0.75)
+texture_filter = 1
+texture = ExtResource("5_rock")

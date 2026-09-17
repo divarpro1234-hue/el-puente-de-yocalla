@@ -1,0 +1,48 @@
+{
+  "package": "Nivel 1 - Zona C - Pueblo de Yocalla",
+  "requires": [
+    "Zona A integrada",
+    "Zona B integrada"
+  ],
+  "coordinates": {
+    "background_start_x": 16000,
+    "background_end_x": 26400,
+    "village_ground_02": [
+      16800,
+      18900
+    ],
+    "village_ground_03": [
+      18900,
+      21000
+    ],
+    "village_ground_04": [
+      21000,
+      23100
+    ],
+    "village_ground_05": [
+      23100,
+      25200
+    ],
+    "house_02_x": 19000,
+    "tree_02_x": 19700,
+    "crops_02_x": 20700,
+    "house_03_x": 21800,
+    "fence_02_x": 22800,
+    "tree_03_x": 23700,
+    "house_04_x": 24500
+  },
+  "kept_original": [
+    "JovenYocalla_01",
+    "JovenYocalla_02",
+    "JovenYocalla_03",
+    "GuardiaInca_Test",
+    "ReunionSecretaArea",
+    "CollisionShape2D"
+  ],
+  "safety": [
+    "No modifica scripts.",
+    "No modifica eventos.",
+    "No modifica colisiones.",
+    "No cambia las posiciones de los NPC."
+  ]
+}

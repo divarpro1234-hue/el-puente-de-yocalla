@@ -1,0 +1,29 @@
+{
+  "package": "Nivel 1 - Zona A - Carrera",
+  "target_project_root": "03_Godot/",
+  "based_on": {
+    "race_end_x": 14400,
+    "viewport_reference": "1152x648",
+    "player_start": [
+      300,
+      500
+    ],
+    "ground_segments": 7,
+    "race_rocks": 6
+  },
+  "files": [
+    "assets/environments/level01/zone_a/backgrounds/zone_a_race_background.png",
+    "assets/environments/level01/zone_a/ground/race_ground_tile.png",
+    "assets/environments/level01/zone_a/props/fence_01.png",
+    "assets/environments/level01/zone_a/props/bush_01.png",
+    "assets/environments/level01/zone_a/props/rock_01.png",
+    "scenes/environment/level01/ZoneA_Carrera_Visual.tscn",
+    "tools/integrate_zone_a_carrera.ps1"
+  ],
+  "safety": [
+    "No cambia colisiones.",
+    "No cambia scripts de gameplay.",
+    "No cambia NPC ni eventos.",
+    "El script aborta si detecta la integracion experimental anterior."
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "package": "Nivel 1 - Zona B - Entrada a Yocalla",
+  "requires": "Zona A integrada",
+  "coordinates": {
+    "background_start_x": 12800,
+    "gate_x": 14400,
+    "lucero_x": 14850,
+    "village_ground_01": [
+      14700,
+      16800
+    ],
+    "house_01_x": 15800,
+    "tree_01_x": 16450
+  },
+  "changes": [
+    "Fondo de transición con valle y casas al fondo",
+    "Arco de entrada nuevo",
+    "Cartel YOCALLA",
+    "Casa y árbol de transición",
+    "Continuidad del terreno usando el tile de Zona A",
+    "Oculta únicamente visuales provisionales equivalentes"
+  ],
+  "safety": [
+    "No modifica CollisionShape2D",
+    "No modifica CarreraArea",
+    "No modifica Lucero",
+    "No modifica scripts ni objetivos",
+    "No modifica la lógica de PuebloYocalla"
+  ]
+}

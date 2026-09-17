@@ -1,0 +1,63 @@
+{
+  "package": "Nivel 1 - Yocalla - Referencia visual",
+  "target_folder": "assets/environments/level01/reference/",
+  "purpose": "Referencia visual para rediseñar el Nivel 1. No usar directamente como fondo de juego.",
+  "zones": [
+    {
+      "id": "A",
+      "name": "Zona de la carrera",
+      "elements": [
+        "cielo",
+        "montañas lejanas",
+        "montañas medias",
+        "vegetación",
+        "rocas",
+        "cercas",
+        "camino/suelo"
+      ]
+    },
+    {
+      "id": "B",
+      "name": "Entrada a Yocalla",
+      "elements": [
+        "arco/entrada",
+        "cartel Yocalla",
+        "casas al fondo",
+        "vegetación",
+        "camino"
+      ]
+    },
+    {
+      "id": "C",
+      "name": "Pueblo de Yocalla",
+      "elements": [
+        "casas de adobe",
+        "árboles",
+        "cercas",
+        "cultivos",
+        "arbustos",
+        "rocas",
+        "NPC"
+      ]
+    },
+    {
+      "id": "D",
+      "name": "Complejo del Jefe Inca",
+      "elements": [
+        "muro de piedra",
+        "puerta principal",
+        "escalones",
+        "estandartes",
+        "braseros",
+        "patio",
+        "arquitectura de mayor jerarquía"
+      ]
+    }
+  ],
+  "notes": [
+    "Mantener las colisiones y eventos actuales.",
+    "Separar arte visual de gameplay.",
+    "Usar escenas visuales reutilizables para casas, árboles, rocas y complejo.",
+    "No reutilizar esta imagen completa como textura de fondo."
+  ]
+}

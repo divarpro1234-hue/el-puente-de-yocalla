@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/environments/level01/zone_d/props/complex_access_blocker.png" id="1_blocker"]
+
+[node name="ComplexAccessGateVisual" type="Node2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(0, 20)
+scale = Vector2(0.50, 0.96)
+texture_filter = 1
+texture = ExtResource("1_blocker")

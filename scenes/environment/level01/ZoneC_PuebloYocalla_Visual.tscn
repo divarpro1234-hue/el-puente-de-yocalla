@@ -1,0 +1,163 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/environments/level01/zone_c/backgrounds/zone_c_village_background.png" id="1_bg"]
+[ext_resource type="Texture2D" path="res://assets/environments/level01/zone_c/ground/village_ground_tile.png" id="2_ground"]
+[ext_resource type="Texture2D" path="res://assets/environments/level01/zone_c/props/house_01.png" id="3_house1"]
+[ext_resource type="Texture2D" path="res://assets/environments/level01/zone_c/props/house_02.png" id="4_house2"]
+[ext_resource type="Texture2D" path="res://assets/environments/level01/zone_c/props/house_03.png" id="5_house3"]
+[ext_resource type="Texture2D" path="res://assets/environments/level01/zone_c/props/tree_01.png" id="6_tree"]
+[ext_resource type="Texture2D" path="res://assets/environments/level01/zone_c/props/crops_01.png" id="7_crops"]
+[ext_resource type="Texture2D" path="res://assets/environments/level01/zone_c/props/fence_01.png" id="8_fence"]
+[ext_resource type="Texture2D" path="res://assets/environments/level01/zone_c/props/bush_01.png" id="9_bush"]
+[ext_resource type="Texture2D" path="res://assets/environments/level01/zone_c/props/rock_01.png" id="10_rock"]
+
+[node name="ZoneC_PuebloYocalla_Visual" type="Node2D"]
+
+[node name="Backdrop" type="Sprite2D" parent="."]
+z_index = -98
+position = Vector2(16000, 0)
+centered = false
+texture_filter = 1
+texture = ExtResource("1_bg")
+
+[node name="GroundArt" type="Node2D" parent="."]
+
+[node name="Ground_02" type="Sprite2D" parent="GroundArt"]
+position = Vector2(17850, 556)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2100, 96)
+texture = ExtResource("2_ground")
+
+[node name="Ground_03" type="Sprite2D" parent="GroundArt"]
+position = Vector2(19950, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2100, 96)
+texture = ExtResource("2_ground")
+
+[node name="Ground_04" type="Sprite2D" parent="GroundArt"]
+position = Vector2(22050, 556)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2100, 96)
+texture = ExtResource("2_ground")
+
+[node name="Ground_05" type="Sprite2D" parent="GroundArt"]
+position = Vector2(24150, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2100, 96)
+texture = ExtResource("2_ground")
+
+[node name="VillageProps" type="Node2D" parent="."]
+
+[node name="Crops_01" type="Sprite2D" parent="VillageProps"]
+position = Vector2(17100, 478)
+z_index = -2
+texture_filter = 1
+texture = ExtResource("7_crops")
+
+[node name="Fence_01" type="Sprite2D" parent="VillageProps"]
+position = Vector2(18100, 465)
+z_index = -2
+texture_filter = 1
+texture = ExtResource("8_fence")
+
+[node name="House_02" type="Sprite2D" parent="VillageProps"]
+position = Vector2(19000, 390)
+z_index = -4
+scale = Vector2(0.80, 0.80)
+texture_filter = 1
+texture = ExtResource("3_house1")
+
+[node name="Tree_02" type="Sprite2D" parent="VillageProps"]
+position = Vector2(19700, 384)
+z_index = -3
+scale = Vector2(0.62, 0.62)
+texture_filter = 1
+texture = ExtResource("6_tree")
+
+[node name="Crops_02" type="Sprite2D" parent="VillageProps"]
+position = Vector2(20700, 478)
+z_index = -2
+texture_filter = 1
+texture = ExtResource("7_crops")
+
+[node name="House_03" type="Sprite2D" parent="VillageProps"]
+position = Vector2(21800, 390)
+z_index = -4
+scale = Vector2(0.82, 0.82)
+texture_filter = 1
+texture = ExtResource("4_house2")
+
+[node name="Fence_02" type="Sprite2D" parent="VillageProps"]
+position = Vector2(22800, 465)
+z_index = -2
+texture_filter = 1
+texture = ExtResource("8_fence")
+
+[node name="Tree_03" type="Sprite2D" parent="VillageProps"]
+position = Vector2(23700, 384)
+z_index = -3
+scale = Vector2(0.62, 0.62)
+texture_filter = 1
+texture = ExtResource("6_tree")
+
+[node name="House_04" type="Sprite2D" parent="VillageProps"]
+position = Vector2(24500, 390)
+z_index = -4
+scale = Vector2(0.80, 0.80)
+texture_filter = 1
+texture = ExtResource("5_house3")
+
+[node name="Decoration" type="Node2D" parent="."]
+
+[node name="Bush_01" type="Sprite2D" parent="Decoration"]
+position = Vector2(18600, 488)
+z_index = -1
+texture_filter = 1
+texture = ExtResource("9_bush")
+
+[node name="Bush_02" type="Sprite2D" parent="Decoration"]
+position = Vector2(20250, 488)
+z_index = -1
+texture_filter = 1
+texture = ExtResource("9_bush")
+
+[node name="Bush_03" type="Sprite2D" parent="Decoration"]
+position = Vector2(22300, 488)
+z_index = -1
+texture_filter = 1
+texture = ExtResource("9_bush")
+
+[node name="Bush_04" type="Sprite2D" parent="Decoration"]
+position = Vector2(24850, 488)
+z_index = -1
+texture_filter = 1
+texture = ExtResource("9_bush")
+
+[node name="Rock_01" type="Sprite2D" parent="Decoration"]
+position = Vector2(17550, 486)
+z_index = 1
+scale = Vector2(0.62, 0.62)
+texture_filter = 1
+texture = ExtResource("10_rock")
+
+[node name="Rock_02" type="Sprite2D" parent="Decoration"]
+position = Vector2(21350, 488)
+z_index = 1
+scale = Vector2(0.66, 0.66)
+texture_filter = 1
+texture = ExtResource("10_rock")
+
+[node name="Rock_03" type="Sprite2D" parent="Decoration"]
+position = Vector2(23450, 486)
+z_index = 1
+scale = Vector2(0.60, 0.60)
+texture_filter = 1
+texture = ExtResource("10_rock")

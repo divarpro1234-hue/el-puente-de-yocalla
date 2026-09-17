@@ -1,0 +1,54 @@
+{
+  "package": "Nivel 1 - Zona D - Complejo del Jefe Inca",
+  "requires": [
+    "Zona A integrada",
+    "Zona B integrada",
+    "Zona C integrada"
+  ],
+  "coordinates": {
+    "background_start_x": 23800,
+    "background_end_x": 28400,
+    "complex_ground": {
+      "center": [
+        26250,
+        564
+      ],
+      "width": 4200,
+      "top_y": 524
+    },
+    "complex_wall": {
+      "center": [
+        26250,
+        400
+      ],
+      "width": 1600
+    },
+    "complex_gate": [
+      25950,
+      445
+    ],
+    "complex_access_blocker": [
+      25200,
+      300
+    ],
+    "consejo_area": [
+      26100,
+      410
+    ],
+    "lucero_consejo": [
+      26350,
+      496
+    ],
+    "jefe_inca": [
+      26600,
+      496
+    ]
+  },
+  "safety": [
+    "No modifica scripts.",
+    "No modifica CollisionShape2D.",
+    "No modifica ConsejoArea.",
+    "No modifica JefeInca_Test ni Lucero_Consejo.",
+    "El arte del blocker es hijo de ComplexAccessBlocker y respeta show/hide existente."
+  ]
+}
