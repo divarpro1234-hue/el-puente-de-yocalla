@@ -9,6 +9,7 @@
 [node name="ZoneA_Carrera_Visual" type="Node2D"]
 
 [node name="Backdrop" type="Sprite2D" parent="."]
+visible = false
 z_index = -100
 centered = false
 texture_filter = 1

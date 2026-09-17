@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" path="res://scenes/environment/level01/ZoneB_EntradaYocalla_Visual.tscn" id="6_zone_b"]
 [ext_resource type="PackedScene" path="res://scenes/environment/level01/ZoneC_PuebloYocalla_Visual.tscn" id="7_zone_c"]
 [ext_resource type="PackedScene" path="res://scenes/environment/level01/ZoneD_ComplejoInca_Visual.tscn" id="8_zone_d"]
+[ext_resource type="PackedScene" path="res://scenes/environment/level01/Level01_ContinuousBackground.tscn" id="10_bg_continuous"]
 [ext_resource type="PackedScene" path="res://scenes/environment/level01/ComplexAccessGateVisual.tscn" id="9_blocker_art"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pf2kg"]
@@ -95,6 +96,8 @@ size = Vector2(600, 260)
 
 [node name="Nivel01_Yocalla_Mision" type="Node2D" unique_id=928365288]
 script = ExtResource("1_85674")
+
+[node name="Level01_ContinuousBackground" parent="." instance=ExtResource("10_bg_continuous")]
 
 [node name="ZoneA_Carrera_Visual" parent="." instance=ExtResource("5_zone_a")]
 
@@ -811,9 +814,10 @@ color = Color(0.26, 0.18, 0.12, 1)
 polygon = PackedVector2Array(-90, -75, 90, -75, 90, 75, -90, 75)
 
 [node name="ComplexAccessBlocker" type="StaticBody2D" parent="ZonaComplejoInca" unique_id=619690058]
+position = Vector2(25200, 300)
 
 [node name="ComplexAccessGateVisual" parent="ZonaComplejoInca/ComplexAccessBlocker" instance=ExtResource("9_blocker_art")]
-position = Vector2(25200, 300)
+position = Vector2(0, 0)
 
 [node name="Visual" type="Polygon2D" parent="ZonaComplejoInca/ComplexAccessBlocker" unique_id=712310717]
 visible = false
@@ -837,6 +841,8 @@ position = Vector2(26350, 496)
 [node name="ObjectiveHUD" type="CanvasLayer" parent="." unique_id=1010854544]
 
 [node name="ObjectiveLabel" type="Label" parent="ObjectiveHUD" unique_id=1053388577]
+theme_override_colors/font_outline_color = Color(0.07, 0.08, 0.09, 0.92)
+theme_override_constants/outline_size = 4
 offset_left = 24.0
 offset_top = 24.0
 offset_right = 524.0

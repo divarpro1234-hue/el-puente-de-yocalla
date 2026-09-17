@@ -14,6 +14,7 @@
 [node name="ZoneC_PuebloYocalla_Visual" type="Node2D"]
 
 [node name="Backdrop" type="Sprite2D" parent="."]
+visible = false
 z_index = -98
 position = Vector2(16000, 0)
 centered = false
@@ -150,7 +151,7 @@ texture = ExtResource("10_rock")
 
 [node name="Rock_02" type="Sprite2D" parent="Decoration"]
 position = Vector2(21350, 488)
-z_index = 1
+z_index = -1
 scale = Vector2(0.66, 0.66)
 texture_filter = 1
 texture = ExtResource("10_rock")
