@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://bjetk3r7mqn32"]
 
 [ext_resource type="Script" uid="uid://b0cakvd41tqwe" path="res://scripts/npc/lucero_test.gd" id="1_u7ov4"]
+[ext_resource type="SpriteFrames" path="res://assets/characters/lucero/sprites/lucero_sprite_frames.tres" id="2_lucero"]
 
 [node name="Lucero_Test" type="Node2D" unique_id=1090689686]
 visible = false
 script = ExtResource("1_u7ov4")
 
-[node name="Visual" type="Polygon2D" parent="." unique_id=1812852258]
-color = Color(0.8509804, 0.4745098, 0.65882355, 1)
-polygon = PackedVector2Array(-18, 0, 18, 0, 14, -48, -14, -48)
+[node name="Visual" type="AnimatedSprite2D" parent="." unique_id=1812852258]
+position = Vector2(0, -4)
+scale = Vector2(0.5, 0.5)
+texture_filter = 1
+sprite_frames = ExtResource("2_lucero")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="DialogueText" type="Label" parent="." unique_id=1527907526]
 visible = false
