@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bpegwik8rheit"]
 
 [ext_resource type="Script" uid="uid://cicfk8jpp1rll" path="res://scripts/npc/mensajero_test.gd" id="1_6khc5"]
+[ext_resource type="SpriteFrames" path="res://assets/characters/mensajero/sprites/mensajero_sprite_frames.tres" id="2_mensajero"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fwdn"]
 size = Vector2(120, 80)
@@ -9,9 +10,13 @@ size = Vector2(120, 80)
 visible = false
 script = ExtResource("1_6khc5")
 
-[node name="Visual" type="Polygon2D" parent="." unique_id=1971876051]
-color = Color(0.1, 0.85, 0.95, 1)
-polygon = PackedVector2Array(-14, -24, 14, -24, 14, 24, -14, 24)
+[node name="Visual" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -4)
+scale = Vector2(0.5, 0.5)
+texture_filter = 1
+sprite_frames = ExtResource("2_mensajero")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=1498689320]
 collision_layer = 0
