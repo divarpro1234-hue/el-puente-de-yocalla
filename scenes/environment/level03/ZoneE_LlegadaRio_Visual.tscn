@@ -1,0 +1,93 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_e/ground/riverbank_ground_tile.png" id="1_ground"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_e/ground/storm_to_riverbank.png" id="2_ground_transition"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_e/props/wet_ground_01.png" id="3_wet1"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_e/props/wet_ground_02.png" id="4_wet2"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_e/props/river_rock_01.png" id="5_rock"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_e/props/sparse_river_bush.png" id="6_bush"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_e/storm_exit/storm_exit_tint.png" id="7_exit_tint"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_e/storm_exit/storm_exit_rain.png" id="8_exit_rain"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_e/storm_exit/storm_exit_clouds.png" id="9_exit_clouds"]
+
+[sub_resource type="Shader" id="Shader_exit_rain"]
+code = "shader_type canvas_item;\n\nuniform float speed = 0.58;\n\nvoid fragment() {\n    vec2 uv = UV;\n    uv.y = fract(uv.y - TIME * speed);\n    COLOR = texture(TEXTURE, uv) * COLOR;\n}\n"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_exit_rain"]
+shader = SubResource("Shader_exit_rain")
+shader_parameter/speed = 0.58
+
+[node name="ZoneE_LlegadaRio_Visual" type="Node2D"]
+
+[node name="GroundArt" type="Node2D" parent="."]
+
+[node name="EntryGround" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(33500, 572)
+texture_filter = 1
+texture = ExtResource("2_ground_transition")
+
+[node name="Ground01B" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(34500, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 1000, 96)
+texture = ExtResource("1_ground")
+
+[node name="Ground02" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(35500, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 1000, 96)
+texture = ExtResource("1_ground")
+
+[node name="Wet01" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(33700, 514)
+texture_filter = 1
+texture = ExtResource("3_wet1")
+
+[node name="Wet02" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(35100, 512)
+texture_filter = 1
+texture = ExtResource("4_wet2")
+
+[node name="StormExitClouds" type="Sprite2D" parent="."]
+z_index = -108
+position = Vector2(33250, 150)
+texture_filter = 1
+texture = ExtResource("9_exit_clouds")
+
+[node name="StormExitTint" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(33250, 324)
+texture_filter = 1
+texture = ExtResource("7_exit_tint")
+
+[node name="StormExitRain" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(33250, 324)
+material = SubResource("ShaderMaterial_exit_rain")
+texture_filter = 1
+texture = ExtResource("8_exit_rain")
+
+[node name="CollisionAlignedArt" type="Node2D" parent="."]
+
+[node name="RiverRock01" type="Sprite2D" parent="CollisionAlignedArt"]
+position = Vector2(34500, 494)
+texture_filter = 1
+texture = ExtResource("5_rock")
+
+[node name="Decoration" type="Node2D" parent="."]
+
+[node name="SparseBush" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(33300, 491)
+scale = Vector2(0.62, 0.62)
+texture_filter = 1
+texture = ExtResource("6_bush")

@@ -1,0 +1,171 @@
+[gd_scene load_steps=14 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_d/ground/storm_entry_ground.png" id="1_entry"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_d/ground/storm_ground_tile.png" id="2_ground"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_d/props/shelter_rock_01.png" id="3_rock1"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_d/props/shelter_rock_02.png" id="4_rock2"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_d/props/protected_ledge_01.png" id="5_ledge"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_d/props/storm_puddle.png" id="6_puddle"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_d/storm/storm_transition_tint.png" id="7_tint_transition"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_d/storm/storm_full_tint.png" id="8_tint_full"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_d/storm/storm_clouds_tile.png" id="9_clouds"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_d/storm/rain_transition.png" id="10_rain_transition"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_d/storm/rain_far_tile.png" id="11_rain_far"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_d/storm/rain_near_tile.png" id="12_rain_near"]
+
+[sub_resource type="Shader" id="Shader_rain_transition"]
+code = "shader_type canvas_item;\n\nuniform float speed = 0.68;\n\nvoid fragment() {\n    vec2 uv = UV;\n    uv.y = fract(uv.y - TIME * speed);\n    COLOR = texture(TEXTURE, uv) * COLOR;\n}\n"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rain_transition"]
+shader = SubResource("Shader_rain_transition")
+shader_parameter/speed = 0.68
+
+[sub_resource type="Shader" id="Shader_rain_repeat"]
+code = "shader_type canvas_item;\n\nuniform float speed = 0.72;\n\nvoid fragment() {\n    vec2 uv = fract(UV - vec2(0.0, TIME * speed));\n    COLOR = texture(TEXTURE, uv) * COLOR;\n}\n"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rain_far"]
+shader = SubResource("Shader_rain_repeat")
+shader_parameter/speed = 0.46
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rain_near"]
+shader = SubResource("Shader_rain_repeat")
+shader_parameter/speed = 0.84
+
+[node name="ZoneD_PasoTormenta_Visual" type="Node2D"]
+
+[node name="GroundArt" type="Node2D" parent="."]
+
+[node name="EntryGround" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(24500, 572)
+texture_filter = 1
+texture = ExtResource("1_entry")
+
+[node name="Ground01B" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(25500, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 1000, 96)
+texture = ExtResource("2_ground")
+
+[node name="Ground02" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(27000, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 96)
+texture = ExtResource("2_ground")
+
+[node name="Ground03" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(29000, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 96)
+texture = ExtResource("2_ground")
+
+[node name="Ground04" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(31000, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 96)
+texture = ExtResource("2_ground")
+
+[node name="Ground05" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(32500, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 1000, 96)
+texture = ExtResource("2_ground")
+
+[node name="Clouds" type="Sprite2D" parent="."]
+z_index = -108
+position = Vector2(27750, 150)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 8500, 300)
+texture = ExtResource("9_clouds")
+
+[node name="TransitionTint" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(24500, 324)
+texture_filter = 1
+texture = ExtResource("7_tint_transition")
+
+[node name="FullTint" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(28750, 324)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 6500, 648)
+texture = ExtResource("8_tint_full")
+
+[node name="TransitionRain" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(24500, 324)
+material = SubResource("ShaderMaterial_rain_transition")
+texture_filter = 1
+texture = ExtResource("10_rain_transition")
+
+[node name="RainFar" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(28750, 324)
+material = SubResource("ShaderMaterial_rain_far")
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 6500, 648)
+texture = ExtResource("11_rain_far")
+
+[node name="RainNear" type="Sprite2D" parent="."]
+z_index = 6
+position = Vector2(28750, 324)
+material = SubResource("ShaderMaterial_rain_near")
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 6500, 648)
+texture = ExtResource("12_rain_near")
+
+[node name="CollisionAlignedArt" type="Node2D" parent="."]
+
+[node name="ShelterRock01" type="Sprite2D" parent="CollisionAlignedArt"]
+position = Vector2(26400, 494)
+texture_filter = 1
+texture = ExtResource("3_rock1")
+
+[node name="ProtectedLedge01" type="Sprite2D" parent="CollisionAlignedArt"]
+position = Vector2(28200, 438)
+texture_filter = 1
+texture = ExtResource("5_ledge")
+
+[node name="ShelterRock02" type="Sprite2D" parent="CollisionAlignedArt"]
+position = Vector2(30200, 490)
+texture_filter = 1
+texture = ExtResource("4_rock2")
+
+[node name="Decoration" type="Node2D" parent="."]
+
+[node name="Puddle01" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(27300, 516)
+scale = Vector2(0.62, 0.62)
+texture_filter = 1
+texture = ExtResource("6_puddle")
+
+[node name="Puddle02" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(31500, 516)
+scale = Vector2(0.70, 0.70)
+texture_filter = 1
+texture = ExtResource("6_puddle")

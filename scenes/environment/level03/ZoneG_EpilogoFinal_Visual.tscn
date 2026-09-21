@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_g/ground/epilogue_ground_tile.png" id="1_ground"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_g/ground/river_to_epilogue_transition.png" id="2_transition"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_g/props/epilogue_rock_01.png" id="3_rock1"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_g/props/epilogue_rock_02.png" id="4_rock2"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_g/props/epilogue_bush.png" id="5_bush"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_g/props/epilogue_cairn.png" id="6_cairn"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_g/props/distant_yocalla.png" id="7_village"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_g/props/epilogue_glow.png" id="8_glow"]
+
+[node name="ZoneG_EpilogoFinal_Visual" type="Node2D"]
+
+[node name="GroundArt" type="Node2D" parent="."]
+
+[node name="EntryTransition" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(39050, 644)
+texture_filter = 1
+texture = ExtResource("2_transition")
+
+[node name="GroundMain" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(39550, 644)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 500, 240)
+texture = ExtResource("1_ground")
+
+[node name="Atmosphere" type="Node2D" parent="."]
+
+[node name="Glow" type="Sprite2D" parent="Atmosphere"]
+z_index = -110
+position = Vector2(39450, 315)
+texture_filter = 1
+texture = ExtResource("8_glow")
+
+[node name="DistantYocalla" type="Sprite2D" parent="Atmosphere"]
+z_index = -109
+position = Vector2(39480, 468)
+scale = Vector2(0.62, 0.62)
+texture_filter = 1
+texture = ExtResource("7_village")
+
+[node name="Decoration" type="Node2D" parent="."]
+
+[node name="Rock01" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(39040, 488)
+scale = Vector2(0.70, 0.70)
+texture_filter = 1
+texture = ExtResource("3_rock1")
+
+[node name="Rock02" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(39500, 492)
+scale = Vector2(0.68, 0.68)
+texture_filter = 1
+texture = ExtResource("4_rock2")
+
+[node name="Bush01" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(39720, 493)
+scale = Vector2(0.60, 0.60)
+texture_filter = 1
+texture = ExtResource("5_bush")
+
+[node name="MemoryCairn" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(39240, 475)
+scale = Vector2(0.32, 0.32)
+texture_filter = 1
+texture = ExtResource("6_cairn")

@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/environments/level03/background/level03_sky.png" id="1_sky"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/background/level03_far_mountains.png" id="2_far"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/background/level03_mid_mountains.png" id="3_mid"]
+[ext_resource type="Texture2D" path="res://assets/environments/level03/background/level03_near_hills.png" id="4_near"]
+
+[node name="Level03_ContinuousBackground" type="Node2D"]
+
+[node name="SkyParallax" type="Parallax2D" parent="."]
+z_index = -130
+scroll_scale = Vector2(0, 1)
+repeat_size = Vector2(4096, 0)
+repeat_times = 24
+
+[node name="Sky" type="Sprite2D" parent="SkyParallax"]
+centered = false
+texture_filter = 1
+texture = ExtResource("1_sky")
+
+[node name="FarParallax" type="Parallax2D" parent="."]
+z_index = -125
+scroll_scale = Vector2(0.08, 1)
+repeat_size = Vector2(4096, 0)
+repeat_times = 24
+
+[node name="FarMountains" type="Sprite2D" parent="FarParallax"]
+centered = false
+texture_filter = 1
+texture = ExtResource("2_far")
+
+[node name="MidParallax" type="Parallax2D" parent="."]
+z_index = -120
+scroll_scale = Vector2(0.18, 1)
+repeat_size = Vector2(4096, 0)
+repeat_times = 24
+
+[node name="MidMountains" type="Sprite2D" parent="MidParallax"]
+centered = false
+texture_filter = 1
+texture = ExtResource("3_mid")
+
+[node name="NearParallax" type="Parallax2D" parent="."]
+z_index = -115
+scroll_scale = Vector2(0.32, 1)
+repeat_size = Vector2(4096, 0)
+repeat_times = 24
+
+[node name="NearHills" type="Sprite2D" parent="NearParallax"]
+centered = false
+texture_filter = 1
+texture = ExtResource("4_near")
