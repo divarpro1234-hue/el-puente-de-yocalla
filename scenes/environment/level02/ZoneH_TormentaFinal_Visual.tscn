@@ -1,0 +1,142 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_h/ground/storm_ground_tile.png" id="1_ground"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_h/ground/storm_final_ground_tile.png" id="2_final"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_h/props/shelter_rock_01.png" id="3_rock1"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_h/props/shelter_rock_02.png" id="4_rock2"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_h/props/storm_obstacle.png" id="5_obstacle"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_h/props/safe_ledge_01.png" id="6_ledge1"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_h/props/safe_ledge_02.png" id="7_ledge2"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_h/props/storm_puddle.png" id="8_puddle"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_h/props/storm_grass.png" id="9_grass"]
+
+[node name="ZoneH_TormentaFinal_Visual" type="Node2D"]
+
+[node name="GroundArt" type="Node2D" parent="."]
+
+[node name="Ground01" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(48000, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 96)
+texture = ExtResource("1_ground")
+
+[node name="Ground02" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(50000, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 96)
+texture = ExtResource("1_ground")
+
+[node name="Ground03" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(52000, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 96)
+texture = ExtResource("1_ground")
+
+[node name="Ground04" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(54000, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 96)
+texture = ExtResource("1_ground")
+
+[node name="Ground05" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(56000, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 96)
+texture = ExtResource("1_ground")
+
+[node name="Ground06" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(57500, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 1000, 96)
+texture = ExtResource("1_ground")
+
+[node name="GroundFinal" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(58500, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 1000, 96)
+texture = ExtResource("2_final")
+
+[node name="CollisionAlignedArt" type="Node2D" parent="."]
+
+[node name="ShelterRock01" type="Sprite2D" parent="CollisionAlignedArt"]
+position = Vector2(49200, 494)
+texture_filter = 1
+texture = ExtResource("3_rock1")
+
+[node name="SafeLedge01" type="Sprite2D" parent="CollisionAlignedArt"]
+position = Vector2(51000, 448)
+texture_filter = 1
+texture = ExtResource("6_ledge1")
+
+[node name="ShelterRock02" type="Sprite2D" parent="CollisionAlignedArt"]
+position = Vector2(53500, 494)
+texture_filter = 1
+texture = ExtResource("4_rock2")
+
+[node name="StormObstacle" type="Sprite2D" parent="CollisionAlignedArt"]
+position = Vector2(54800, 494)
+texture_filter = 1
+texture = ExtResource("5_obstacle")
+
+[node name="SafeLedge02" type="Sprite2D" parent="CollisionAlignedArt"]
+position = Vector2(55800, 430)
+texture_filter = 1
+texture = ExtResource("7_ledge2")
+
+[node name="Decoration" type="Node2D" parent="."]
+
+[node name="Puddle01" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(50100, 516)
+scale = Vector2(0.60, 0.60)
+texture_filter = 1
+texture = ExtResource("8_puddle")
+
+[node name="Puddle02" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(52800, 516)
+scale = Vector2(0.72, 0.72)
+texture_filter = 1
+texture = ExtResource("8_puddle")
+
+[node name="Puddle03" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(57050, 516)
+scale = Vector2(0.55, 0.55)
+texture_filter = 1
+texture = ExtResource("8_puddle")
+
+[node name="Grass01" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(48600, 500)
+scale = Vector2(0.48, 0.48)
+texture_filter = 1
+texture = ExtResource("9_grass")
+
+[node name="Grass02" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(58150, 500)
+scale = Vector2(0.44, 0.44)
+texture_filter = 1
+texture = ExtResource("9_grass")

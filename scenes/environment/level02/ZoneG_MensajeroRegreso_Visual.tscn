@@ -1,0 +1,113 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_g/ground/return_ground_tile.png" id="1_ground"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_g/ground/storm_ground_transition.png" id="2_transition"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_g/props/messenger_tree.png" id="3_tree"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_g/props/meeting_marker.png" id="4_marker"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_g/props/return_bush.png" id="5_bush"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_g/props/return_platform.png" id="6_platform"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_g/props/return_rock.png" id="7_rock"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_g/props/return_grass.png" id="8_grass"]
+
+[node name="ZoneG_MensajeroRegreso_Visual" type="Node2D"]
+
+[node name="GroundArt" type="Node2D" parent="."]
+
+[node name="MessengerGround01" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(34500, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 96)
+texture = ExtResource("1_ground")
+
+[node name="MessengerGround02" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(36500, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 96)
+texture = ExtResource("1_ground")
+
+[node name="MessengerGround03" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(38500, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 96)
+texture = ExtResource("1_ground")
+
+[node name="MessengerGround04" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(39750, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 500, 96)
+texture = ExtResource("1_ground")
+
+[node name="ReturnGroundDry" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(42500, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 5000, 96)
+texture = ExtResource("1_ground")
+
+[node name="StormGroundTransition" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(46000, 572)
+texture_filter = 1
+texture = ExtResource("2_transition")
+
+[node name="CollisionAlignedArt" type="Node2D" parent="."]
+
+[node name="ReturnPlatform" type="Sprite2D" parent="CollisionAlignedArt"]
+position = Vector2(42400, 474)
+texture_filter = 1
+texture = ExtResource("6_platform")
+
+[node name="ReturnRock" type="Sprite2D" parent="CollisionAlignedArt"]
+position = Vector2(44700, 494)
+texture_filter = 1
+texture = ExtResource("7_rock")
+
+[node name="Decoration" type="Node2D" parent="."]
+
+[node name="MessengerTree" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(37400, 344)
+scale = Vector2(0.72, 0.72)
+texture_filter = 1
+texture = ExtResource("3_tree")
+
+[node name="MeetingMarker" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(39000, 514)
+texture_filter = 1
+texture = ExtResource("4_marker")
+
+[node name="ReturnBush" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(41400, 490)
+scale = Vector2(0.72, 0.72)
+texture_filter = 1
+texture = ExtResource("5_bush")
+
+[node name="Grass01" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(35200, 500)
+scale = Vector2(0.55, 0.55)
+texture_filter = 1
+texture = ExtResource("8_grass")
+
+[node name="Grass02" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(43300, 500)
+scale = Vector2(0.50, 0.50)
+texture_filter = 1
+texture = ExtResource("8_grass")

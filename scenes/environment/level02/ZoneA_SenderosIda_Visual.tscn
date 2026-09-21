@@ -1,0 +1,103 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_a/ground/trail_ground_tile.png" id="1_ground"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_a/props/trail_rock.png" id="2_rock"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_a/props/trail_bush.png" id="3_bush"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_a/props/trail_tree.png" id="4_tree"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_a/props/trail_ledge.png" id="5_ledge"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_a/props/trail_cairn.png" id="6_cairn"]
+
+[node name="ZoneA_SenderosIda_Visual" type="Node2D"]
+
+[node name="GroundArt" type="Node2D" parent="."]
+
+[node name="Ground01" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(1500, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 3000, 96)
+texture = ExtResource("1_ground")
+
+[node name="Ground02" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(4500, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 3000, 96)
+texture = ExtResource("1_ground")
+
+[node name="Ground03" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(7000, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 96)
+texture = ExtResource("1_ground")
+
+[node name="TransitionPatch" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(8200, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 400, 96)
+texture = ExtResource("1_ground")
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Bush01" type="Sprite2D" parent="Props"]
+z_index = -2
+position = Vector2(900, 484)
+scale = Vector2(0.67, 0.67)
+texture_filter = 1
+texture = ExtResource("3_bush")
+
+[node name="Rock01" type="Sprite2D" parent="Props"]
+position = Vector2(1850, 493)
+scale = Vector2(0.58, 0.58)
+texture_filter = 1
+texture = ExtResource("2_rock")
+
+[node name="Cairn01" type="Sprite2D" parent="Props"]
+z_index = -2
+position = Vector2(2780, 493)
+scale = Vector2(0.45, 0.45)
+texture_filter = 1
+texture = ExtResource("6_cairn")
+
+[node name="Platform01" type="Sprite2D" parent="Props"]
+position = Vector2(3600, 472)
+scale = Vector2(0.78, 0.78)
+texture_filter = 1
+texture = ExtResource("5_ledge")
+
+[node name="Bush02" type="Sprite2D" parent="Props"]
+z_index = -2
+position = Vector2(4450, 488)
+scale = Vector2(0.60, 0.60)
+texture_filter = 1
+texture = ExtResource("3_bush")
+
+[node name="Rock02" type="Sprite2D" parent="Props"]
+position = Vector2(5350, 487)
+scale = Vector2(0.68, 0.68)
+texture_filter = 1
+texture = ExtResource("2_rock")
+
+[node name="Tree01" type="Sprite2D" parent="Props"]
+z_index = -2
+position = Vector2(6200, 397)
+scale = Vector2(0.60, 0.60)
+texture_filter = 1
+texture = ExtResource("4_tree")
+
+[node name="Cairn02" type="Sprite2D" parent="Props"]
+z_index = -2
+position = Vector2(7420, 498)
+scale = Vector2(0.38, 0.38)
+texture_filter = 1
+texture = ExtResource("6_cairn")

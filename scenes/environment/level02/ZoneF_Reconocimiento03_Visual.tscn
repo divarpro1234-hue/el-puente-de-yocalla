@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_f/ground/recon3_ground_tile.png" id="1_ground"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_f/props/recon3_rock_formation.png" id="2_formation"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_f/props/recon3_rock.png" id="3_rock"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_f/props/recon3_marker.png" id="4_marker"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_f/props/recon3_grass.png" id="5_grass"]
+
+[node name="ZoneF_Reconocimiento03_Visual" type="Node2D"]
+
+[node name="GroundArt" type="Node2D" parent="."]
+
+[node name="Ground01" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(31500, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 96)
+texture = ExtResource("1_ground")
+
+[node name="Ground02" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(33000, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 1000, 96)
+texture = ExtResource("1_ground")
+
+[node name="Formation" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(31550, 399)
+texture_filter = 1
+texture = ExtResource("2_formation")
+
+[node name="CollisionAlignedArt" type="Node2D" parent="."]
+
+[node name="Rock01" type="Sprite2D" parent="CollisionAlignedArt"]
+position = Vector2(32200, 494)
+texture_filter = 1
+texture = ExtResource("3_rock")
+
+[node name="Decoration" type="Node2D" parent="."]
+
+[node name="ObservationMarker" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(32650, 480)
+scale = Vector2(0.40, 0.40)
+texture_filter = 1
+texture = ExtResource("4_marker")
+
+[node name="Grass01" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(30900, 500)
+scale = Vector2(0.58, 0.58)
+texture_filter = 1
+texture = ExtResource("5_grass")
+
+[node name="Grass02" type="Sprite2D" parent="Decoration"]
+z_index = -2
+position = Vector2(33200, 500)
+scale = Vector2(0.50, 0.50)
+texture_filter = 1
+texture = ExtResource("5_grass")

@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_b/ground/recon_ground_tile.png" id="1_recon_ground"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_b/ground/pass_transition_tile.png" id="2_pass_ground"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_b/props/recon_bush.png" id="3_bush"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_b/props/recon_rocks.png" id="4_rocks"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_b/props/recon_marker.png" id="5_marker"]
+[ext_resource type="Texture2D" path="res://assets/environments/level02/zone_b/props/recon_grass.png" id="6_grass"]
+
+[node name="ZoneB_Reconocimiento01_Visual" type="Node2D"]
+
+[node name="GroundArt" type="Node2D" parent="."]
+
+[node name="RecognitionMeadow" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(9000, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 96)
+texture = ExtResource("1_recon_ground")
+
+[node name="RecognitionBridge" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(10500, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 1000, 96)
+texture = ExtResource("2_pass_ground")
+
+[node name="PassEntry" type="Sprite2D" parent="GroundArt"]
+z_index = -1
+position = Vector2(11500, 572)
+texture_repeat = 2
+texture_filter = 1
+region_enabled = true
+region_rect = Rect2(0, 0, 1000, 96)
+texture = ExtResource("2_pass_ground")
+
+[node name="Props" type="Node2D" parent="."]
+
+[node name="Bush01" type="Sprite2D" parent="Props"]
+z_index = -2
+position = Vector2(8350, 489)
+scale = Vector2(0.62, 0.62)
+texture_filter = 1
+texture = ExtResource("3_bush")
+
+[node name="Grass01" type="Sprite2D" parent="Props"]
+z_index = -2
+position = Vector2(8720, 501)
+scale = Vector2(0.65, 0.65)
+texture_filter = 1
+texture = ExtResource("6_grass")
+
+[node name="LookoutRocks" type="Sprite2D" parent="Props"]
+z_index = -2
+position = Vector2(9280, 482)
+scale = Vector2(0.58, 0.58)
+texture_filter = 1
+texture = ExtResource("4_rocks")
+
+[node name="Bush02" type="Sprite2D" parent="Props"]
+z_index = -2
+position = Vector2(9700, 489)
+scale = Vector2(0.58, 0.58)
+texture_filter = 1
+texture = ExtResource("3_bush")
+
+[node name="Grass02" type="Sprite2D" parent="Props"]
+z_index = -2
+position = Vector2(10180, 501)
+scale = Vector2(0.55, 0.55)
+texture_filter = 1
+texture = ExtResource("6_grass")
+
+[node name="RouteMarker" type="Sprite2D" parent="Props"]
+z_index = -2
+position = Vector2(10800, 472)
+scale = Vector2(0.48, 0.48)
+texture_filter = 1
+texture = ExtResource("5_marker")
+
+[node name="PassRocks" type="Sprite2D" parent="Props"]
+z_index = -2
+position = Vector2(11800, 486)
+scale = Vector2(0.52, 0.52)
+texture_filter = 1
+texture = ExtResource("4_rocks")
