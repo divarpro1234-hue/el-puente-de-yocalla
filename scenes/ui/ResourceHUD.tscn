@@ -2,9 +2,35 @@
 
 [ext_resource type="Script" uid="uid://d05vyn00xgr67" path="res://scripts/ui/resource_hud.gd" id="1_jaayj"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_resources"]
+bg_color = Color(0.035, 0.045, 0.06, 0.78)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.63, 0.70, 0.72, 0.42)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+shadow_color = Color(0, 0, 0, 0.3)
+shadow_size = 5
+
 [node name="ResourceHUD" type="CanvasLayer" unique_id=1499777590]
 layer = 2
 script = ExtResource("1_jaayj")
+
+[node name="ResourceUIPanel" type="Panel" parent="."]
+z_index = -1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -472.0
+offset_top = 68.0
+offset_right = -16.0
+offset_bottom = 202.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ui_resources")
 
 [node name="ApplesLabel" type="Label" parent="." unique_id=506952761]
 anchors_preset = 1
@@ -21,6 +47,9 @@ theme_override_constants/outline_size = 3
 text = "Manzanas: 0"
 horizontal_alignment = 2
 vertical_alignment = 1
+theme_override_colors/font_outline_color = Color(0.03, 0.035, 0.045, 1)
+theme_override_constants/outline_size = 3
+metadata/ui_polish_v1 = true
 
 [node name="HerbsLabel" type="Label" parent="." unique_id=1485479813]
 anchors_preset = 1
@@ -37,6 +66,9 @@ theme_override_constants/outline_size = 3
 text = "Hierbas: 0"
 horizontal_alignment = 2
 vertical_alignment = 1
+theme_override_colors/font_outline_color = Color(0.03, 0.035, 0.045, 1)
+theme_override_constants/outline_size = 3
+metadata/ui_polish_v1 = true
 
 [node name="WaterLabel" type="Label" parent="." unique_id=396499623]
 anchors_preset = 1
@@ -53,6 +85,9 @@ theme_override_constants/outline_size = 3
 text = "Agua: 0"
 horizontal_alignment = 2
 vertical_alignment = 1
+theme_override_colors/font_outline_color = Color(0.03, 0.035, 0.045, 1)
+theme_override_constants/outline_size = 3
+metadata/ui_polish_v1 = true
 
 [node name="FeedbackLabel" type="Label" parent="." unique_id=465610462]
 anchors_preset = 1
@@ -68,6 +103,9 @@ theme_override_colors/font_outline_color = Color(0.06, 0.07, 0.08, 1)
 theme_override_constants/outline_size = 3
 horizontal_alignment = 2
 vertical_alignment = 1
+theme_override_colors/font_outline_color = Color(0.03, 0.035, 0.045, 1)
+theme_override_constants/outline_size = 3
+metadata/ui_polish_v1 = true
 
 [node name="FeedbackTimer" type="Timer" parent="." unique_id=1138202557]
 wait_time = 1.25

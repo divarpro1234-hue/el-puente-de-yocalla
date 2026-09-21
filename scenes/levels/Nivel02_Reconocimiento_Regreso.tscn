@@ -27,6 +27,20 @@
 
 [ext_resource type="PackedScene" path="res://scenes/environment/level02/ZoneH_TormentaFinal_Visual.tscn" id="17_zone_h_l2"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_obj_l2"]
+bg_color = Color(0.03, 0.04, 0.055, 0.78)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.74, 0.66, 0.46, 0.38)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.3)
+shadow_size = 4
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_apk1t"]
 size = Vector2(3000, 96)
 
@@ -449,13 +463,34 @@ offset_top = 24.0
 offset_right = 624.0
 offset_bottom = 52.0
 text = "Objetivo: Reúne información en la zona de reconocimiento"
+theme_override_colors/font_color = Color(0.96, 0.96, 0.92, 1)
+theme_override_colors/font_outline_color = Color(0.03, 0.035, 0.045, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 17
+metadata/ui_polish_v1 = true
 
+[node name="ObjectiveUIPanel" type="Panel" parent="ObjectiveHUD/ObjectiveLabel"]
+show_behind_parent = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = -8.0
+offset_right = 12.0
+offset_bottom = 45.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ui_obj_l2")
 [node name="InfoCounter" type="Label" parent="ObjectiveHUD" unique_id=1360337657]
 offset_left = 24.0
 offset_top = 60.0
 offset_right = 384.0
 offset_bottom = 88.0
 text = "Información: 0/3"
+theme_override_colors/font_color = Color(0.80, 0.90, 0.96, 1)
+theme_override_colors/font_outline_color = Color(0.03, 0.035, 0.045, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+metadata/ui_polish_v1 = true
 
 [node name="LevelCompleteLabel" type="Label" parent="ObjectiveHUD" unique_id=448936466]
 visible = false
@@ -465,6 +500,10 @@ offset_right = 624.0
 offset_bottom = 160.0
 theme_override_font_sizes/font_size = 32
 text = "NIVEL 2 COMPLETADO"
+theme_override_colors/font_color = Color(0.98, 0.82, 0.46, 1)
+theme_override_colors/font_outline_color = Color(0.04, 0.035, 0.03, 1)
+theme_override_constants/outline_size = 5
+metadata/ui_polish_v1 = true
 
 [node name="Checkpoint_Start" parent="." unique_id=471287348 instance=ExtResource("5_dig7p")]
 position = Vector2(300, 500)

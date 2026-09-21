@@ -16,6 +16,20 @@
 [ext_resource type="PackedScene" path="res://scenes/environment/level01/Level01_ContinuousBackground.tscn" id="10_bg_continuous"]
 [ext_resource type="PackedScene" path="res://scenes/environment/level01/ComplexAccessGateVisual.tscn" id="9_blocker_art"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_obj_l1"]
+bg_color = Color(0.03, 0.04, 0.055, 0.78)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.74, 0.66, 0.46, 0.38)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.3)
+shadow_size = 4
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pf2kg"]
 size = Vector2(180, 260)
 
@@ -848,7 +862,23 @@ offset_top = 24.0
 offset_right = 524.0
 offset_bottom = 52.0
 text = "Objetivo: Dirígete al Complejo del Jefe Inca"
+theme_override_colors/font_color = Color(0.96, 0.96, 0.92, 1)
+theme_override_colors/font_outline_color = Color(0.03, 0.035, 0.045, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 17
+metadata/ui_polish_v1 = true
 
+[node name="ObjectiveUIPanel" type="Panel" parent="ObjectiveHUD/ObjectiveLabel"]
+show_behind_parent = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = -8.0
+offset_right = 12.0
+offset_bottom = 14.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ui_obj_l1")
 [node name="LevelCompleteLabel" type="Label" parent="ObjectiveHUD" unique_id=584016476]
 visible = false
 offset_left = 24.0
@@ -856,6 +886,11 @@ offset_top = 60.0
 offset_right = 524.0
 offset_bottom = 88.0
 text = "NIVEL 1 COMPLETADO"
+theme_override_colors/font_color = Color(0.98, 0.82, 0.46, 1)
+theme_override_colors/font_outline_color = Color(0.04, 0.035, 0.03, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 26
+metadata/ui_polish_v1 = true
 
 [node name="IntroStoryText" type="Label" parent="ObjectiveHUD" unique_id=1013164583]
 visible = false
@@ -868,6 +903,11 @@ text = "En las tierras altas de Yocalla se encontraba un pueblo rodeado de monta
 
 Allí vivía Kespi, un joven conocido por su valentía y espíritu aventurero."
 autowrap_mode = 3
+theme_override_colors/font_color = Color(0.95, 0.95, 0.92, 1)
+theme_override_colors/font_outline_color = Color(0.04, 0.045, 0.05, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+metadata/ui_polish_v1 = true
 
 [node name="Checkpoint_Start" parent="." unique_id=471287348 instance=ExtResource("4_x1nsb")]
 position = Vector2(300, 500)

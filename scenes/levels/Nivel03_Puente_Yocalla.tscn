@@ -24,6 +24,58 @@
 
 [ext_resource type="PackedScene" path="res://scenes/environment/level03/ZoneG_EpilogoFinal_Visual.tscn" id="16_zone_g_l3"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_final_card"]
+bg_color = Color(0.035, 0.045, 0.055, 0.88)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.78, 0.64, 0.36, 0.62)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0, 0, 0, 0.45)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_final_button"]
+bg_color = Color(0.18, 0.14, 0.10, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.88, 0.72, 0.40, 0.72)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_final_button_hover"]
+bg_color = Color(0.34, 0.23, 0.12, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.86, 0.55, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_obj_l3"]
+bg_color = Color(0.03, 0.04, 0.055, 0.78)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.74, 0.66, 0.46, 0.38)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.3)
+shadow_size = 4
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6wyq"]
 size = Vector2(1200, 240)
 
@@ -364,7 +416,23 @@ offset_top = 24.0
 offset_right = 744.0
 offset_bottom = 52.0
 text = "Objetivo: Encuentra una forma de cruzar el río"
+theme_override_colors/font_color = Color(0.96, 0.96, 0.92, 1)
+theme_override_colors/font_outline_color = Color(0.03, 0.035, 0.045, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 17
+metadata/ui_polish_v1 = true
 
+[node name="ObjectiveUIPanel" type="Panel" parent="ObjectiveHUD/ObjectiveLabel"]
+show_behind_parent = true
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -12.0
+offset_top = -8.0
+offset_right = 12.0
+offset_bottom = 45.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ui_obj_l3")
 [node name="RoosterEventLabel" type="Label" parent="ObjectiveHUD" unique_id=514883114]
 visible = false
 offset_left = 24.0
@@ -372,6 +440,11 @@ offset_top = 60.0
 offset_right = 24.0
 offset_bottom = 60.0
 text = "¡Quiquiriquí! El gallo ha cantado."
+theme_override_colors/font_color = Color(1, 0.88, 0.58, 1)
+theme_override_colors/font_outline_color = Color(0.04, 0.035, 0.03, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 17
+metadata/ui_polish_v1 = true
 
 [node name="EpilogueText" type="Label" parent="ObjectiveHUD" unique_id=767109567]
 visible = false
@@ -382,6 +455,11 @@ offset_right = 744.0
 offset_bottom = 156.0
 text = "Kespi logró regresar a Yocalla. El puente quedó como recuerdo de la prueba que logró superar."
 autowrap_mode = 3
+theme_override_colors/font_color = Color(0.95, 0.95, 0.92, 1)
+theme_override_colors/font_outline_color = Color(0.035, 0.04, 0.05, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 17
+metadata/ui_polish_v1 = true
 
 [node name="FinalStoryText" type="Label" parent="ObjectiveHUD" unique_id=1762778526]
 visible = false
@@ -392,6 +470,11 @@ offset_right = 744.0
 offset_bottom = 224.0
 text = "El Puente de Yocalla quedó como símbolo de unión y esperanza para las generaciones futuras."
 autowrap_mode = 3
+theme_override_colors/font_color = Color(0.95, 0.95, 0.92, 1)
+theme_override_colors/font_outline_color = Color(0.035, 0.04, 0.05, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 17
+metadata/ui_polish_v1 = true
 
 [node name="LegendCompletePanel" type="Control" parent="ObjectiveHUD" unique_id=1954516502]
 visible = false
@@ -404,6 +487,24 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+
+[node name="DimOverlay" type="ColorRect" parent="ObjectiveHUD/LegendCompletePanel"]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.02, 0.025, 0.035, 0.42)
+
+[node name="FinalCard" type="Panel" parent="ObjectiveHUD/LegendCompletePanel"]
+layout_mode = 0
+anchor_left = 0.19
+anchor_top = 0.19
+anchor_right = 0.81
+anchor_bottom = 0.92
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ui_final_card")
 [node name="TitleLabel" type="Label" parent="ObjectiveHUD/LegendCompletePanel" unique_id=1127244242]
 layout_mode = 0
 anchor_top = 0.3
@@ -462,6 +563,13 @@ offset_right = 140.0
 offset_bottom = 27.0
 theme_override_font_sizes/font_size = 20
 text = "VOLVER AL MENÚ"
+theme_override_colors/font_color = Color(0.96, 0.94, 0.89, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ui_final_button")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ui_final_button_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ui_final_button_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ui_final_button_hover")
+metadata/ui_polish_v1 = true
 
 [node name="ExitButton" type="Button" parent="ObjectiveHUD/LegendCompletePanel"]
 layout_mode = 0
@@ -475,6 +583,13 @@ offset_right = 140.0
 offset_bottom = 27.0
 theme_override_font_sizes/font_size = 20
 text = "SALIR"
+theme_override_colors/font_color = Color(0.96, 0.94, 0.89, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ui_final_button")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ui_final_button_hover")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ui_final_button_hover")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ui_final_button_hover")
+metadata/ui_polish_v1 = true
 
 [node name="BridgeBlockedText" type="Label" parent="ObjectiveHUD" unique_id=1774432382]
 visible = false
@@ -483,6 +598,11 @@ offset_top = 60.0
 offset_right = 624.0
 offset_bottom = 88.0
 text = "El puente todavía no está listo. Debo esperar."
+theme_override_colors/font_color = Color(1, 0.88, 0.58, 1)
+theme_override_colors/font_outline_color = Color(0.04, 0.035, 0.03, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 17
+metadata/ui_polish_v1 = true
 
 [node name="PactArea" type="Area2D" parent="." unique_id=349111852]
 position = Vector2(37080, 470)
