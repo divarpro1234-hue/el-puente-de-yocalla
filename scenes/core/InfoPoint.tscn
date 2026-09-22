@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://mkxgrb8xgmkv"]
+[gd_scene load_steps=4 format=3 uid="uid://mkxgrb8xgmkv"]
 
 [ext_resource type="Script" uid="uid://smtv5b5gbmgp" path="res://scripts/core/info_point.gd" id="1_dto2w"]
+[ext_resource type="Texture2D" path="res://assets/ui/interactables_v1/info_marker_v1.png" id="2_info"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ug6mq"]
 size = Vector2(160, 96)
@@ -8,9 +9,11 @@ size = Vector2(160, 96)
 [node name="InfoPoint" type="Node2D" unique_id=1729395355]
 script = ExtResource("1_dto2w")
 
-[node name="Visual" type="Polygon2D" parent="." unique_id=1141276085]
-color = Color(0.85, 0.2, 0.85, 1)
-polygon = PackedVector2Array(-14, -24, 14, -24, 14, 24, -14, 24)
+[node name="MarkerSprite" type="Sprite2D" parent="."]
+position = Vector2(0, -20)
+scale = Vector2(0.72, 0.72)
+texture_filter = 1
+texture = ExtResource("2_info")
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=1990570474]
 collision_layer = 0
@@ -21,17 +24,25 @@ shape = SubResource("RectangleShape2D_ug6mq")
 [node name="InteractionPrompt" type="Label" parent="." unique_id=2049688178]
 visible = false
 offset_left = -90.0
-offset_top = -54.0
+offset_top = -74.0
 offset_right = 90.0
-offset_bottom = -30.0
+offset_bottom = -46.0
+theme_override_colors/font_color = Color(1, 0.91, 0.63, 1)
+theme_override_colors/font_outline_color = Color(0.06, 0.06, 0.05, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 17
 text = "[E] Examinar"
 horizontal_alignment = 1
 
 [node name="CollectedLabel" type="Label" parent="." unique_id=23471824]
 visible = false
-offset_left = -120.0
-offset_top = -84.0
-offset_right = 120.0
-offset_bottom = -60.0
-text = "Información recopilada"
+offset_left = -150.0
+offset_top = -100.0
+offset_right = 150.0
+offset_bottom = -70.0
+theme_override_colors/font_color = Color(0.78, 0.95, 0.76, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.07, 0.05, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+text = "InformaciÃ³n recopilada"
 horizontal_alignment = 1
