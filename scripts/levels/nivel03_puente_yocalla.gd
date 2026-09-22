@@ -1,5 +1,7 @@
 extends Node2D
 
+# transition_fade_v1
+
 # audio_base_v1
 
 const MAIN_MENU_PATH: String = "res://scenes/ui/MainMenu.tscn"
@@ -197,7 +199,7 @@ func _on_legend_complete_timer_timeout() -> void:
 	objective_label.text = "Objetivo completado: La leyenda de Yocalla terminó"
 
 func _on_return_to_menu_button_pressed() -> void:
-	get_tree().change_scene_to_file(MAIN_MENU_PATH)
+	SceneTransition.change_scene(MAIN_MENU_PATH)
 
 
 func _on_exit_button_pressed() -> void:

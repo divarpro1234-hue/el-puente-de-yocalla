@@ -1,5 +1,7 @@
 extends Node2D
 
+# transition_fade_v1
+
 const NEXT_LEVEL_PATH: String = "res://scenes/levels/Nivel02_Reconocimiento_Regreso.tscn"
 const INTRO_PART_DURATION: float = 2.8
 const RACE_MESSAGE_DURATION: float = 1.6
@@ -158,4 +160,4 @@ func _on_mission_assigned(objective: String) -> void:
 
 
 func _on_level_transition_timer_timeout() -> void:
-	get_tree().change_scene_to_file(NEXT_LEVEL_PATH)
+	SceneTransition.change_scene(NEXT_LEVEL_PATH)

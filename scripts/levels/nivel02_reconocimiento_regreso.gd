@@ -1,5 +1,7 @@
 extends Node2D
 
+# transition_fade_v1
+
 # audio_base_v1
 
 const INFO_IDS: Array[String] = ["info_01", "info_02", "info_03"]
@@ -184,4 +186,4 @@ func _update_info_counter() -> void:
 
 
 func _on_level_transition_timer_timeout() -> void:
-	get_tree().change_scene_to_file(NEXT_LEVEL_PATH)
+	SceneTransition.change_scene(NEXT_LEVEL_PATH)

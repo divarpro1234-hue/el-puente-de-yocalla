@@ -1,5 +1,7 @@
 extends Control
 
+# transition_fade_v1
+
 const LEVEL_ONE_PATH: String = "res://scenes/levels/Nivel01_Yocalla_Mision.tscn"
 
 @onready var play_button: Button = $PlayButton
@@ -13,7 +15,7 @@ func _ready() -> void:
 
 
 func _on_play_button_pressed() -> void:
-	get_tree().change_scene_to_file(LEVEL_ONE_PATH)
+	SceneTransition.change_scene(LEVEL_ONE_PATH)
 
 
 func _on_exit_button_pressed() -> void:
