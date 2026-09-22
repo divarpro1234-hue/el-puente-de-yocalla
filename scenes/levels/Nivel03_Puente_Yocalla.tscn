@@ -24,6 +24,8 @@
 
 [ext_resource type="PackedScene" path="res://scenes/environment/level03/ZoneG_EpilogoFinal_Visual.tscn" id="16_zone_g_l3"]
 
+[ext_resource type="StyleBox" path="res://assets/ui/dialogue/interaction_prompt_style.tres" id="ui_prompt"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_final_card"]
 bg_color = Color(0.035, 0.045, 0.055, 0.88)
 border_width_left = 2
@@ -612,14 +614,21 @@ collision_layer = 0
 shape = SubResource("RectangleShape2D_nduto")
 
 [node name="PactPrompt" type="Label" parent="PactArea" unique_id=1644025426]
+theme_override_styles/normal = ExtResource("ui_prompt")
+metadata/dialogue_polish_v2 = true
+vertical_alignment = 1
 visible = false
-z_index = 10
-offset_left = -78.0
-offset_top = -100.0
-offset_right = -78.0
-offset_bottom = -100.0
+offset_bottom = -88.0
+theme_override_colors/font_outline_color = Color(0.04, 0.03, 0.02, 1)
+offset_left = -96.0
+horizontal_alignment = 1
+offset_top = -122.0
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+offset_right = 96.0
+theme_override_colors/font_color = Color(1, 0.86, 0.48, 1)
+z_index = 21
 text = "[E] Pedir ayuda"
-
 [node name="Satanas" parent="." unique_id=696938969 instance=ExtResource("3_587l1")]
 position = Vector2(37320, 480)
 

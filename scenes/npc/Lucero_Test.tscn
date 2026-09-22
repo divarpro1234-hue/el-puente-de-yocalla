@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://b0cakvd41tqwe" path="res://scripts/npc/lucero_test.gd" id="1_u7ov4"]
 [ext_resource type="SpriteFrames" path="res://assets/characters/lucero/sprites/lucero_sprite_frames.tres" id="2_lucero"]
 
+[ext_resource type="StyleBox" path="res://assets/ui/dialogue/dialogue_box_style.tres" id="ui_dialogue"]
+
 [node name="Lucero_Test" type="Node2D" unique_id=1090689686]
 visible = false
 script = ExtResource("1_u7ov4")
@@ -16,10 +18,20 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="DialogueText" type="Label" parent="." unique_id=1527907526]
+theme_override_styles/normal = ExtResource("ui_dialogue")
+metadata/dialogue_polish_v2 = true
+custom_minimum_size = Vector2(380, 52)
 visible = false
-offset_left = -160.0
-offset_top = -86.0
-offset_right = 180.0
-offset_bottom = -58.0
+offset_bottom = -66.0
+theme_override_colors/font_outline_color = Color(0.03, 0.025, 0.02, 1)
+offset_left = -190.0
+offset_top = -118.0
+theme_override_constants/outline_size = 3
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 16
+vertical_alignment = 1
+offset_right = 190.0
+theme_override_colors/font_color = Color(1, 0.96, 0.84, 1)
+z_index = 20
 text = "¡Sabía que ganarías la carrera, Kespi!"
 horizontal_alignment = 1

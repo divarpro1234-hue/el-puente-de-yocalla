@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://cicfk8jpp1rll" path="res://scripts/npc/mensajero_test.gd" id="1_6khc5"]
 [ext_resource type="SpriteFrames" path="res://assets/characters/mensajero/sprites/mensajero_sprite_frames.tres" id="2_mensajero"]
 
+[ext_resource type="StyleBox" path="res://assets/ui/dialogue/dialogue_box_style.tres" id="ui_dialogue"]
+
+[ext_resource type="StyleBox" path="res://assets/ui/dialogue/interaction_prompt_style.tres" id="ui_prompt"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fwdn"]
 size = Vector2(120, 80)
 
@@ -25,20 +29,36 @@ collision_layer = 0
 shape = SubResource("RectangleShape2D_0fwdn")
 
 [node name="InteractionPrompt" type="Label" parent="." unique_id=710884987]
+theme_override_styles/normal = ExtResource("ui_prompt")
+metadata/dialogue_polish_v2 = true
+vertical_alignment = 1
 visible = false
-offset_left = -70.0
-offset_top = -54.0
-offset_right = 70.0
-offset_bottom = -30.0
+offset_bottom = -50.0
+theme_override_colors/font_outline_color = Color(0.04, 0.03, 0.02, 1)
+offset_left = -72.0
+offset_top = -82.0
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+offset_right = 72.0
+theme_override_colors/font_color = Color(1, 0.86, 0.48, 1)
+z_index = 21
 text = "[E] Hablar"
 horizontal_alignment = 1
-
 [node name="DialogueText" type="Label" parent="." unique_id=1634661030]
+theme_override_styles/normal = ExtResource("ui_dialogue")
+metadata/dialogue_polish_v2 = true
+custom_minimum_size = Vector2(440, 60)
 visible = false
+offset_bottom = -76.0
+theme_override_colors/font_outline_color = Color(0.03, 0.025, 0.02, 1)
 offset_left = -220.0
-offset_top = -116.0
+offset_top = -136.0
+theme_override_constants/outline_size = 3
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 16
+vertical_alignment = 1
 offset_right = 220.0
-offset_bottom = -60.0
+theme_override_colors/font_color = Color(1, 0.96, 0.84, 1)
+z_index = 20
 text = "Mensajero: Kespi, debes regresar a Yocalla."
 horizontal_alignment = 1
-autowrap_mode = 3

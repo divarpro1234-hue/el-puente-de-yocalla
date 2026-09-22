@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://ddxfe6b73dnvy" path="res://scripts/npc/satanas_test.gd" id="1_b3pso"]
 [ext_resource type="SpriteFrames" path="res://assets/characters/satanas/sprites/satanas_sprite_frames.tres" id="2_satanas"]
 
+[ext_resource type="StyleBox" path="res://assets/ui/dialogue/dialogue_box_style.tres" id="ui_dialogue"]
+
 [node name="Satanas_Test" type="Node2D" unique_id=696938969]
 visible = false
 script = ExtResource("1_b3pso")
@@ -16,10 +18,20 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="DialogueText" type="Label" parent="." unique_id=23544295]
+theme_override_styles/normal = ExtResource("ui_dialogue")
+metadata/dialogue_polish_v2 = true
+custom_minimum_size = Vector2(500, 68)
 visible = false
-z_index = 10
-offset_left = -235.0
-offset_top = -115.0
-offset_right = -235.0
-offset_bottom = -115.0
+offset_bottom = -86.0
+theme_override_colors/font_outline_color = Color(0.04, 0.02, 0.02, 1)
+offset_left = -250.0
+horizontal_alignment = 1
+offset_top = -154.0
+theme_override_constants/outline_size = 3
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 16
+vertical_alignment = 1
+offset_right = 250.0
+theme_override_colors/font_color = Color(1, 0.89, 0.72, 1)
+z_index = 20
 text = "Satanás: Construiré un puente antes de que cante el gallo."

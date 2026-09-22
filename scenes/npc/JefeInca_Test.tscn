@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://1tqt58lransw" path="res://scripts/npc/jefe_inca_test.gd" id="1_hcyx3"]
 [ext_resource type="SpriteFrames" path="res://assets/characters/jefe_inca/sprites/jefe_inca_sprite_frames.tres" id="2_inca"]
 
+[ext_resource type="StyleBox" path="res://assets/ui/dialogue/dialogue_box_style.tres" id="ui_dialogue"]
+
+[ext_resource type="StyleBox" path="res://assets/ui/dialogue/interaction_prompt_style.tres" id="ui_prompt"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fgkrg"]
 size = Vector2(120, 80)
 
@@ -23,20 +27,36 @@ autoplay = "idle"
 shape = SubResource("RectangleShape2D_fgkrg")
 
 [node name="InteractionPrompt" type="Label" parent="." unique_id=1289099048]
+theme_override_styles/normal = ExtResource("ui_prompt")
+metadata/dialogue_polish_v2 = true
+vertical_alignment = 1
 visible = false
-offset_left = -60.0
-offset_top = -56.0
-offset_right = 60.0
-offset_bottom = -32.0
+offset_bottom = -50.0
+theme_override_colors/font_outline_color = Color(0.04, 0.03, 0.02, 1)
+offset_left = -72.0
+offset_top = -82.0
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+offset_right = 72.0
+theme_override_colors/font_color = Color(1, 0.86, 0.48, 1)
+z_index = 21
 text = "[E] Hablar"
 horizontal_alignment = 1
-
 [node name="DialogueText" type="Label" parent="." unique_id=1883485501]
+theme_override_styles/normal = ExtResource("ui_dialogue")
+metadata/dialogue_polish_v2 = true
+custom_minimum_size = Vector2(460, 66)
 visible = false
-offset_left = -180.0
-offset_top = -120.0
-offset_right = 285.0
-offset_bottom = -64.0
+offset_bottom = -88.0
+theme_override_colors/font_outline_color = Color(0.03, 0.025, 0.02, 1)
+offset_left = -230.0
+offset_top = -154.0
+theme_override_constants/outline_size = 3
+autowrap_mode = 3
+theme_override_font_sizes/font_size = 16
+vertical_alignment = 1
+offset_right = 230.0
+theme_override_colors/font_color = Color(1, 0.96, 0.84, 1)
+z_index = 20
 text = "Jefe Inca: Kespi, ve a la zona conquistada y trae información."
 horizontal_alignment = 1
-autowrap_mode = 3
