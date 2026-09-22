@@ -1,5 +1,7 @@
 extends Node2D
 
+# audio_base_v1
+
 signal collectible_collected(collectible_type: String, amount: int)
 
 @export_enum("apple", "herb", "water") var collectible_type: String = "apple"
@@ -14,6 +16,7 @@ var was_collected: bool = false
 @onready var apple_visual: Node2D = $VisualRoot/AppleVisual
 @onready var herb_visual: Node2D = $VisualRoot/HerbVisual
 @onready var water_visual: Node2D = $VisualRoot/WaterVisual
+@onready var pickup_sfx: AudioStreamPlayer = $PickupSfx
 
 
 func _ready() -> void:
@@ -32,6 +35,7 @@ func _collect() -> void:
 	if was_collected:
 		return
 	was_collected = true
+	pickup_sfx.play()
 	player_inside = false
 	interaction_prompt.hide()
 	interaction_area.set_deferred(&"monitoring", false)

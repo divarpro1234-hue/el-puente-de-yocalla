@@ -1,5 +1,7 @@
 extends Node2D
 
+# audio_base_v1
+
 const INFO_IDS: Array[String] = ["info_01", "info_02", "info_03"]
 const NEXT_LEVEL_PATH: String = "res://scenes/levels/Nivel03_Puente_Yocalla.tscn"
 const HERB_HEAL_AMOUNT: int = 20
@@ -29,6 +31,7 @@ var is_player_in_storm_damage_area: bool = false
 @onready var player: CharacterBody2D = $Player
 @onready var storm_damage_area: Area2D = $ZonaTormenta/StormDamageArea
 @onready var storm_damage_timer: Timer = $StormDamageTimer
+@onready var storm_audio: AudioStreamPlayer = $StormAudio
 @onready var info_points: Array[Node2D] = [
 	$ZonaReconocimiento/InfoPoint_01,
 	$ZonaReconocimiento/InfoPoint_02,
@@ -138,6 +141,8 @@ func _on_storm_damage_area_body_entered(body: Node2D) -> void:
 	if body != player or is_player_in_storm_damage_area:
 		return
 	is_player_in_storm_damage_area = true
+	if not storm_audio.playing:
+		storm_audio.play()
 	resource_hud.call(&"show_feedback", "La tormenta está debilitando a Kespi.")
 	storm_damage_timer.start(STORM_DAMAGE_INTERVAL)
 
@@ -162,6 +167,7 @@ func _on_storm_damage_timer_timeout() -> void:
 func _stop_storm_damage() -> void:
 	is_player_in_storm_damage_area = false
 	storm_damage_timer.stop()
+	storm_audio.stop()
 
 
 func _update_resource_hud() -> void:

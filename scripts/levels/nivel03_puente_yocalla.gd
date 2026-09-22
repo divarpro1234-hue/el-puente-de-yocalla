@@ -1,5 +1,7 @@
 extends Node2D
 
+# audio_base_v1
+
 const MAIN_MENU_PATH: String = "res://scenes/ui/MainMenu.tscn"
 
 @onready var player: CharacterBody2D = $Player
@@ -34,6 +36,8 @@ const MAIN_MENU_PATH: String = "res://scenes/ui/MainMenu.tscn"
 @onready var final_story_timer: Timer = $FinalStoryTimer
 @onready var legend_complete_timer: Timer = $LegendCompleteTimer
 @onready var bridge_blocked_message_timer: Timer = $BridgeBlockedMessageTimer
+@onready var bridge_sfx: AudioStreamPlayer = $BridgeSfx
+@onready var rooster_sfx: AudioStreamPlayer = $RoosterSfx
 
 var player_inside_pact_area: bool = false
 var pact_completed: bool = false
@@ -96,6 +100,7 @@ func _start_bridge_construction() -> void:
 	bridge_construction_started = true
 	bridge_blocker_collision.disabled = false
 	bridge_parts[0].show()
+	bridge_sfx.play()
 	next_bridge_part_index = 1
 	construction_timer.start()
 
@@ -105,6 +110,7 @@ func _on_construction_timer_timeout() -> void:
 		construction_timer.stop()
 		return
 	bridge_parts[next_bridge_part_index].show()
+	bridge_sfx.play()
 	next_bridge_part_index += 1
 	if next_bridge_part_index == bridge_parts.size():
 		construction_timer.stop()
@@ -123,6 +129,7 @@ func _start_outcome_sequence() -> void:
 func _on_outcome_timer_timeout() -> void:
 	if outcome_stage == 0:
 		rooster_event_label.show()
+		rooster_sfx.play()
 		outcome_stage = 1
 		outcome_timer.start()
 	elif outcome_stage == 1:

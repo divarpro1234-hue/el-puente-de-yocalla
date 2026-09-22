@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://b3eolfxf8dphc" path="res://scripts/ui/main_menu.gd" id="1_vjtqc"]
 [ext_resource type="Texture2D" path="res://assets/ui/menu/menu_principal_yocalla_v1.png" id="2_menu_yocalla"]
 
+[ext_resource type="AudioStream" path="res://assets/audio/v1/menu_theme.wav" id="audio_menu"]
+
+[ext_resource type="Script" path="res://scripts/audio/audio_loop_player.gd" id="audio_loop_script"]
+
 [node name="MainMenu" type="Control" unique_id=1029497002]
 layout_mode = 3
 anchors_preset = 15
@@ -43,3 +47,10 @@ anchor_bottom = 0.708
 mouse_default_cursor_shape = 2
 flat = true
 text = ""
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("audio_menu")
+volume_db = -13.0
+autoplay = true
+script = ExtResource("audio_loop_script")
+metadata/audio_base_v1 = true

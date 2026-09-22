@@ -4,6 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://bpmyvxkuklhfe" path="res://scenes/ui/PlayerHUD.tscn" id="2_gfjak"]
 [ext_resource type="SpriteFrames" path="res://assets/characters/kespi/sprites/kespi_sprite_frames.tres" id="3_kespi"]
 
+[ext_resource type="AudioStream" path="res://assets/audio/v1/jump.wav" id="audio_jump"]
+
+[ext_resource type="AudioStream" path="res://assets/audio/v1/damage.wav" id="audio_damage"]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o8nba"]
 radius = 12.0
 height = 48.0
@@ -25,3 +29,13 @@ shape = SubResource("CapsuleShape2D_o8nba")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1355875088]
 
 [node name="PlayerHUD" parent="." unique_id=2043180030 instance=ExtResource("2_gfjak")]
+
+[node name="JumpSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("audio_jump")
+volume_db = -8.0
+metadata/audio_base_v1 = true
+
+[node name="DamageSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("audio_damage")
+volume_db = -6.0
+metadata/audio_base_v1 = true

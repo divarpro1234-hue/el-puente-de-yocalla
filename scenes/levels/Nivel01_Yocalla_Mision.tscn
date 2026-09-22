@@ -18,6 +18,10 @@
 
 [ext_resource type="StyleBox" path="res://assets/ui/dialogue/dialogue_box_style.tres" id="ui_dialogue"]
 
+[ext_resource type="AudioStream" path="res://assets/audio/v1/level1_yocalla_loop.wav" id="audio_l1"]
+
+[ext_resource type="Script" path="res://scripts/audio/audio_loop_player.gd" id="audio_loop_script"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_obj_l1"]
 bg_color = Color(0.03, 0.04, 0.055, 0.78)
 border_width_left = 1
@@ -928,3 +932,10 @@ one_shot = true
 
 [node name="IntroCamera" type="Camera2D" parent="." unique_id=877676865]
 position = Vector2(900, 324)
+
+[node name="LevelMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("audio_l1")
+volume_db = -15.0
+autoplay = true
+script = ExtResource("audio_loop_script")
+metadata/audio_base_v1 = true

@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://smtv5b5gbmgp" path="res://scripts/core/info_point.gd" id="1_dto2w"]
 [ext_resource type="Texture2D" path="res://assets/ui/interactables_v1/info_marker_v1.png" id="2_info"]
 
+[ext_resource type="AudioStream" path="res://assets/audio/v1/info.wav" id="audio_info"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ug6mq"]
 size = Vector2(160, 96)
 
@@ -46,3 +48,8 @@ theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 16
 text = "InformaciÃ³n recopilada"
 horizontal_alignment = 1
+
+[node name="InfoSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("audio_info")
+volume_db = -7.0
+metadata/audio_base_v1 = true

@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" path="res://assets/ui/interactables_v1/herb_pickup_v1.png" id="3_herb"]
 [ext_resource type="Texture2D" path="res://assets/ui/interactables_v1/water_pickup_v1.png" id="4_water"]
 
+[ext_resource type="AudioStream" path="res://assets/audio/v1/pickup.wav" id="audio_pickup"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s070u"]
 size = Vector2(88, 80)
 
@@ -55,3 +57,8 @@ theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 17
 text = "[E] Recoger"
 horizontal_alignment = 1
+
+[node name="PickupSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("audio_pickup")
+volume_db = -7.0
+metadata/audio_base_v1 = true

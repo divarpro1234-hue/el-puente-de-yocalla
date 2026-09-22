@@ -26,6 +26,14 @@
 
 [ext_resource type="StyleBox" path="res://assets/ui/dialogue/interaction_prompt_style.tres" id="ui_prompt"]
 
+[ext_resource type="AudioStream" path="res://assets/audio/v1/level3_river_loop.wav" id="audio_l3"]
+
+[ext_resource type="AudioStream" path="res://assets/audio/v1/bridge_stone.wav" id="audio_bridge"]
+
+[ext_resource type="AudioStream" path="res://assets/audio/v1/rooster.wav" id="audio_rooster"]
+
+[ext_resource type="Script" path="res://scripts/audio/audio_loop_player.gd" id="audio_loop_script"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_final_card"]
 bg_color = Color(0.035, 0.045, 0.055, 0.88)
 border_width_left = 2
@@ -1169,3 +1177,20 @@ position = Vector2(15500, 490)
 
 [node name="Checkpoint_Intermedio_02" parent="." unique_id=1552381400 instance=ExtResource("5_ku70w")]
 position = Vector2(33500, 500)
+
+[node name="LevelMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("audio_l3")
+volume_db = -16.0
+autoplay = true
+script = ExtResource("audio_loop_script")
+metadata/audio_base_v1 = true
+
+[node name="BridgeSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("audio_bridge")
+volume_db = -5.0
+metadata/audio_base_v1 = true
+
+[node name="RoosterSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("audio_rooster")
+volume_db = -4.0
+metadata/audio_base_v1 = true

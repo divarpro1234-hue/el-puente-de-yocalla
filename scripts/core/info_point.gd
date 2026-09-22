@@ -1,5 +1,7 @@
 extends Node2D
 
+# audio_base_v1
+
 signal information_collected(info_id: String)
 
 @export var info_id: String = ""
@@ -10,6 +12,7 @@ var collected: bool = false
 @onready var interaction_area: Area2D = $InteractionArea
 @onready var interaction_prompt: Label = $InteractionPrompt
 @onready var collected_label: Label = $CollectedLabel
+@onready var info_sfx: AudioStreamPlayer = $InfoSfx
 
 
 func _ready() -> void:
@@ -22,6 +25,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if player_inside and not collected and Input.is_action_just_pressed(&"interact"):
 		collected = true
+		info_sfx.play()
 		interaction_prompt.hide()
 		collected_label.show()
 		information_collected.emit(info_id)

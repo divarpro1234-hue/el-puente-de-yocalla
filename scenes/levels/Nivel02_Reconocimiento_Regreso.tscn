@@ -27,6 +27,12 @@
 
 [ext_resource type="PackedScene" path="res://scenes/environment/level02/ZoneH_TormentaFinal_Visual.tscn" id="17_zone_h_l2"]
 
+[ext_resource type="AudioStream" path="res://assets/audio/v1/level2_mountain_loop.wav" id="audio_l2"]
+
+[ext_resource type="AudioStream" path="res://assets/audio/v1/storm_loop.wav" id="audio_storm"]
+
+[ext_resource type="Script" path="res://scripts/audio/audio_loop_player.gd" id="audio_loop_script"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_obj_l2"]
 bg_color = Color(0.03, 0.04, 0.055, 0.78)
 border_width_left = 1
@@ -1113,3 +1119,16 @@ position = Vector2(11300, 500)
 
 [node name="Checkpoint_Intermedio_02" parent="." unique_id=1474358479 instance=ExtResource("5_dig7p")]
 position = Vector2(46200, 500)
+
+[node name="LevelMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("audio_l2")
+volume_db = -17.0
+autoplay = true
+script = ExtResource("audio_loop_script")
+metadata/audio_base_v1 = true
+
+[node name="StormAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("audio_storm")
+volume_db = -10.0
+script = ExtResource("audio_loop_script")
+metadata/audio_base_v1 = true

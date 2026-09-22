@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+# audio_base_v1
+
 const HORIZONTAL_SPEED: float = 250.0
 const GRAVITY: float = 1200.0
 const JUMP_VELOCITY: float = -450.0
@@ -11,6 +13,8 @@ var is_respawning: bool = false
 
 @onready var health_label: Label = get_node_or_null("PlayerHUD/HealthLabel")
 @onready var animated_sprite: AnimatedSprite2D = $Visual
+@onready var jump_sfx: AudioStreamPlayer = $JumpSfx
+@onready var damage_sfx: AudioStreamPlayer = $DamageSfx
 
 
 func _ready() -> void:
@@ -28,6 +32,7 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed(&"jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		jump_sfx.play()
 
 	move_and_slide()
 	_update_animation(direction)
@@ -40,6 +45,7 @@ func take_damage(amount: int) -> void:
 	if amount <= 0 or is_respawning:
 		return
 
+	damage_sfx.play()
 	current_health = maxi(current_health - amount, 0)
 
 	if health_label:
