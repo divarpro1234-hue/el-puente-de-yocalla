@@ -80,7 +80,7 @@ texture = ExtResource("7_rock")
 
 [node name="MessengerTree" type="Sprite2D" parent="Decoration"]
 z_index = -2
-position = Vector2(37400, 344)
+position = Vector2(37400, 401)
 scale = Vector2(0.72, 0.72)
 texture_filter = 1
 texture = ExtResource("3_tree")
