@@ -70,14 +70,14 @@ texture_filter = 1
 texture = ExtResource("8_fence")
 
 [node name="House_02" type="Sprite2D" parent="VillageProps"]
-position = Vector2(19000, 390)
+position = Vector2(19000, 411)
 z_index = -4
 scale = Vector2(0.80, 0.80)
 texture_filter = 1
 texture = ExtResource("3_house1")
 
 [node name="Tree_02" type="Sprite2D" parent="VillageProps"]
-position = Vector2(19700, 384)
+position = Vector2(19700, 404)
 z_index = -3
 scale = Vector2(0.62, 0.62)
 texture_filter = 1
@@ -90,7 +90,7 @@ texture_filter = 1
 texture = ExtResource("7_crops")
 
 [node name="House_03" type="Sprite2D" parent="VillageProps"]
-position = Vector2(21800, 390)
+position = Vector2(21800, 392)
 z_index = -4
 scale = Vector2(0.82, 0.82)
 texture_filter = 1
@@ -103,14 +103,14 @@ texture_filter = 1
 texture = ExtResource("8_fence")
 
 [node name="Tree_03" type="Sprite2D" parent="VillageProps"]
-position = Vector2(23700, 384)
+position = Vector2(23700, 404)
 z_index = -3
 scale = Vector2(0.62, 0.62)
 texture_filter = 1
 texture = ExtResource("6_tree")
 
 [node name="House_04" type="Sprite2D" parent="VillageProps"]
-position = Vector2(24500, 390)
+position = Vector2(24500, 411)
 z_index = -4
 scale = Vector2(0.80, 0.80)
 texture_filter = 1
@@ -119,45 +119,45 @@ texture = ExtResource("5_house3")
 [node name="Decoration" type="Node2D" parent="."]
 
 [node name="Bush_01" type="Sprite2D" parent="Decoration"]
-position = Vector2(18600, 488)
+position = Vector2(18600, 456)
 z_index = -1
 texture_filter = 1
 texture = ExtResource("9_bush")
 
 [node name="Bush_02" type="Sprite2D" parent="Decoration"]
-position = Vector2(20250, 488)
+position = Vector2(20250, 472)
 z_index = -1
 texture_filter = 1
 texture = ExtResource("9_bush")
 
 [node name="Bush_03" type="Sprite2D" parent="Decoration"]
-position = Vector2(22300, 488)
+position = Vector2(22300, 456)
 z_index = -1
 texture_filter = 1
 texture = ExtResource("9_bush")
 
 [node name="Bush_04" type="Sprite2D" parent="Decoration"]
-position = Vector2(24850, 488)
+position = Vector2(24850, 472)
 z_index = -1
 texture_filter = 1
 texture = ExtResource("9_bush")
 
 [node name="Rock_01" type="Sprite2D" parent="Decoration"]
-position = Vector2(17550, 486)
+position = Vector2(17550, 477)
 z_index = 1
 scale = Vector2(0.62, 0.62)
 texture_filter = 1
 texture = ExtResource("10_rock")
 
 [node name="Rock_02" type="Sprite2D" parent="Decoration"]
-position = Vector2(21350, 488)
+position = Vector2(21350, 475)
 z_index = -1
 scale = Vector2(0.66, 0.66)
 texture_filter = 1
 texture = ExtResource("10_rock")
 
 [node name="Rock_03" type="Sprite2D" parent="Decoration"]
-position = Vector2(23450, 486)
+position = Vector2(23450, 494)
 z_index = 1
 scale = Vector2(0.60, 0.60)
 texture_filter = 1
