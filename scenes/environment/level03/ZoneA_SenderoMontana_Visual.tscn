@@ -69,21 +69,21 @@ texture = ExtResource("4_platform")
 
 [node name="Bush01" type="Sprite2D" parent="Decoration"]
 z_index = -2
-position = Vector2(900, 489)
+position = Vector2(900, 493)
 scale = Vector2(0.70, 0.70)
 texture_filter = 1
 texture = ExtResource("5_bush")
 
 [node name="Bush02" type="Sprite2D" parent="Decoration"]
 z_index = -2
-position = Vector2(3900, 489)
+position = Vector2(3900, 493)
 scale = Vector2(0.66, 0.66)
 texture_filter = 1
 texture = ExtResource("5_bush")
 
 [node name="Tree01" type="Sprite2D" parent="Decoration"]
 z_index = -2
-position = Vector2(7450, 394)
+position = Vector2(7450, 401)
 scale = Vector2(0.72, 0.72)
 texture_filter = 1
 texture = ExtResource("6_tree")

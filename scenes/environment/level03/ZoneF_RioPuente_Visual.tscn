@@ -59,28 +59,28 @@ texture = ExtResource("3_edge")
 
 [node name="LeftGrass" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(36900, 493)
+position = Vector2(36900, 501)
 scale = Vector2(0.48, 0.48)
 texture_filter = 1
 texture = ExtResource("4_grass")
 
 [node name="RightGrass" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(38080, 493)
+position = Vector2(38080, 503)
 scale = Vector2(0.44, 0.44)
 texture_filter = 1
 texture = ExtResource("4_grass")
 
 [node name="BridgeMarkerLeft" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(37175, 503)
+position = Vector2(37175, 510)
 scale = Vector2(0.62, 0.62)
 texture_filter = 1
 texture = ExtResource("5_marker")
 
 [node name="BridgeMarkerRight" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(37825, 503)
+position = Vector2(37825, 510)
 scale = Vector2(0.62, 0.62)
 texture_filter = 1
 texture = ExtResource("5_marker")

@@ -101,14 +101,14 @@ texture = ExtResource("8_rock2")
 
 [node name="Grass01" type="Sprite2D" parent="Decoration"]
 z_index = -2
-position = Vector2(17400, 500)
+position = Vector2(17400, 504)
 scale = Vector2(0.48, 0.48)
 texture_filter = 1
 texture = ExtResource("10_grass")
 
 [node name="Grass02" type="Sprite2D" parent="Decoration"]
 z_index = -2
-position = Vector2(23500, 500)
+position = Vector2(23500, 506)
 scale = Vector2(0.44, 0.44)
 texture_filter = 1
 texture = ExtResource("10_grass")

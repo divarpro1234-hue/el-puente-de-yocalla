@@ -87,7 +87,7 @@ texture = ExtResource("5_rock")
 
 [node name="SparseBush" type="Sprite2D" parent="Decoration"]
 z_index = -2
-position = Vector2(33300, 491)
+position = Vector2(33300, 497)
 scale = Vector2(0.62, 0.62)
 texture_filter = 1
 texture = ExtResource("6_bush")
