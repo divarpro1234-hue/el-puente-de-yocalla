@@ -6,7 +6,7 @@ border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.78, 0.58, 0.60, 0.62)
+border_color = Color(0.78, 0.58, 0.6, 0.62)
 corner_radius_top_left = 9
 corner_radius_top_right = 9
 corner_radius_bottom_right = 9
@@ -14,9 +14,26 @@ corner_radius_bottom_left = 9
 shadow_color = Color(0, 0, 0, 0.35)
 shadow_size = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dcna0"]
+bg_color = Color(0.035, 0.045, 0.06, 0.82)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.78, 0.58, 0.6, 0.62)
+corner_radius_top_left = 9
+corner_radius_top_right = 9
+corner_radius_bottom_right = 9
+corner_radius_bottom_left = 9
+shadow_color = Color(0, 0, 0, 0.35)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivdol"]
+bg_color = Color(0.90588236, 0.7058824, 0.3764706, 1)
+
 [node name="PlayerHUD" type="CanvasLayer" unique_id=2043180030]
 
-[node name="HealthUIPanel" type="Panel" parent="."]
+[node name="HealthUIPanel" type="Panel" parent="." unique_id=768750654]
 z_index = -1
 anchors_preset = 1
 anchor_left = 1.0
@@ -29,8 +46,6 @@ mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ui_health")
 
 [node name="HealthLabel" type="Label" parent="." unique_id=528699763]
-theme_override_colors/font_outline_color = Color(0.07, 0.08, 0.09, 0.92)
-theme_override_constants/outline_size = 4
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -38,12 +53,56 @@ offset_left = -244.0
 offset_top = 24.0
 offset_right = -24.0
 offset_bottom = 58.0
-theme_override_colors/font_color = Color(1, 0.8, 0.8352941, 1)
+theme_override_colors/font_color = Color(1, 0.84, 0.86, 1)
+theme_override_colors/font_outline_color = Color(0.05, 0.04, 0.05, 1)
+theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 20
 text = "Vida: 100"
 horizontal_alignment = 2
 vertical_alignment = 1
-theme_override_colors/font_color = Color(1, 0.84, 0.86, 1)
-theme_override_colors/font_outline_color = Color(0.05, 0.04, 0.05, 1)
-theme_override_constants/outline_size = 3
 metadata/ui_polish_v1 = true
+
+[node name="EnergyPanel" type="Panel" parent="." unique_id=50863009]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -282.0
+offset_top = 76.0
+offset_right = -16.0
+offset_bottom = 168.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dcna0")
+
+[node name="EnergyLabel" type="Label" parent="EnergyPanel" unique_id=1623195376]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 256.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.95686275, 0.83137256, 0.5764706, 1)
+theme_override_font_sizes/font_size = 17
+text = "Energía: 100 / 100"
+horizontal_alignment = 1
+
+[node name="EnergyBar" type="ProgressBar" parent="EnergyPanel" unique_id=8608211]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 33.0
+offset_right = 254.0
+offset_bottom = 60.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_ivdol")
+value = 100.0
+show_percentage = false
+
+[node name="RunnerHint" type="Label" parent="EnergyPanel" unique_id=868786272]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 55.0
+offset_right = 258.0
+offset_bottom = 85.0
+theme_override_font_sizes/font_size = 14
+text = "Shift: rápido | F: impulso (-30)"
+horizontal_alignment = 1
+autowrap_mode = 3

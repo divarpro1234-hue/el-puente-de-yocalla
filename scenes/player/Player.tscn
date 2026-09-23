@@ -3,10 +3,8 @@
 [ext_resource type="Script" uid="uid://ctqmbj22yfry2" path="res://scripts/player/player_controller.gd" id="1_wr5hl"]
 [ext_resource type="PackedScene" uid="uid://bpmyvxkuklhfe" path="res://scenes/ui/PlayerHUD.tscn" id="2_gfjak"]
 [ext_resource type="SpriteFrames" path="res://assets/characters/kespi/sprites/kespi_sprite_frames.tres" id="3_kespi"]
-
-[ext_resource type="AudioStream" path="res://assets/audio/v1/jump.wav" id="audio_jump"]
-
-[ext_resource type="AudioStream" path="res://assets/audio/v1/damage.wav" id="audio_damage"]
+[ext_resource type="AudioStream" uid="uid://d0tbwgw0f3jn6" path="res://assets/audio/v1/damage.wav" id="audio_damage"]
+[ext_resource type="AudioStream" uid="uid://cylgxdrg55xkh" path="res://assets/audio/v1/jump.wav" id="audio_jump"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o8nba"]
 radius = 12.0
@@ -16,9 +14,9 @@ height = 48.0
 script = ExtResource("1_wr5hl")
 
 [node name="Visual" type="AnimatedSprite2D" parent="." unique_id=919570886]
+texture_filter = 1
 position = Vector2(0, -4)
 scale = Vector2(0.5, 0.5)
-texture_filter = 1
 sprite_frames = ExtResource("3_kespi")
 animation = &"idle"
 autoplay = "idle"
@@ -30,12 +28,17 @@ shape = SubResource("CapsuleShape2D_o8nba")
 
 [node name="PlayerHUD" parent="." unique_id=2043180030 instance=ExtResource("2_gfjak")]
 
-[node name="JumpSfx" type="AudioStreamPlayer" parent="."]
+[node name="JumpSfx" type="AudioStreamPlayer" parent="." unique_id=1443015282]
 stream = ExtResource("audio_jump")
 volume_db = -8.0
 metadata/audio_base_v1 = true
 
-[node name="DamageSfx" type="AudioStreamPlayer" parent="."]
+[node name="DamageSfx" type="AudioStreamPlayer" parent="." unique_id=1446649095]
 stream = ExtResource("audio_damage")
 volume_db = -6.0
 metadata/audio_base_v1 = true
+
+[node name="FoxSfx" type="AudioStreamPlayer" parent="." unique_id=219170275]
+stream = ExtResource("audio_jump")
+volume_db = -10.0
+pitch_scale = 0.65

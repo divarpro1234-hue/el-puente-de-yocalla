@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://db3aej2vayw3c"]
+
+[ext_resource type="Script" uid="uid://x5oue3b5dmr6" path="res://scripts/core/wind_zone.gd" id="1_032dh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dsy8s"]
+size = Vector2(600, 300)
+
+[node name="WindZone" type="Area2D" unique_id=31852036]
+collision_layer = 0
+script = ExtResource("1_032dh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=873737101]
+shape = SubResource("RectangleShape2D_dsy8s")
+
+[node name="WindHint" type="Label" parent="." unique_id=1402269962]
+offset_left = -150.0
+offset_top = -95.0
+offset_right = 150.0
+offset_bottom = -69.0
+theme_override_colors/font_color = Color(0.81960785, 0.9019608, 0.8392157, 1)
+theme_override_colors/font_outline_color = Color(0.14901961, 0.22352941, 0.25882354, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 17
+text = "VIENTO EN CONTRA"
+horizontal_alignment = 1
