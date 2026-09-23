@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+# Auditoría Astra Test
 # audio_base_v1
 
 const HORIZONTAL_SPEED: float = 250.0
