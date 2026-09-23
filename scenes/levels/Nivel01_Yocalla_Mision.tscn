@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://e64v6qvivray" path="res://assets/environments/level01/zone_b/props/yocalla_gate.png" id="19_6vmn4"]
 [ext_resource type="Texture2D" uid="uid://weseeckis6og" path="res://assets/environments/level01/zone_d/props/banner_inca.png" id="20_syygp"]
 [ext_resource type="AudioStream" uid="uid://c7cdwqjhtvxdx" path="res://assets/audio/v1/checkpoint.wav" id="21_d71m2"]
+[ext_resource type="PackedScene" uid="uid://db3aej2vayw3c" path="res://scenes/core/WindZone.tscn" id="21_syygp"]
 [ext_resource type="AudioStream" uid="uid://br1jtrhcwbcqh" path="res://assets/audio/v1/level1_yocalla_loop.wav" id="audio_l1"]
 [ext_resource type="Script" uid="uid://4h8hvmbbe5xe" path="res://scripts/audio/audio_loop_player.gd" id="audio_loop_script"]
 [ext_resource type="SpriteFrames" path="res://assets/characters/jovenes_yocalla/joven_01/sprites/joven_01_sprite_frames.tres" id="joven_yocalla_01_frames"]
@@ -950,7 +951,7 @@ anchor_right = 0.5
 offset_left = -285.0
 offset_top = 80.0
 offset_right = 285.0
-offset_bottom = 210.0
+offset_bottom = 240.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_12nbm")
 
@@ -985,9 +986,9 @@ vertical_alignment = 1
 [node name="ProgressBar" type="ProgressBar" parent="ObjectiveHUD/RacePanel" unique_id=33449072]
 layout_mode = 0
 offset_left = 20.0
-offset_top = 70.0
+offset_top = 92.0
 offset_right = 550.0
-offset_bottom = 97.0
+offset_bottom = 119.0
 mouse_filter = 2
 theme_override_styles/fill = SubResource("StyleBoxFlat_oxa7f")
 max_value = 4.0
@@ -996,9 +997,9 @@ show_percentage = false
 [node name="Feedback" type="Label" parent="ObjectiveHUD/RacePanel" unique_id=276028345]
 layout_mode = 0
 offset_left = 10.0
-offset_top = 88.0
+offset_top = 120.0
 offset_right = 560.0
-offset_bottom = 118.0
+offset_bottom = 150.0
 theme_override_colors/font_color = Color(1, 0.9411765, 0.80784315, 1)
 theme_override_colors/font_outline_color = Color(0.13725491, 0.101960786, 0.09803922, 1)
 theme_override_constants/outline_size = 3
@@ -1006,6 +1007,17 @@ theme_override_font_sizes/font_size = 17
 text = "E: comenzar   |   A/D: correr   |   Espacio: saltar"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BestTime" type="Label" parent="ObjectiveHUD/RacePanel" unique_id=1781066066]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 62.0
+offset_right = 556.0
+offset_bottom = 86.0
+theme_override_colors/font_color = Color(0.95686275, 0.83137256, 0.5764706, 1)
+theme_override_font_sizes/font_size = 16
+text = "Mejor guardado: —"
+horizontal_alignment = 1
 
 [node name="Checkpoint_Start" parent="." unique_id=471287348 instance=ExtResource("4_x1nsb")]
 position = Vector2(300, 500)
@@ -1175,6 +1187,15 @@ theme_override_font_sizes/font_size = 22
 text = "SALIDA"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="WindZone1" parent="RaceCourse" unique_id=31852036 instance=ExtResource("21_syygp")]
+position = Vector2(3500, 358)
+
+[node name="WindZone2" parent="RaceCourse" unique_id=1087614651 instance=ExtResource("21_syygp")]
+position = Vector2(7700, 350)
+
+[node name="WindZone3" parent="RaceCourse" unique_id=1274381854 instance=ExtResource("21_syygp")]
+position = Vector2(11900, 358)
 
 [node name="RaceSfx" type="AudioStreamPlayer" parent="." unique_id=1406423517]
 stream = ExtResource("21_d71m2")

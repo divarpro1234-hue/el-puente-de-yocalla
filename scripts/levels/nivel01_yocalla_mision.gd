@@ -16,6 +16,10 @@ var race_finished: bool = false
 var race_checkpoint_count: int = 0
 var race_elapsed: float = 0.0
 var race_feedback_remaining: float = 0.0
+var race_best_time: float = 0.0
+var race_record_saved: bool = true
+# Separate local record; no global save manager or narrative state is needed.
+var race_record_path: String = "user://yocalla_runner_record.cfg"
 
 var intro_camera_started: bool = false
 var intro_second_part_shown: bool = false
@@ -51,6 +55,7 @@ var level_transition_started: bool = false
 @onready var race_progress: Label = $ObjectiveHUD/RacePanel/Progress
 @onready var race_progress_bar: ProgressBar = $ObjectiveHUD/RacePanel/ProgressBar
 @onready var race_feedback: Label = $ObjectiveHUD/RacePanel/Feedback
+@onready var race_best_label: Label = $ObjectiveHUD/RacePanel/BestTime
 @onready var race_sfx: AudioStreamPlayer = $RaceSfx
 @onready var race_gates: Array[Area2D] = [
 	$RaceCourse/Checkpoint1,
@@ -60,6 +65,7 @@ var level_transition_started: bool = false
 
 
 func _ready() -> void:
+	_load_race_record()
 	objective_label.text = "Objetivo: Completa la carrera y llega a Yocalla"
 	objective_label.show()
 	level_complete_label.hide()
@@ -149,6 +155,7 @@ func _start_race_countdown() -> void:
 		await get_tree().create_timer(1.0).timeout
 	race_title.text = "CARRERA ANCESTRAL DE YOCALLA"
 	race_active = true
+	player.call(&"set_runner_enabled", true)
 	player.set_physics_process(true)
 	_show_race_feedback("¡Vamos! Busca el hito 1", 1.2)
 	_update_race_hud()
@@ -170,6 +177,36 @@ func _process(delta: float) -> void:
 func _update_race_hud() -> void:
 	race_progress.text = "Hitos: %d/3   |   Tiempo: %.1f s   |   Reto: %.0f s" % [race_checkpoint_count, race_elapsed, RACE_TARGET_SECONDS]
 	race_progress_bar.value = 4 if race_finished else race_checkpoint_count
+	race_best_label.text = "Mejor guardado: %.2f s" % race_best_time if race_best_time > 0.0 else "Mejor guardado: —"
+	if not race_record_saved:
+		race_best_label.text += "   (nuevo tiempo sin guardar)"
+
+
+func _load_race_record() -> void:
+	race_best_time = 0.0
+	var record: ConfigFile = ConfigFile.new()
+	var error: Error = record.load(race_record_path)
+	if error == ERR_FILE_NOT_FOUND:
+		return
+	if error != OK:
+		push_warning("No se pudo leer el récord de carrera: %s" % error_string(error))
+		return
+	var saved: Variant = record.get_value("runner_v1", "best_seconds", 0.0)
+	if (saved is float or saved is int) and is_finite(float(saved)) and float(saved) > 0.0:
+		race_best_time = float(saved)
+
+
+func _save_race_record() -> void:
+	if race_best_time > 0.0 and race_elapsed >= race_best_time:
+		return
+	var record: ConfigFile = ConfigFile.new()
+	record.set_value("runner_v1", "best_seconds", race_elapsed)
+	var error: Error = record.save(race_record_path)
+	race_record_saved = error == OK
+	if race_record_saved:
+		race_best_time = race_elapsed
+	else:
+		push_warning("No se pudo guardar el récord de carrera: %s" % error_string(error))
 
 
 func _show_race_feedback(message: String, pitch: float) -> void:
@@ -212,6 +249,8 @@ func _on_carrera_area_body_entered(body: Node2D) -> void:
 		return
 	race_active = false
 	race_finished = true
+	player.call(&"set_runner_enabled", false)
+	_save_race_record()
 	race_title.text = "¡META!  ¡Kespi gana la carrera!"
 	var result: String = "¡Reto de tiempo superado!" if race_elapsed <= RACE_TARGET_SECONDS else "¡Recorrido completo! Yocalla te espera"
 	_show_race_feedback(result, 1.5)
