@@ -7,45 +7,23 @@
 [ext_resource type="PackedScene" uid="uid://ltfr3mc2dfj1" path="res://scenes/core/Checkpoint.tscn" id="5_dig7p"]
 [ext_resource type="PackedScene" uid="uid://clx28geadsgyg" path="res://scenes/ui/ResourceHUD.tscn" id="6_auhyr"]
 [ext_resource type="PackedScene" uid="uid://b6cq2rv1adftk" path="res://scenes/core/Collectible.tscn" id="7_lwtln"]
-
 [ext_resource type="PackedScene" path="res://scenes/environment/level02/Level02_ContinuousBackground.tscn" id="8_bg_l2"]
 [ext_resource type="PackedScene" path="res://scenes/environment/level02/ZoneA_SenderosIda_Visual.tscn" id="9_zone_a_l2"]
-
 [ext_resource type="PackedScene" path="res://scenes/environment/level02/ZoneB_Reconocimiento01_Visual.tscn" id="10_zone_b_l2"]
-
 [ext_resource type="PackedScene" path="res://scenes/environment/level02/ZoneC_PasoMontana_Visual.tscn" id="11_zone_c_l2"]
-
 [ext_resource type="PackedScene" path="res://scenes/environment/level02/ZoneD_Reconocimiento02_Visual.tscn" id="12_zone_d_l2"]
-
 [ext_resource type="PackedScene" path="res://scenes/environment/level02/ZoneE_Quebrada_Visual.tscn" id="13_zone_e_l2"]
-
 [ext_resource type="PackedScene" path="res://scenes/environment/level02/ZoneF_Reconocimiento03_Visual.tscn" id="14_zone_f_l2"]
-
 [ext_resource type="PackedScene" path="res://scenes/environment/level02/Level02_StormVisual.tscn" id="15_storm_visual_l2"]
-
+[ext_resource type="PackedScene" uid="uid://db3aej2vayw3c" path="res://scenes/core/WindZone.tscn" id="16_02nqy"]
 [ext_resource type="PackedScene" path="res://scenes/environment/level02/ZoneG_MensajeroRegreso_Visual.tscn" id="16_zone_g_l2"]
-
 [ext_resource type="PackedScene" path="res://scenes/environment/level02/ZoneH_TormentaFinal_Visual.tscn" id="17_zone_h_l2"]
-
-[ext_resource type="AudioStream" path="res://assets/audio/v1/level2_mountain_loop.wav" id="audio_l2"]
-
-[ext_resource type="AudioStream" path="res://assets/audio/v1/storm_loop.wav" id="audio_storm"]
-
-[ext_resource type="Script" path="res://scripts/audio/audio_loop_player.gd" id="audio_loop_script"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_obj_l2"]
-bg_color = Color(0.03, 0.04, 0.055, 0.78)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.74, 0.66, 0.46, 0.38)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-shadow_color = Color(0, 0, 0, 0.3)
-shadow_size = 4
+[ext_resource type="Texture2D" uid="uid://bwjsuy528tjr6" path="res://assets/environments/level02/zone_f/props/recon3_grass.png" id="22_6or1q"]
+[ext_resource type="AudioStream" uid="uid://l4hyn120ckaj" path="res://assets/audio/v1/rooster.wav" id="23_wxeoo"]
+[ext_resource type="AudioStream" uid="uid://dha06fi8x6yxc" path="res://assets/audio/v1/level3_river_loop.wav" id="24_b24s0"]
+[ext_resource type="AudioStream" uid="uid://cqlhqsd168qpg" path="res://assets/audio/v1/level2_mountain_loop.wav" id="audio_l2"]
+[ext_resource type="Script" uid="uid://4h8hvmbbe5xe" path="res://scripts/audio/audio_loop_player.gd" id="audio_loop_script"]
+[ext_resource type="AudioStream" uid="uid://uod7qv5ahv3f" path="res://assets/audio/v1/storm_loop.wav" id="audio_storm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_apk1t"]
 size = Vector2(3000, 96)
@@ -85,6 +63,20 @@ size = Vector2(80, 240)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hcm6a"]
 size = Vector2(150, 60)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_obj_l2"]
+bg_color = Color(0.03, 0.04, 0.055, 0.78)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.74, 0.66, 0.46, 0.38)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.3)
+shadow_size = 4
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53e4b"]
 size = Vector2(2000, 96)
@@ -215,28 +207,52 @@ size = Vector2(340, 36)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6edud"]
 size = Vector2(6000, 720)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdjyf"]
+size = Vector2(180, 110)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rt7oa"]
+size = Vector2(180, 110)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cj5xu"]
+size = Vector2(1200, 420)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2o0l"]
+size = Vector2(2200, 500)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kv00f"]
+size = Vector2(4000, 600)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxnvx"]
+size = Vector2(180, 110)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2rvnw"]
+size = Vector2(180, 110)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n0kv4"]
+size = Vector2(180, 110)
+
 [node name="Nivel02_Reconocimiento_Regreso" type="Node2D" unique_id=880944882]
 script = ExtResource("1_ilpqe")
 
-[node name="Level02_ContinuousBackground" parent="." instance=ExtResource("8_bg_l2")]
+[node name="Level02_ContinuousBackground" parent="." unique_id=993172817 instance=ExtResource("8_bg_l2")]
 
-[node name="ZoneA_SenderosIda_Visual" parent="." instance=ExtResource("9_zone_a_l2")]
+[node name="ZoneA_SenderosIda_Visual" parent="." unique_id=1706221749 instance=ExtResource("9_zone_a_l2")]
 
-[node name="ZoneB_Reconocimiento01_Visual" parent="." instance=ExtResource("10_zone_b_l2")]
+[node name="ZoneB_Reconocimiento01_Visual" parent="." unique_id=787234070 instance=ExtResource("10_zone_b_l2")]
 
-[node name="ZoneC_PasoMontana_Visual" parent="." instance=ExtResource("11_zone_c_l2")]
+[node name="ZoneC_PasoMontana_Visual" parent="." unique_id=1283207640 instance=ExtResource("11_zone_c_l2")]
 
-[node name="ZoneD_Reconocimiento02_Visual" parent="." instance=ExtResource("12_zone_d_l2")]
+[node name="ZoneD_Reconocimiento02_Visual" parent="." unique_id=1444698658 instance=ExtResource("12_zone_d_l2")]
 
-[node name="ZoneE_Quebrada_Visual" parent="." instance=ExtResource("13_zone_e_l2")]
+[node name="ZoneE_Quebrada_Visual" parent="." unique_id=234267620 instance=ExtResource("13_zone_e_l2")]
 
-[node name="ZoneF_Reconocimiento03_Visual" parent="." instance=ExtResource("14_zone_f_l2")]
+[node name="ZoneF_Reconocimiento03_Visual" parent="." unique_id=1467240480 instance=ExtResource("14_zone_f_l2")]
 
-[node name="Level02_StormVisual" parent="." instance=ExtResource("15_storm_visual_l2")]
+[node name="Level02_StormVisual" parent="." unique_id=743953512 instance=ExtResource("15_storm_visual_l2")]
 
-[node name="ZoneG_MensajeroRegreso_Visual" parent="." instance=ExtResource("16_zone_g_l2")]
+[node name="ZoneG_MensajeroRegreso_Visual" parent="." unique_id=705855867 instance=ExtResource("16_zone_g_l2")]
 
-[node name="ZoneH_TormentaFinal_Visual" parent="." instance=ExtResource("17_zone_h_l2")]
+[node name="ZoneH_TormentaFinal_Visual" parent="." unique_id=631803241 instance=ExtResource("17_zone_h_l2")]
 
 [node name="Player" parent="." unique_id=1388814590 instance=ExtResource("2_l1gcm")]
 position = Vector2(300, 500)
@@ -468,14 +484,14 @@ offset_left = 24.0
 offset_top = 24.0
 offset_right = 624.0
 offset_bottom = 52.0
-text = "Objetivo: Reúne información en la zona de reconocimiento"
 theme_override_colors/font_color = Color(0.96, 0.96, 0.92, 1)
 theme_override_colors/font_outline_color = Color(0.03, 0.035, 0.045, 1)
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 17
+text = "Objetivo: Reúne información en la zona de reconocimiento"
 metadata/ui_polish_v1 = true
 
-[node name="ObjectiveUIPanel" type="Panel" parent="ObjectiveHUD/ObjectiveLabel"]
+[node name="ObjectiveUIPanel" type="Panel" parent="ObjectiveHUD/ObjectiveLabel" unique_id=265593688]
 show_behind_parent = true
 layout_mode = 0
 anchor_right = 1.0
@@ -486,16 +502,17 @@ offset_right = 12.0
 offset_bottom = 45.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ui_obj_l2")
+
 [node name="InfoCounter" type="Label" parent="ObjectiveHUD" unique_id=1360337657]
 offset_left = 24.0
 offset_top = 60.0
 offset_right = 384.0
 offset_bottom = 88.0
-text = "Información: 0/3"
-theme_override_colors/font_color = Color(0.80, 0.90, 0.96, 1)
+theme_override_colors/font_color = Color(0.8, 0.9, 0.96, 1)
 theme_override_colors/font_outline_color = Color(0.03, 0.035, 0.045, 1)
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 16
+text = "Información: 0/3"
 metadata/ui_polish_v1 = true
 
 [node name="LevelCompleteLabel" type="Label" parent="ObjectiveHUD" unique_id=448936466]
@@ -504,18 +521,55 @@ offset_left = 24.0
 offset_top = 112.0
 offset_right = 624.0
 offset_bottom = 160.0
-theme_override_font_sizes/font_size = 32
-text = "NIVEL 2 COMPLETADO"
 theme_override_colors/font_color = Color(0.98, 0.82, 0.46, 1)
 theme_override_colors/font_outline_color = Color(0.04, 0.035, 0.03, 1)
 theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "NIVEL 2 COMPLETADO"
 metadata/ui_polish_v1 = true
+
+[node name="DiscoveryLabel" type="Label" parent="ObjectiveHUD" unique_id=1854151462]
+visible = false
+custom_minimum_size = Vector2(650, 55)
+offset_left = 24.0
+offset_top = 90.0
+offset_right = 674.0
+offset_bottom = 145.0
+theme_override_colors/font_color = Color(1, 0.91, 0.67, 1)
+theme_override_colors/font_outline_color = Color(0.03, 0.03, 0.04, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+autowrap_mode = 3
+
+[node name="OptionalCounter" type="Label" parent="ObjectiveHUD" unique_id=1733420436]
+offset_left = 380.0
+offset_top = 60.0
+offset_right = 624.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0.88, 0.87, 0.72, 1)
+theme_override_colors/font_outline_color = Color(0.03, 0.035, 0.045, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 16
+text = "Exploración: 0/3"
+
+[node name="ExplorationSummaryLabel" type="Label" parent="ObjectiveHUD" unique_id=162724895]
+visible = false
+offset_left = 24.0
+offset_top = 166.0
+offset_right = 624.0
+offset_bottom = 230.0
+theme_override_colors/font_color = Color(0.96, 0.93, 0.81, 1)
+theme_override_colors/font_outline_color = Color(0.03, 0.03, 0.04, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 18
+text = "Pistas principales: 3/3
+Descubrimientos opcionales: 0/3"
 
 [node name="Checkpoint_Start" parent="." unique_id=471287348 instance=ExtResource("5_dig7p")]
 position = Vector2(300, 500)
 
 [node name="LevelTransitionTimer" type="Timer" parent="." unique_id=841884435]
-wait_time = 1.8
+wait_time = 4.0
 one_shot = true
 
 [node name="ExpeditionBackground" type="Node2D" parent="." unique_id=2021091242]
@@ -1078,6 +1132,15 @@ collision_layer = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaTormenta/StormDamageArea" unique_id=1975697551]
 shape = SubResource("RectangleShape2D_6edud")
 
+[node name="StormWind_01" parent="ZonaTormenta" unique_id=31852036 instance=ExtResource("16_02nqy")]
+position = Vector2(50500, 505)
+scale = Vector2(1.42, 0.43)
+speed_multiplier = 0.65
+
+[node name="StormWind_02" parent="ZonaTormenta" unique_id=1350286482 instance=ExtResource("16_02nqy")]
+position = Vector2(54500, 505)
+scale = Vector2(1.42, 0.43)
+
 [node name="ResourceHUD" parent="." unique_id=1499777590 instance=ExtResource("6_auhyr")]
 
 [node name="Collectibles" type="Node2D" parent="." unique_id=59649899]
@@ -1120,15 +1183,134 @@ position = Vector2(11300, 500)
 [node name="Checkpoint_Intermedio_02" parent="." unique_id=1474358479 instance=ExtResource("5_dig7p")]
 position = Vector2(46200, 500)
 
-[node name="LevelMusic" type="AudioStreamPlayer" parent="."]
+[node name="LevelMusic" type="AudioStreamPlayer" parent="." unique_id=1371977915]
 stream = ExtResource("audio_l2")
 volume_db = -17.0
 autoplay = true
 script = ExtResource("audio_loop_script")
 metadata/audio_base_v1 = true
 
-[node name="StormAudio" type="AudioStreamPlayer" parent="."]
+[node name="StormAudio" type="AudioStreamPlayer" parent="." unique_id=1742402266]
 stream = ExtResource("audio_storm")
 volume_db = -10.0
 script = ExtResource("audio_loop_script")
 metadata/audio_base_v1 = true
+
+[node name="OptionalDiscoveries" type="Node2D" parent="." unique_id=1141717871]
+
+[node name="SecretView" parent="OptionalDiscoveries" unique_id=950460192 instance=ExtResource("3_l1gcm")]
+position = Vector2(14900, 500)
+info_id = "secret_view"
+
+[node name="MarkFirst" parent="OptionalDiscoveries" unique_id=352601742 instance=ExtResource("3_l1gcm")]
+position = Vector2(26500, 500)
+info_id = "mark_first"
+
+[node name="MarkSecond" parent="OptionalDiscoveries" unique_id=1824992935 instance=ExtResource("3_l1gcm")]
+position = Vector2(30900, 500)
+info_id = "mark_second"
+
+[node name="TrailSign" parent="OptionalDiscoveries" unique_id=1162105418 instance=ExtResource("3_l1gcm")]
+position = Vector2(10800, 500)
+info_id = "trail_sign"
+
+[node name="TrailEvidence" parent="OptionalDiscoveries" unique_id=110537693 instance=ExtResource("3_l1gcm")]
+position = Vector2(33000, 500)
+info_id = "trail_evidence"
+
+[node name="DiscoveryTimer" type="Timer" parent="." unique_id=1957727087]
+wait_time = 6.0
+one_shot = true
+
+[node name="EnvironmentalEvents" type="Node2D" parent="." unique_id=1687973278]
+
+[node name="TrailGrass" type="Sprite2D" parent="EnvironmentalEvents" unique_id=555125384]
+z_index = -2
+texture_filter = 1
+position = Vector2(25920, 500)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("22_6or1q")
+
+[node name="TrailGrassArea" type="Area2D" parent="EnvironmentalEvents" unique_id=415059410]
+position = Vector2(25920, 500)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnvironmentalEvents/TrailGrassArea" unique_id=542482806]
+shape = SubResource("RectangleShape2D_cdjyf")
+
+[node name="FinalGrassArea" type="Area2D" parent="EnvironmentalEvents" unique_id=881826542]
+position = Vector2(33000, 500)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnvironmentalEvents/FinalGrassArea" unique_id=822194475]
+shape = SubResource("RectangleShape2D_rt7oa")
+
+[node name="VillageEdgeArea" type="Area2D" parent="EnvironmentalEvents" unique_id=853721261]
+position = Vector2(4450, 400)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnvironmentalEvents/VillageEdgeArea" unique_id=37926904]
+shape = SubResource("RectangleShape2D_cj5xu")
+
+[node name="RavineArea" type="Area2D" parent="EnvironmentalEvents" unique_id=1752850603]
+position = Vector2(26000, 380)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnvironmentalEvents/RavineArea" unique_id=68786763]
+shape = SubResource("RectangleShape2D_g2o0l")
+
+[node name="PreStormArea" type="Area2D" parent="EnvironmentalEvents" unique_id=1401555695]
+position = Vector2(47000, 350)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnvironmentalEvents/PreStormArea" unique_id=1083393080]
+shape = SubResource("RectangleShape2D_kv00f")
+
+[node name="VillageRoosterSfx" type="AudioStreamPlayer" parent="EnvironmentalEvents" unique_id=1660811778]
+stream = ExtResource("23_wxeoo")
+volume_db = -12.0
+
+[node name="RavineAudio" type="AudioStreamPlayer" parent="EnvironmentalEvents" unique_id=1059224763]
+stream = ExtResource("24_b24s0")
+volume_db = -40.0
+script = ExtResource("audio_loop_script")
+
+[node name="PreStormAudio" type="AudioStreamPlayer" parent="EnvironmentalEvents" unique_id=45148378]
+stream = ExtResource("audio_storm")
+volume_db = -40.0
+script = ExtResource("audio_loop_script")
+
+[node name="MeadowGrassArea" type="Area2D" parent="EnvironmentalEvents" unique_id=1255507553]
+position = Vector2(8720, 500)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnvironmentalEvents/MeadowGrassArea" unique_id=2054993776]
+shape = SubResource("RectangleShape2D_xxnvx")
+
+[node name="ReturnGrassArea" type="Area2D" parent="EnvironmentalEvents" unique_id=649787786]
+position = Vector2(43300, 500)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnvironmentalEvents/ReturnGrassArea" unique_id=367565986]
+shape = SubResource("RectangleShape2D_2rvnw")
+
+[node name="StormEdgeGrassArea" type="Area2D" parent="EnvironmentalEvents" unique_id=914483191]
+position = Vector2(48600, 500)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnvironmentalEvents/StormEdgeGrassArea" unique_id=1274063152]
+shape = SubResource("RectangleShape2D_n0kv4")
+
+[node name="WindStreakNear" type="Line2D" parent="EnvironmentalEvents" unique_id=1730022802]
+visible = false
+z_index = 1
+points = PackedVector2Array(-26, 0, 0, -2, 34, -2)
+width = 2.0
+default_color = Color(0.76, 0.89, 0.84, 0.52)
+
+[node name="WindStreakFar" type="Line2D" parent="EnvironmentalEvents" unique_id=1782383841]
+visible = false
+z_index = 1
+points = PackedVector2Array(-18, 0, 4, -1, 23, -1)
+width = 2.0
+default_color = Color(0.76, 0.89, 0.84, 0.36)

@@ -5,86 +5,23 @@
 [ext_resource type="PackedScene" uid="uid://bk16hnkrfjjkf" path="res://scenes/npc/Satanas_Test.tscn" id="3_587l1"]
 [ext_resource type="PackedScene" uid="uid://dfhhxhf6hxfwr" path="res://scenes/npc/Guardian_Test.tscn" id="4_p6wyq"]
 [ext_resource type="PackedScene" uid="uid://ltfr3mc2dfj1" path="res://scenes/core/Checkpoint.tscn" id="5_ku70w"]
-
 [ext_resource type="PackedScene" path="res://scenes/environment/level03/Level03_ContinuousBackground.tscn" id="6_bg_l3"]
 [ext_resource type="PackedScene" path="res://scenes/environment/level03/ZoneA_SenderoMontana_Visual.tscn" id="7_zone_a_l3"]
-
 [ext_resource type="PackedScene" path="res://scenes/environment/level03/ZoneB_AscensoRocoso_Visual.tscn" id="8_zone_b_l3"]
-
 [ext_resource type="PackedScene" path="res://scenes/environment/level03/ZoneC_Quebrada_Visual.tscn" id="9_zone_c_l3"]
-
 [ext_resource type="PackedScene" path="res://scenes/environment/level03/ZoneD_PasoTormenta_Visual.tscn" id="10_zone_d_l3"]
-
 [ext_resource type="PackedScene" path="res://scenes/environment/level03/ZoneE_LlegadaRio_Visual.tscn" id="11_zone_e_l3"]
-
 [ext_resource type="PackedScene" path="res://scenes/environment/level03/ZoneF_RioPuente_Visual.tscn" id="12_zone_f_l3"]
-[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_f/bridge/bridge_part_01.png" id="13_bridge_01_l3"]
-[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_f/bridge/bridge_part_02.png" id="14_bridge_02_l3"]
-[ext_resource type="Texture2D" path="res://assets/environments/level03/zone_f/bridge/bridge_part_03.png" id="15_bridge_03_l3"]
-
+[ext_resource type="Texture2D" uid="uid://6fh42553ne5s" path="res://assets/environments/level03/zone_f/bridge/bridge_part_01.png" id="13_bridge_01_l3"]
+[ext_resource type="Texture2D" uid="uid://inokqdhew4gu" path="res://assets/environments/level03/zone_f/bridge/bridge_part_02.png" id="14_bridge_02_l3"]
+[ext_resource type="Script" uid="uid://x5oue3b5dmr6" path="res://scripts/core/wind_zone.gd" id="14_eejyn"]
+[ext_resource type="Texture2D" uid="uid://3crun7qf0sy4" path="res://assets/environments/level03/zone_f/bridge/bridge_part_03.png" id="15_bridge_03_l3"]
 [ext_resource type="PackedScene" path="res://scenes/environment/level03/ZoneG_EpilogoFinal_Visual.tscn" id="16_zone_g_l3"]
-
+[ext_resource type="AudioStream" uid="uid://hpsgbtsjktft" path="res://assets/audio/v1/bridge_stone.wav" id="audio_bridge"]
+[ext_resource type="AudioStream" uid="uid://dha06fi8x6yxc" path="res://assets/audio/v1/level3_river_loop.wav" id="audio_l3"]
+[ext_resource type="Script" uid="uid://4h8hvmbbe5xe" path="res://scripts/audio/audio_loop_player.gd" id="audio_loop_script"]
+[ext_resource type="AudioStream" uid="uid://l4hyn120ckaj" path="res://assets/audio/v1/rooster.wav" id="audio_rooster"]
 [ext_resource type="StyleBox" path="res://assets/ui/dialogue/interaction_prompt_style.tres" id="ui_prompt"]
-
-[ext_resource type="AudioStream" path="res://assets/audio/v1/level3_river_loop.wav" id="audio_l3"]
-
-[ext_resource type="AudioStream" path="res://assets/audio/v1/bridge_stone.wav" id="audio_bridge"]
-
-[ext_resource type="AudioStream" path="res://assets/audio/v1/rooster.wav" id="audio_rooster"]
-
-[ext_resource type="Script" path="res://scripts/audio/audio_loop_player.gd" id="audio_loop_script"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_final_card"]
-bg_color = Color(0.035, 0.045, 0.055, 0.88)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.78, 0.64, 0.36, 0.62)
-corner_radius_top_left = 14
-corner_radius_top_right = 14
-corner_radius_bottom_right = 14
-corner_radius_bottom_left = 14
-shadow_color = Color(0, 0, 0, 0.45)
-shadow_size = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_final_button"]
-bg_color = Color(0.18, 0.14, 0.10, 0.92)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.88, 0.72, 0.40, 0.72)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_final_button_hover"]
-bg_color = Color(0.34, 0.23, 0.12, 0.98)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(1, 0.86, 0.55, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_obj_l3"]
-bg_color = Color(0.03, 0.04, 0.055, 0.78)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.74, 0.66, 0.46, 0.38)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-shadow_color = Color(0, 0, 0, 0.3)
-shadow_size = 4
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6wyq"]
 size = Vector2(1200, 240)
@@ -104,11 +41,72 @@ size = Vector2(170, 30)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y1gpa"]
 size = Vector2(20, 160)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vrtd6"]
+size = Vector2(420, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3eoq5"]
+size = Vector2(210, 170)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y5nod"]
+size = Vector2(600, 300)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ku70w"]
 size = Vector2(1000, 240)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vv6yq"]
 size = Vector2(520, 190)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_obj_l3"]
+bg_color = Color(0.03, 0.04, 0.055, 0.78)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.74, 0.66, 0.46, 0.38)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(0, 0, 0, 0.3)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_final_card"]
+bg_color = Color(0.035, 0.045, 0.055, 0.88)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.78, 0.64, 0.36, 0.62)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0, 0, 0, 0.45)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_final_button"]
+bg_color = Color(0.18, 0.14, 0.1, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.88, 0.72, 0.4, 0.72)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ui_final_button_hover"]
+bg_color = Color(0.34, 0.23, 0.12, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.86, 0.55, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nduto"]
 size = Vector2(180, 140)
@@ -218,21 +216,21 @@ size = Vector2(135, 60)
 [node name="Nivel03_Puente_Yocalla" type="Node2D" unique_id=2100613900]
 script = ExtResource("1_m53sp")
 
-[node name="Level03_ContinuousBackground" parent="." instance=ExtResource("6_bg_l3")]
+[node name="Level03_ContinuousBackground" parent="." unique_id=864828121 instance=ExtResource("6_bg_l3")]
 
-[node name="ZoneA_SenderoMontana_Visual" parent="." instance=ExtResource("7_zone_a_l3")]
+[node name="ZoneA_SenderoMontana_Visual" parent="." unique_id=1169561875 instance=ExtResource("7_zone_a_l3")]
 
-[node name="ZoneB_AscensoRocoso_Visual" parent="." instance=ExtResource("8_zone_b_l3")]
+[node name="ZoneB_AscensoRocoso_Visual" parent="." unique_id=977764590 instance=ExtResource("8_zone_b_l3")]
 
-[node name="ZoneC_Quebrada_Visual" parent="." instance=ExtResource("9_zone_c_l3")]
+[node name="ZoneC_Quebrada_Visual" parent="." unique_id=667982849 instance=ExtResource("9_zone_c_l3")]
 
-[node name="ZoneD_PasoTormenta_Visual" parent="." instance=ExtResource("10_zone_d_l3")]
+[node name="ZoneD_PasoTormenta_Visual" parent="." unique_id=1187295084 instance=ExtResource("10_zone_d_l3")]
 
-[node name="ZoneE_LlegadaRio_Visual" parent="." instance=ExtResource("11_zone_e_l3")]
+[node name="ZoneE_LlegadaRio_Visual" parent="." unique_id=1861241549 instance=ExtResource("11_zone_e_l3")]
 
-[node name="ZoneF_RioPuente_Visual" parent="." instance=ExtResource("12_zone_f_l3")]
+[node name="ZoneF_RioPuente_Visual" parent="." unique_id=1646255695 instance=ExtResource("12_zone_f_l3")]
 
-[node name="ZoneG_EpilogoFinal_Visual" parent="." instance=ExtResource("16_zone_g_l3")]
+[node name="ZoneG_EpilogoFinal_Visual" parent="." unique_id=1622354296 instance=ExtResource("16_zone_g_l3")]
 
 [node name="Player" parent="." unique_id=1388814590 instance=ExtResource("2_587l1")]
 position = Vector2(300, 500)
@@ -314,7 +312,7 @@ polygon = PackedVector2Array(0, -3, 40, -3, 40, 3, 0, 3)
 
 [node name="Guide_08" type="Polygon2D" parent="ZonaRioPuente/BridgeZone" unique_id=1625060086]
 visible = false
-position = Vector2(540, 520)
+position = Vector2(600, 520)
 color = Color(0.95, 0.8, 0.4, 0.35)
 polygon = PackedVector2Array(0, -3, 40, -3, 40, 3, 0, 3)
 
@@ -326,9 +324,9 @@ position = Vector2(0, 520)
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(0, -15, 180, -13, 180, 15, 0, 17)
 
-[node name="BridgePart_01_Art" type="Sprite2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction/BridgePart_01"]
-position = Vector2(90, 19)
+[node name="BridgePart_01_Art" type="Sprite2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction/BridgePart_01" unique_id=1369990228]
 texture_filter = 1
+position = Vector2(90, 19)
 texture = ExtResource("13_bridge_01_l3")
 
 [node name="BridgePart_02" type="Polygon2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction" unique_id=1963426941]
@@ -337,9 +335,9 @@ position = Vector2(180, 520)
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(0, -13, 180, -15, 180, 17, 0, 15)
 
-[node name="BridgePart_02_Art" type="Sprite2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction/BridgePart_02"]
-position = Vector2(90, 19)
+[node name="BridgePart_02_Art" type="Sprite2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction/BridgePart_02" unique_id=1016352308]
 texture_filter = 1
+position = Vector2(90, 19)
 texture = ExtResource("14_bridge_02_l3")
 
 [node name="BridgePart_03" type="Polygon2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction" unique_id=2000347037]
@@ -348,9 +346,9 @@ position = Vector2(360, 520)
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(0, -15, 170, -12, 170, 16, 0, 17)
 
-[node name="BridgePart_03_Art" type="Sprite2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction/BridgePart_03"]
-position = Vector2(85, 19)
+[node name="BridgePart_03_Art" type="Sprite2D" parent="ZonaRioPuente/BridgeZone/BridgeConstruction/BridgePart_03" unique_id=1886546599]
 texture_filter = 1
+position = Vector2(85, 19)
 texture = ExtResource("15_bridge_03_l3")
 
 [node name="ConstructionTimer" type="Timer" parent="ZonaRioPuente/BridgeZone/BridgeConstruction" unique_id=91392770]
@@ -377,11 +375,38 @@ shape = SubResource("RectangleShape2D_a21q1")
 disabled = true
 
 [node name="BridgeBlocker" type="StaticBody2D" parent="ZonaRioPuente/BridgeZone" unique_id=727839901]
-position = Vector2(-10, 450)
+position = Vector2(355, 450)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaRioPuente/BridgeZone/BridgeBlocker" unique_id=432909650]
 shape = SubResource("RectangleShape2D_y1gpa")
 disabled = true
+
+[node name="BridgeWindZone" type="Area2D" parent="ZonaRioPuente/BridgeZone" unique_id=2042920292]
+z_index = -1
+position = Vector2(300, 500)
+collision_layer = 0
+script = ExtResource("14_eejyn")
+speed_multiplier = 0.7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaRioPuente/BridgeZone/BridgeWindZone" unique_id=400727325]
+shape = SubResource("RectangleShape2D_vrtd6")
+
+[node name="FinalGustZone" type="Area2D" parent="ZonaRioPuente/BridgeZone" unique_id=1679671389]
+z_index = -1
+position = Vector2(415, 500)
+collision_layer = 0
+script = ExtResource("14_eejyn")
+speed_multiplier = 0.6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaRioPuente/BridgeZone/FinalGustZone" unique_id=1990683876]
+shape = SubResource("RectangleShape2D_3eoq5")
+
+[node name="RiverFallArea" type="Area2D" parent="ZonaRioPuente" unique_id=2102294215]
+position = Vector2(1500, 750)
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZonaRioPuente/RiverFallArea" unique_id=1153510207]
+shape = SubResource("RectangleShape2D_y5nod")
 
 [node name="ZonaEpilogo" type="Node2D" parent="." unique_id=464544751]
 position = Vector2(36000, 0)
@@ -425,14 +450,14 @@ offset_left = 24.0
 offset_top = 24.0
 offset_right = 744.0
 offset_bottom = 52.0
-text = "Objetivo: Encuentra una forma de cruzar el río"
 theme_override_colors/font_color = Color(0.96, 0.96, 0.92, 1)
 theme_override_colors/font_outline_color = Color(0.03, 0.035, 0.045, 1)
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 17
+text = "Objetivo: Encuentra una forma de cruzar el río"
 metadata/ui_polish_v1 = true
 
-[node name="ObjectiveUIPanel" type="Panel" parent="ObjectiveHUD/ObjectiveLabel"]
+[node name="ObjectiveUIPanel" type="Panel" parent="ObjectiveHUD/ObjectiveLabel" unique_id=1431162848]
 show_behind_parent = true
 layout_mode = 0
 anchor_right = 1.0
@@ -443,17 +468,18 @@ offset_right = 12.0
 offset_bottom = 45.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ui_obj_l3")
+
 [node name="RoosterEventLabel" type="Label" parent="ObjectiveHUD" unique_id=514883114]
 visible = false
 offset_left = 24.0
 offset_top = 60.0
 offset_right = 24.0
 offset_bottom = 60.0
-text = "¡Quiquiriquí! El gallo ha cantado."
 theme_override_colors/font_color = Color(1, 0.88, 0.58, 1)
 theme_override_colors/font_outline_color = Color(0.04, 0.035, 0.03, 1)
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 17
+text = "¡Quiquiriquí! El gallo ha cantado."
 metadata/ui_polish_v1 = true
 
 [node name="EpilogueText" type="Label" parent="ObjectiveHUD" unique_id=767109567]
@@ -463,12 +489,12 @@ offset_left = 24.0
 offset_top = 96.0
 offset_right = 744.0
 offset_bottom = 156.0
-text = "Kespi logró regresar a Yocalla. El puente quedó como recuerdo de la prueba que logró superar."
-autowrap_mode = 3
 theme_override_colors/font_color = Color(0.95, 0.95, 0.92, 1)
 theme_override_colors/font_outline_color = Color(0.035, 0.04, 0.05, 1)
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 17
+text = "Kespi logró regresar a Yocalla. El puente quedó como recuerdo de la prueba que logró superar."
+autowrap_mode = 3
 metadata/ui_polish_v1 = true
 
 [node name="FinalStoryText" type="Label" parent="ObjectiveHUD" unique_id=1762778526]
@@ -478,12 +504,12 @@ offset_left = 24.0
 offset_top = 164.0
 offset_right = 744.0
 offset_bottom = 224.0
-text = "El Puente de Yocalla quedó como símbolo de unión y esperanza para las generaciones futuras."
-autowrap_mode = 3
 theme_override_colors/font_color = Color(0.95, 0.95, 0.92, 1)
 theme_override_colors/font_outline_color = Color(0.035, 0.04, 0.05, 1)
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 17
+text = "El Puente de Yocalla quedó como símbolo de unión y esperanza para las generaciones futuras."
+autowrap_mode = 3
 metadata/ui_polish_v1 = true
 
 [node name="LegendCompletePanel" type="Control" parent="ObjectiveHUD" unique_id=1954516502]
@@ -497,8 +523,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-
-[node name="DimOverlay" type="ColorRect" parent="ObjectiveHUD/LegendCompletePanel"]
+[node name="DimOverlay" type="ColorRect" parent="ObjectiveHUD/LegendCompletePanel" unique_id=1216223433]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -507,7 +532,7 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0.02, 0.025, 0.035, 0.42)
 
-[node name="FinalCard" type="Panel" parent="ObjectiveHUD/LegendCompletePanel"]
+[node name="FinalCard" type="Panel" parent="ObjectiveHUD/LegendCompletePanel" unique_id=382643610]
 layout_mode = 0
 anchor_left = 0.19
 anchor_top = 0.19
@@ -515,6 +540,7 @@ anchor_right = 0.81
 anchor_bottom = 0.92
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ui_final_card")
+
 [node name="TitleLabel" type="Label" parent="ObjectiveHUD/LegendCompletePanel" unique_id=1127244242]
 layout_mode = 0
 anchor_top = 0.3
@@ -546,12 +572,12 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ContinueLabel" type="Label" parent="ObjectiveHUD/LegendCompletePanel" unique_id=688587126]
-custom_minimum_size = Vector2(640, 90)
+custom_minimum_size = Vector2(620, 0)
 layout_mode = 0
-anchor_left = 0.15
+anchor_left = 0.22
 anchor_top = 0.54
-anchor_right = 0.85
-anchor_bottom = 0.66
+anchor_right = 0.78
+anchor_bottom = 0.65
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0.08, 0.06, 0.04, 1)
 theme_override_constants/outline_size = 4
@@ -561,7 +587,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="ReturnToMenuButton" type="Button" parent="ObjectiveHUD/LegendCompletePanel"]
+[node name="ReturnToMenuButton" type="Button" parent="ObjectiveHUD/LegendCompletePanel" unique_id=1517383250]
 layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.72
@@ -571,17 +597,17 @@ offset_left = -140.0
 offset_top = -27.0
 offset_right = 140.0
 offset_bottom = 27.0
-theme_override_font_sizes/font_size = 20
-text = "VOLVER AL MENÚ"
 theme_override_colors/font_color = Color(0.96, 0.94, 0.89, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_ui_final_button")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ui_final_button_hover")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ui_final_button_hover")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ui_final_button_hover")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ui_final_button_hover")
+text = "VOLVER AL MENÚ"
 metadata/ui_polish_v1 = true
 
-[node name="ExitButton" type="Button" parent="ObjectiveHUD/LegendCompletePanel"]
+[node name="ExitButton" type="Button" parent="ObjectiveHUD/LegendCompletePanel" unique_id=1364079679]
 layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.84
@@ -591,14 +617,14 @@ offset_left = -140.0
 offset_top = -27.0
 offset_right = 140.0
 offset_bottom = 27.0
-theme_override_font_sizes/font_size = 20
-text = "SALIR"
 theme_override_colors/font_color = Color(0.96, 0.94, 0.89, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_ui_final_button")
-theme_override_styles/hover = SubResource("StyleBoxFlat_ui_final_button_hover")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ui_final_button_hover")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ui_final_button_hover")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ui_final_button_hover")
+text = "SALIR"
 metadata/ui_polish_v1 = true
 
 [node name="BridgeBlockedText" type="Label" parent="ObjectiveHUD" unique_id=1774432382]
@@ -607,11 +633,11 @@ offset_left = 24.0
 offset_top = 60.0
 offset_right = 624.0
 offset_bottom = 88.0
-text = "El puente todavía no está listo. Debo esperar."
 theme_override_colors/font_color = Color(1, 0.88, 0.58, 1)
 theme_override_colors/font_outline_color = Color(0.04, 0.035, 0.03, 1)
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 17
+text = "El puente todavía no está listo. Debo esperar."
 metadata/ui_polish_v1 = true
 
 [node name="PactArea" type="Area2D" parent="." unique_id=349111852]
@@ -622,21 +648,22 @@ collision_layer = 0
 shape = SubResource("RectangleShape2D_nduto")
 
 [node name="PactPrompt" type="Label" parent="PactArea" unique_id=1644025426]
-theme_override_styles/normal = ExtResource("ui_prompt")
-metadata/dialogue_polish_v2 = true
-vertical_alignment = 1
 visible = false
-offset_bottom = -88.0
-theme_override_colors/font_outline_color = Color(0.04, 0.03, 0.02, 1)
+z_index = 21
 offset_left = -96.0
-horizontal_alignment = 1
 offset_top = -122.0
+offset_right = 96.0
+offset_bottom = -88.0
+theme_override_colors/font_color = Color(1, 0.86, 0.48, 1)
+theme_override_colors/font_outline_color = Color(0.04, 0.03, 0.02, 1)
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 16
-offset_right = 96.0
-theme_override_colors/font_color = Color(1, 0.86, 0.48, 1)
-z_index = 21
+theme_override_styles/normal = ExtResource("ui_prompt")
 text = "[E] Pedir ayuda"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/dialogue_polish_v2 = true
+
 [node name="Satanas" parent="." unique_id=696938969 instance=ExtResource("3_587l1")]
 position = Vector2(37320, 480)
 
@@ -1178,19 +1205,22 @@ position = Vector2(15500, 490)
 [node name="Checkpoint_Intermedio_02" parent="." unique_id=1552381400 instance=ExtResource("5_ku70w")]
 position = Vector2(33500, 500)
 
-[node name="LevelMusic" type="AudioStreamPlayer" parent="."]
+[node name="LevelMusic" type="AudioStreamPlayer" parent="." unique_id=1282551369]
 stream = ExtResource("audio_l3")
 volume_db = -16.0
 autoplay = true
 script = ExtResource("audio_loop_script")
 metadata/audio_base_v1 = true
 
-[node name="BridgeSfx" type="AudioStreamPlayer" parent="."]
+[node name="BridgeSfx" type="AudioStreamPlayer" parent="." unique_id=1536242909]
 stream = ExtResource("audio_bridge")
 volume_db = -5.0
 metadata/audio_base_v1 = true
 
-[node name="RoosterSfx" type="AudioStreamPlayer" parent="."]
+[node name="RoosterSfx" type="AudioStreamPlayer" parent="." unique_id=1395593624]
 stream = ExtResource("audio_rooster")
 volume_db = -4.0
 metadata/audio_base_v1 = true
+
+[node name="Checkpoint_Puente" parent="." unique_id=1877802869 instance=ExtResource("5_ku70w")]
+position = Vector2(37050, 500)

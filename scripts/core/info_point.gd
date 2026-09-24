@@ -31,6 +31,13 @@ func _process(_delta: float) -> void:
 		information_collected.emit(info_id)
 
 
+func reset_discovery() -> void:
+	# Optional environmental sequences can be retried after an early inspection.
+	collected = false
+	collected_label.hide()
+	interaction_prompt.visible = player_inside
+
+
 func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D and body.name == &"Player":
 		player_inside = true

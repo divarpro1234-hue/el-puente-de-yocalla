@@ -5,6 +5,8 @@ signal return_mission_assigned
 var interaction_enabled: bool = false
 var player_inside: bool = false
 var mission_was_assigned: bool = false
+var investigation_count: int = 0
+var required_clues: int = 3
 
 @onready var interaction_area: Area2D = $InteractionArea
 @onready var interaction_prompt: Label = $InteractionPrompt
@@ -12,24 +14,41 @@ var mission_was_assigned: bool = false
 
 
 func _ready() -> void:
-	hide()
+	show()
 	interaction_prompt.hide()
 	dialogue_text.hide()
 	interaction_area.body_entered.connect(_on_body_entered)
 	interaction_area.body_exited.connect(_on_body_exited)
+	_update_dialogue()
 
 
-func enable_interaction() -> void:
+func set_investigation_progress(count: int, required: int) -> void:
+	investigation_count = count
+	required_clues = required
 	interaction_enabled = true
 	show()
 	interaction_prompt.visible = player_inside
+	_update_dialogue()
+
+
+func enable_interaction() -> void:
+	set_investigation_progress(required_clues, required_clues)
+
+
+func _update_dialogue() -> void:
+	if mission_was_assigned:
+		dialogue_text.text = "Mensajero: Kespi, debes regresar a Yocalla."
+	elif investigation_count < required_clues:
+		dialogue_text.text = "Mensajero: Observa mejor las señales del camino (%d/%d)." % [investigation_count, required_clues]
+	else:
+		dialogue_text.text = "Mensajero: Ahora conoces las señales. Debes regresar a Yocalla."
 
 
 func _process(_delta: float) -> void:
 	if interaction_enabled and player_inside and Input.is_action_just_pressed(&"interact"):
 		interaction_prompt.hide()
 		dialogue_text.show()
-		if not mission_was_assigned:
+		if investigation_count >= required_clues and not mission_was_assigned:
 			mission_was_assigned = true
 			return_mission_assigned.emit()
 

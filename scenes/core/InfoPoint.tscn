@@ -1,9 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://mkxgrb8xgmkv"]
+[gd_scene format=3 uid="uid://mkxgrb8xgmkv"]
 
 [ext_resource type="Script" uid="uid://smtv5b5gbmgp" path="res://scripts/core/info_point.gd" id="1_dto2w"]
-[ext_resource type="Texture2D" path="res://assets/ui/interactables_v1/info_marker_v1.png" id="2_info"]
-
-[ext_resource type="AudioStream" path="res://assets/audio/v1/info.wav" id="audio_info"]
+[ext_resource type="Texture2D" uid="uid://woq8dghcy8qa" path="res://assets/ui/interactables_v1/info_marker_v1.png" id="2_info"]
+[ext_resource type="AudioStream" uid="uid://ci1iq6q0ku02h" path="res://assets/audio/v1/info.wav" id="audio_info"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ug6mq"]
 size = Vector2(160, 96)
@@ -11,10 +10,10 @@ size = Vector2(160, 96)
 [node name="InfoPoint" type="Node2D" unique_id=1729395355]
 script = ExtResource("1_dto2w")
 
-[node name="MarkerSprite" type="Sprite2D" parent="."]
+[node name="MarkerSprite" type="Sprite2D" parent="." unique_id=2033530498]
+texture_filter = 1
 position = Vector2(0, -20)
 scale = Vector2(0.72, 0.72)
-texture_filter = 1
 texture = ExtResource("2_info")
 
 [node name="InteractionArea" type="Area2D" parent="." unique_id=1990570474]
@@ -46,10 +45,10 @@ theme_override_colors/font_color = Color(0.78, 0.95, 0.76, 1)
 theme_override_colors/font_outline_color = Color(0.05, 0.07, 0.05, 1)
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 16
-text = "InformaciÃ³n recopilada"
+text = "Información recopilada"
 horizontal_alignment = 1
 
-[node name="InfoSfx" type="AudioStreamPlayer" parent="."]
+[node name="InfoSfx" type="AudioStreamPlayer" parent="." unique_id=1621943779]
 stream = ExtResource("audio_info")
 volume_db = -7.0
 metadata/audio_base_v1 = true

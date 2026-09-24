@@ -20,6 +20,8 @@ const FOX_COOLDOWN: float = 3.0
 const FOX_MULTIPLIER: float = 2.1
 
 var runner_enabled: bool = false
+var sprint_only: bool = false
+var energy_capacity: float = MAX_ENERGY
 var energy: float = MAX_ENERGY
 var exhausted: bool = false
 var fox_remaining: float = 0.0
