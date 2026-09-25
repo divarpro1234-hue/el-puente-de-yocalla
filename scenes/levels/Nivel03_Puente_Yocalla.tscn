@@ -17,8 +17,11 @@
 [ext_resource type="Script" uid="uid://x5oue3b5dmr6" path="res://scripts/core/wind_zone.gd" id="14_eejyn"]
 [ext_resource type="Texture2D" uid="uid://3crun7qf0sy4" path="res://assets/environments/level03/zone_f/bridge/bridge_part_03.png" id="15_bridge_03_l3"]
 [ext_resource type="PackedScene" path="res://scenes/environment/level03/ZoneG_EpilogoFinal_Visual.tscn" id="16_zone_g_l3"]
-[ext_resource type="AudioStream" uid="uid://hpsgbtsjktft" path="res://assets/audio/v1/bridge_stone.wav" id="audio_bridge"]
-[ext_resource type="AudioStream" uid="uid://dha06fi8x6yxc" path="res://assets/audio/v1/level3_river_loop.wav" id="audio_l3"]
+[ext_resource type="AudioStream" path="res://assets/audio/v2/sfx/bridge_stone.wav" id="audio_bridge"]
+[ext_resource type="AudioStream" path="res://assets/audio/v2/music/level3_puente_destino.wav" id="audio_l3"]
+[ext_resource type="AudioStream" path="res://assets/audio/v2/music/epilogo_memoria_yocalla.wav" id="audio_epilogue"]
+[ext_resource type="AudioStream" path="res://assets/audio/v2/ambience/river_bridge.wav" id="audio_river_ambience"]
+[ext_resource type="AudioStream" path="res://assets/audio/v2/sfx/victory_legend.wav" id="audio_victory"]
 [ext_resource type="Script" uid="uid://4h8hvmbbe5xe" path="res://scripts/audio/audio_loop_player.gd" id="audio_loop_script"]
 [ext_resource type="AudioStream" uid="uid://l4hyn120ckaj" path="res://assets/audio/v1/rooster.wav" id="audio_rooster"]
 [ext_resource type="StyleBox" path="res://assets/ui/dialogue/interaction_prompt_style.tres" id="ui_prompt"]
@@ -1207,20 +1210,35 @@ position = Vector2(33500, 500)
 
 [node name="LevelMusic" type="AudioStreamPlayer" parent="." unique_id=1282551369]
 stream = ExtResource("audio_l3")
-volume_db = -16.0
+volume_db = -13.0
 autoplay = true
 script = ExtResource("audio_loop_script")
 metadata/audio_base_v1 = true
 
+[node name="RiverAmbience" type="AudioStreamPlayer" parent="." unique_id=1282551370]
+stream = ExtResource("audio_river_ambience")
+volume_db = -19.0
+autoplay = true
+script = ExtResource("audio_loop_script")
+
+[node name="EpilogueMusic" type="AudioStreamPlayer" parent="." unique_id=1282551371]
+stream = ExtResource("audio_epilogue")
+volume_db = -13.0
+script = ExtResource("audio_loop_script")
+
 [node name="BridgeSfx" type="AudioStreamPlayer" parent="." unique_id=1536242909]
 stream = ExtResource("audio_bridge")
-volume_db = -5.0
+volume_db = -9.0
 metadata/audio_base_v1 = true
 
 [node name="RoosterSfx" type="AudioStreamPlayer" parent="." unique_id=1395593624]
 stream = ExtResource("audio_rooster")
-volume_db = -4.0
+volume_db = -9.0
 metadata/audio_base_v1 = true
+
+[node name="VictorySfx" type="AudioStreamPlayer" parent="." unique_id=1395593625]
+stream = ExtResource("audio_victory")
+volume_db = -9.0
 
 [node name="Checkpoint_Puente" parent="." unique_id=1877802869 instance=ExtResource("5_ku70w")]
 position = Vector2(37050, 500)

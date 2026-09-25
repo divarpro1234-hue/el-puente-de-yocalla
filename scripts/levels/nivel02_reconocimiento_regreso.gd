@@ -66,6 +66,7 @@ var pre_storm_visual_tween: Tween
 @onready var storm_damage_timer: Timer = $StormDamageTimer
 @onready var storm_audio: AudioStreamPlayer = $StormAudio
 @onready var level_music: AudioStreamPlayer = $LevelMusic
+@onready var mountain_ambience: AudioStreamPlayer = get_node_or_null("MountainAmbience")
 @onready var village_rooster_sfx: AudioStreamPlayer = $EnvironmentalEvents/VillageRoosterSfx
 @onready var ravine_audio: AudioStreamPlayer = $EnvironmentalEvents/RavineAudio
 @onready var pre_storm_audio: AudioStreamPlayer = $EnvironmentalEvents/PreStormAudio
@@ -81,6 +82,12 @@ var pre_storm_visual_tween: Tween
 
 
 func _ready() -> void:
+	if level_music:
+		level_music.volume_db = -40.0
+		_fade_ambient_audio(level_music, -13.0, 1.5)
+	if mountain_ambience:
+		mountain_ambience.volume_db = -40.0
+		_fade_ambient_audio(mountain_ambience, -19.0, 2.0)
 	objective_label.text = "Objetivo: Reúne información en la zona de reconocimiento"
 	objective_label.show()
 	level_complete_label.hide()
@@ -273,11 +280,11 @@ func _on_ambient_zone_entered(body: Node2D, zone_id: String) -> void:
 				village_rooster_sfx.play()
 				_sway_grass($ZoneA_SenderosIda_Visual/Props/Bush02)
 		"RavineArea":
-			_fade_ambient_audio(ravine_audio, -23.0, 1.5)
+			_fade_ambient_audio(ravine_audio, -19.0, 1.5)
 			_ripple_water()
 		"PreStormArea":
-			_fade_ambient_audio(pre_storm_audio, -26.0, 2.0)
-			_fade_ambient_audio(level_music, -23.0, 2.0)
+			_fade_ambient_audio(pre_storm_audio, -19.0, 2.0)
+			_fade_ambient_audio(level_music, -20.0, 2.0)
 			pre_storm_visual_active = true
 			wind_streak_near.show()
 			wind_streak_far.show()
@@ -294,7 +301,7 @@ func _on_ambient_zone_exited(body: Node2D, zone_id: String) -> void:
 			_fade_ambient_audio(ravine_audio, -40.0, 1.2, true)
 		"PreStormArea":
 			_fade_ambient_audio(pre_storm_audio, -40.0, 0.8, true)
-			_fade_ambient_audio(level_music, -17.0, 1.2)
+			_fade_ambient_audio(level_music, -13.0, 1.2)
 			pre_storm_visual_active = false
 			wind_streak_near.hide()
 			wind_streak_far.hide()
@@ -388,6 +395,14 @@ func _on_level_end_body_entered(body: Node2D) -> void:
 	objective_label.show()
 	if not level_transition_started:
 		level_transition_started = true
+		if level_music:
+			_fade_ambient_audio(level_music, -40.0, 1.2, true)
+		if mountain_ambience:
+			_fade_ambient_audio(mountain_ambience, -40.0, 1.2, true)
+		if pre_storm_audio:
+			_fade_ambient_audio(pre_storm_audio, -40.0, 1.2, true)
+		if storm_audio:
+			_fade_ambient_audio(storm_audio, -40.0, 1.2, true)
 		level_transition_timer.start()
 
 
@@ -435,8 +450,8 @@ func _on_storm_damage_area_body_entered(body: Node2D) -> void:
 	if body != player or is_player_in_storm_damage_area:
 		return
 	is_player_in_storm_damage_area = true
-	if not storm_audio.playing:
-		storm_audio.play()
+	_fade_ambient_audio(storm_audio, -13.0, 1.0)
+	_fade_ambient_audio(level_music, -36.0, 1.0)
 	resource_hud.call(&"show_feedback", "Tormenta: busca refugio.")
 	storm_damage_timer.start(STORM_DAMAGE_INTERVAL)
 
@@ -461,7 +476,8 @@ func _on_storm_damage_timer_timeout() -> void:
 func _stop_storm_damage() -> void:
 	is_player_in_storm_damage_area = false
 	storm_damage_timer.stop()
-	storm_audio.stop()
+	_fade_ambient_audio(storm_audio, -40.0, 1.0, true)
+	_fade_ambient_audio(level_music, -13.0, 1.5)
 
 
 func _update_resource_hud() -> void:

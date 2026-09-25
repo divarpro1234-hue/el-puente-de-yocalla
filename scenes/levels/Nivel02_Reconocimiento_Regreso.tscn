@@ -20,10 +20,12 @@
 [ext_resource type="PackedScene" path="res://scenes/environment/level02/ZoneH_TormentaFinal_Visual.tscn" id="17_zone_h_l2"]
 [ext_resource type="Texture2D" uid="uid://bwjsuy528tjr6" path="res://assets/environments/level02/zone_f/props/recon3_grass.png" id="22_6or1q"]
 [ext_resource type="AudioStream" uid="uid://l4hyn120ckaj" path="res://assets/audio/v1/rooster.wav" id="23_wxeoo"]
-[ext_resource type="AudioStream" uid="uid://dha06fi8x6yxc" path="res://assets/audio/v1/level3_river_loop.wav" id="24_b24s0"]
-[ext_resource type="AudioStream" uid="uid://cqlhqsd168qpg" path="res://assets/audio/v1/level2_mountain_loop.wav" id="audio_l2"]
+[ext_resource type="AudioStream" path="res://assets/audio/v2/ambience/river_bridge.wav" id="24_b24s0"]
+[ext_resource type="AudioStream" path="res://assets/audio/v2/music/level2_misterio_montana.wav" id="audio_l2"]
+[ext_resource type="AudioStream" path="res://assets/audio/v2/music/level2_tormenta_climax.wav" id="audio_storm_music"]
+[ext_resource type="AudioStream" path="res://assets/audio/v2/ambience/mountain_wind.wav" id="audio_mountain_ambience"]
+[ext_resource type="AudioStream" path="res://assets/audio/v2/ambience/storm_atmosphere.wav" id="audio_storm_ambience"]
 [ext_resource type="Script" uid="uid://4h8hvmbbe5xe" path="res://scripts/audio/audio_loop_player.gd" id="audio_loop_script"]
-[ext_resource type="AudioStream" uid="uid://uod7qv5ahv3f" path="res://assets/audio/v1/storm_loop.wav" id="audio_storm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_apk1t"]
 size = Vector2(3000, 96)
@@ -1185,14 +1187,20 @@ position = Vector2(46200, 500)
 
 [node name="LevelMusic" type="AudioStreamPlayer" parent="." unique_id=1371977915]
 stream = ExtResource("audio_l2")
-volume_db = -17.0
+volume_db = -13.0
 autoplay = true
 script = ExtResource("audio_loop_script")
 metadata/audio_base_v1 = true
 
+[node name="MountainAmbience" type="AudioStreamPlayer" parent="." unique_id=1192837466]
+stream = ExtResource("audio_mountain_ambience")
+volume_db = -19.0
+autoplay = true
+script = ExtResource("audio_loop_script")
+
 [node name="StormAudio" type="AudioStreamPlayer" parent="." unique_id=1742402266]
-stream = ExtResource("audio_storm")
-volume_db = -10.0
+stream = ExtResource("audio_storm_music")
+volume_db = -13.0
 script = ExtResource("audio_loop_script")
 metadata/audio_base_v1 = true
 
@@ -1268,7 +1276,7 @@ shape = SubResource("RectangleShape2D_kv00f")
 
 [node name="VillageRoosterSfx" type="AudioStreamPlayer" parent="EnvironmentalEvents" unique_id=1660811778]
 stream = ExtResource("23_wxeoo")
-volume_db = -12.0
+volume_db = -10.0
 
 [node name="RavineAudio" type="AudioStreamPlayer" parent="EnvironmentalEvents" unique_id=1059224763]
 stream = ExtResource("24_b24s0")
@@ -1276,7 +1284,7 @@ volume_db = -40.0
 script = ExtResource("audio_loop_script")
 
 [node name="PreStormAudio" type="AudioStreamPlayer" parent="EnvironmentalEvents" unique_id=45148378]
-stream = ExtResource("audio_storm")
+stream = ExtResource("audio_storm_ambience")
 volume_db = -40.0
 script = ExtResource("audio_loop_script")
 

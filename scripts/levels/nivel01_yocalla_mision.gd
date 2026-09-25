@@ -57,6 +57,8 @@ var level_transition_started: bool = false
 @onready var race_feedback: Label = $ObjectiveHUD/RacePanel/Feedback
 @onready var race_best_label: Label = $ObjectiveHUD/RacePanel/BestTime
 @onready var race_sfx: AudioStreamPlayer = $RaceSfx
+@onready var level_music: AudioStreamPlayer = get_node_or_null("LevelMusic")
+@onready var village_ambience: AudioStreamPlayer = get_node_or_null("VillageAmbience")
 @onready var race_gates: Array[Area2D] = [
 	$RaceCourse/Checkpoint1,
 	$RaceCourse/Checkpoint2,
@@ -66,6 +68,14 @@ var level_transition_started: bool = false
 
 func _ready() -> void:
 	_load_race_record()
+	if level_music:
+		level_music.volume_db = -40.0
+		var music_tween := create_tween()
+		music_tween.tween_property(level_music, "volume_db", -13.0, 1.5)
+	if village_ambience:
+		village_ambience.volume_db = -40.0
+		var amb_tween := create_tween()
+		amb_tween.tween_property(village_ambience, "volume_db", -19.0, 2.0)
 	objective_label.text = "Objetivo: Completa la carrera y llega a Yocalla"
 	objective_label.show()
 	level_complete_label.hide()
@@ -311,6 +321,12 @@ func _on_mission_assigned(objective: String) -> void:
 		return
 	level_transition_started = true
 	level_complete_label.show()
+	if level_music:
+		var music_fade := create_tween()
+		music_fade.tween_property(level_music, "volume_db", -40.0, 1.2)
+	if village_ambience:
+		var amb_fade := create_tween()
+		amb_fade.tween_property(village_ambience, "volume_db", -40.0, 1.2)
 	level_transition_timer.start()
 
 

@@ -16,7 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://weseeckis6og" path="res://assets/environments/level01/zone_d/props/banner_inca.png" id="20_syygp"]
 [ext_resource type="AudioStream" uid="uid://c7cdwqjhtvxdx" path="res://assets/audio/v1/checkpoint.wav" id="21_d71m2"]
 [ext_resource type="PackedScene" uid="uid://db3aej2vayw3c" path="res://scenes/core/WindZone.tscn" id="21_syygp"]
-[ext_resource type="AudioStream" uid="uid://br1jtrhcwbcqh" path="res://assets/audio/v1/level1_yocalla_loop.wav" id="audio_l1"]
+[ext_resource type="AudioStream" path="res://assets/audio/v2/music/level1_camino_yocalla.wav" id="audio_l1"]
+[ext_resource type="AudioStream" path="res://assets/audio/v2/ambience/village_morning.wav" id="audio_village_ambience"]
 [ext_resource type="Script" uid="uid://4h8hvmbbe5xe" path="res://scripts/audio/audio_loop_player.gd" id="audio_loop_script"]
 [ext_resource type="SpriteFrames" path="res://assets/characters/jovenes_yocalla/joven_01/sprites/joven_01_sprite_frames.tres" id="joven_yocalla_01_frames"]
 [ext_resource type="SpriteFrames" path="res://assets/characters/jovenes_yocalla/joven_02/sprites/joven_02_sprite_frames.tres" id="joven_yocalla_02_frames"]
@@ -1035,10 +1036,16 @@ position = Vector2(900, 324)
 
 [node name="LevelMusic" type="AudioStreamPlayer" parent="." unique_id=355926064]
 stream = ExtResource("audio_l1")
-volume_db = -15.0
+volume_db = -13.0
 autoplay = true
 script = ExtResource("audio_loop_script")
 metadata/audio_base_v1 = true
+
+[node name="VillageAmbience" type="AudioStreamPlayer" parent="." unique_id=1092837465]
+stream = ExtResource("audio_village_ambience")
+volume_db = -19.0
+autoplay = true
+script = ExtResource("audio_loop_script")
 
 [node name="RaceCourse" type="Node2D" parent="." unique_id=1581227507]
 

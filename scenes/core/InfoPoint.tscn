@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://smtv5b5gbmgp" path="res://scripts/core/info_point.gd" id="1_dto2w"]
 [ext_resource type="Texture2D" uid="uid://woq8dghcy8qa" path="res://assets/ui/interactables_v1/info_marker_v1.png" id="2_info"]
-[ext_resource type="AudioStream" uid="uid://ci1iq6q0ku02h" path="res://assets/audio/v1/info.wav" id="audio_info"]
+[ext_resource type="AudioStream" path="res://assets/audio/v2/sfx/discovery_memory.wav" id="audio_info"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ug6mq"]
 size = Vector2(160, 96)
@@ -50,5 +50,5 @@ horizontal_alignment = 1
 
 [node name="InfoSfx" type="AudioStreamPlayer" parent="." unique_id=1621943779]
 stream = ExtResource("audio_info")
-volume_db = -7.0
+volume_db = -9.0
 metadata/audio_base_v1 = true

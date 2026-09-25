@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b3eolfxf8dphc" path="res://scripts/ui/main_menu.gd" id="1_vjtqc"]
 [ext_resource type="Texture2D" path="res://assets/ui/menu/menu_principal_yocalla_v1.png" id="2_menu_yocalla"]
 
-[ext_resource type="AudioStream" path="res://assets/audio/v1/menu_theme.wav" id="audio_menu"]
+[ext_resource type="AudioStream" path="res://assets/audio/v2/music/menu_yocalla_ancestral.wav" id="audio_menu"]
 
 [ext_resource type="Script" path="res://scripts/audio/audio_loop_player.gd" id="audio_loop_script"]
 

@@ -6,6 +6,7 @@ const LEVEL_ONE_PATH: String = "res://scenes/levels/Nivel01_Yocalla_Mision.tscn"
 
 @onready var play_button: Button = $PlayButton
 @onready var exit_button: Button = $ExitButton
+@onready var menu_music: AudioStreamPlayer = get_node_or_null("MenuMusic")
 
 
 func _ready() -> void:
@@ -15,6 +16,9 @@ func _ready() -> void:
 
 
 func _on_play_button_pressed() -> void:
+	if menu_music and menu_music.playing:
+		var fade := create_tween()
+		fade.tween_property(menu_music, "volume_db", -40.0, 0.28)
 	SceneTransition.change_scene(LEVEL_ONE_PATH)
 
 

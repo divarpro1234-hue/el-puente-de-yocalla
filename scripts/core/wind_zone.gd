@@ -1,22 +1,31 @@
 @tool
 extends Area2D
 
+const WIND_IMPACT_SFX: AudioStream = preload("res://assets/audio/v2/sfx/wind_push_impact.wav")
+
 # A sensor only: existing ground/player collisions are never changed.
 @export_range(0.1, 1.0, 0.05) var speed_multiplier: float = 0.55
 var phase: float = 0.0
 var affected_bodies: Array[Node2D] = []
+var _wind_audio: AudioStreamPlayer = null
 
 
 func _ready() -> void:
 	if not Engine.is_editor_hint():
 		body_entered.connect(_on_body_entered)
 		body_exited.connect(_on_body_exited)
+		_wind_audio = AudioStreamPlayer.new()
+		_wind_audio.stream = WIND_IMPACT_SFX
+		_wind_audio.volume_db = -10.0
+		add_child(_wind_audio)
 
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method(&"set_wind_modifier") and not affected_bodies.has(body):
 		affected_bodies.append(body)
 		body.call(&"set_wind_modifier", self, speed_multiplier)
+		if _wind_audio:
+			_wind_audio.play()
 
 
 func _on_body_exited(body: Node2D) -> void:

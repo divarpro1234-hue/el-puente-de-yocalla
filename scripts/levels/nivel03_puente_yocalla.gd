@@ -45,6 +45,8 @@ const RIVER_FALL_MESSAGE: String = "La corriente te arrastró. Inténtalo de nue
 	$ZonaRioPuente/BridgeZone/Guide_08,
 ]
 @onready var level_music: AudioStreamPlayer = $LevelMusic
+@onready var river_ambience: AudioStreamPlayer = get_node_or_null("RiverAmbience")
+@onready var epilogue_music: AudioStreamPlayer = get_node_or_null("EpilogueMusic")
 @onready var epilogue_glow: Sprite2D = $ZoneG_EpilogoFinal_Visual/Atmosphere/Glow
 @onready var construction_timer: Timer = $ZonaRioPuente/BridgeZone/BridgeConstruction/ConstructionTimer
 @onready var outcome_timer: Timer = $OutcomeTimer
@@ -53,6 +55,7 @@ const RIVER_FALL_MESSAGE: String = "La corriente te arrastró. Inténtalo de nue
 @onready var bridge_blocked_message_timer: Timer = $BridgeBlockedMessageTimer
 @onready var bridge_sfx: AudioStreamPlayer = $BridgeSfx
 @onready var rooster_sfx: AudioStreamPlayer = $RoosterSfx
+@onready var victory_sfx: AudioStreamPlayer = get_node_or_null("VictorySfx")
 
 var player_inside_pact_area: bool = false
 var pact_completed: bool = false
@@ -66,6 +69,14 @@ var impulse_was_active: bool = false
 
 
 func _ready() -> void:
+	if level_music:
+		level_music.volume_db = -40.0
+		var music_tween := create_tween()
+		music_tween.tween_property(level_music, "volume_db", -13.0, 1.5)
+	if river_ambience:
+		river_ambience.volume_db = -40.0
+		var amb_tween := create_tween()
+		amb_tween.tween_property(river_ambience, "volume_db", -19.0, 2.0)
 	objective_label.text = "Objetivo: Encuentra una forma de cruzar el río"
 	objective_label.show()
 	pact_prompt.hide()
@@ -248,8 +259,19 @@ func _on_epilogue_area_body_entered(body: Node2D) -> void:
 	rooster_event_label.hide()
 	bridge_blocked_text.hide()
 	objective_label.text = "Objetivo: Descubre el destino de Yocalla"
-	var music_tween: Tween = create_tween()
-	music_tween.tween_property(level_music, "volume_db", -26.0, 1.8)
+	if level_music:
+		var music_tween: Tween = create_tween()
+		music_tween.tween_property(level_music, "volume_db", -40.0, 1.8)
+		music_tween.finished.connect(level_music.stop)
+	if river_ambience:
+		var amb_tween: Tween = create_tween()
+		amb_tween.tween_property(river_ambience, "volume_db", -40.0, 1.8)
+		amb_tween.finished.connect(river_ambience.stop)
+	if epilogue_music:
+		epilogue_music.volume_db = -40.0
+		epilogue_music.play()
+		var epilogue_tween: Tween = create_tween()
+		epilogue_tween.tween_property(epilogue_music, "volume_db", -13.0, 2.0)
 	var glow_tween: Tween = create_tween()
 	glow_tween.tween_property(epilogue_glow, "modulate:a", 1.0, 1.2)
 	var arrival_pause: Tween = create_tween()
@@ -271,6 +293,8 @@ func _on_legend_complete_timer_timeout() -> void:
 	if legend_completed:
 		return
 	legend_completed = true
+	if victory_sfx:
+		victory_sfx.play()
 	epilogue_text.hide()
 	final_story_text.hide()
 	legend_complete_panel.show()
@@ -278,6 +302,9 @@ func _on_legend_complete_timer_timeout() -> void:
 	objective_label.text = "Objetivo completado: La leyenda de Yocalla terminó"
 
 func _on_return_to_menu_button_pressed() -> void:
+	if epilogue_music and epilogue_music.playing:
+		var fade := create_tween()
+		fade.tween_property(epilogue_music, "volume_db", -40.0, 0.28)
 	SceneTransition.change_scene(MAIN_MENU_PATH)
 
 
