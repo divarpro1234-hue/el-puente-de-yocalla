@@ -26,11 +26,11 @@ texture = ExtResource("1_bank")
 
 [node name="RightBank" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(38300, 644)
+position = Vector2(38280, 644)
 texture_repeat = 2
 texture_filter = 1
 region_enabled = true
-region_rect = Rect2(0, 0, 1000, 240)
+region_rect = Rect2(0, 0, 1040, 240)
 texture = ExtResource("1_bank")
 
 [node name="RiverWater" type="Sprite2D" parent="."]
@@ -52,7 +52,7 @@ texture = ExtResource("3_edge")
 
 [node name="RightEdgeRocks" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(37855, 512)
+position = Vector2(37815, 512)
 scale = Vector2(-0.66, 0.66)
 texture_filter = 1
 texture = ExtResource("3_edge")
@@ -80,7 +80,7 @@ texture = ExtResource("5_marker")
 
 [node name="BridgeMarkerRight" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(37825, 510)
+position = Vector2(37785, 510)
 scale = Vector2(0.62, 0.62)
 texture_filter = 1
 texture = ExtResource("5_marker")

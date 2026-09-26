@@ -80,27 +80,27 @@ texture = ExtResource("2_final")
 [node name="CollisionAlignedArt" type="Node2D" parent="."]
 
 [node name="ShelterRock01" type="Sprite2D" parent="CollisionAlignedArt"]
-position = Vector2(49200, 494)
+position = Vector2(49200, 500)
 texture_filter = 1
 texture = ExtResource("3_rock1")
 
 [node name="SafeLedge01" type="Sprite2D" parent="CollisionAlignedArt"]
-position = Vector2(51000, 448)
+position = Vector2(51000, 490)
 texture_filter = 1
 texture = ExtResource("6_ledge1")
 
 [node name="ShelterRock02" type="Sprite2D" parent="CollisionAlignedArt"]
-position = Vector2(53500, 494)
+position = Vector2(53500, 500)
 texture_filter = 1
 texture = ExtResource("4_rock2")
 
 [node name="StormObstacle" type="Sprite2D" parent="CollisionAlignedArt"]
-position = Vector2(54800, 494)
+position = Vector2(54800, 502)
 texture_filter = 1
 texture = ExtResource("5_obstacle")
 
 [node name="SafeLedge02" type="Sprite2D" parent="CollisionAlignedArt"]
-position = Vector2(55800, 430)
+position = Vector2(55800, 490)
 texture_filter = 1
 texture = ExtResource("7_ledge2")
 

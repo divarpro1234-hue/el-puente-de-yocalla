@@ -79,7 +79,7 @@ texture = ExtResource("8_exit_rain")
 [node name="CollisionAlignedArt" type="Node2D" parent="."]
 
 [node name="RiverRock01" type="Sprite2D" parent="CollisionAlignedArt"]
-position = Vector2(34500, 494)
+position = Vector2(34500, 502)
 texture_filter = 1
 texture = ExtResource("5_rock")
 

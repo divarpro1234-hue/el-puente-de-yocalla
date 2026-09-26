@@ -67,12 +67,12 @@ texture = ExtResource("2_transition")
 [node name="CollisionAlignedArt" type="Node2D" parent="."]
 
 [node name="ReturnPlatform" type="Sprite2D" parent="CollisionAlignedArt"]
-position = Vector2(42400, 474)
+position = Vector2(42400, 499)
 texture_filter = 1
 texture = ExtResource("6_platform")
 
 [node name="ReturnRock" type="Sprite2D" parent="CollisionAlignedArt"]
-position = Vector2(44700, 494)
+position = Vector2(44700, 502)
 texture_filter = 1
 texture = ExtResource("7_rock")
 
